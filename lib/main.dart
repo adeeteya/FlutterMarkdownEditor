@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown_editable_textinput/format_markdown.dart';
@@ -19,7 +20,8 @@ class ThemeNotifier extends ValueNotifier<bool> {
   }
 }
 
-ThemeNotifier isDarkNotifier = ThemeNotifier(false);
+ThemeNotifier isDarkNotifier = ThemeNotifier(
+    SchedulerBinding.instance.window.platformBrightness == Brightness.dark);
 
 class MarkdownEditorApp extends StatelessWidget {
   const MarkdownEditorApp({Key? key}) : super(key: key);
@@ -39,8 +41,11 @@ class MarkdownEditorApp extends StatelessWidget {
           ),
           darkTheme: ThemeData(
             useMaterial3: true,
-            brightness: Brightness.dark,
-            colorSchemeSeed: Colors.indigo,
+            primaryColor: Colors.white,
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.indigo,
+              brightness: Brightness.dark,
+            ),
           ),
           home: const Home(),
         );
