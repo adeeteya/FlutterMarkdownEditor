@@ -20,7 +20,7 @@ Please star⭐ the repo if you like what you see😊.
 
 (or)
 
-[![Download apk](https://img.shields.io/badge/Download-apk-green)](https://github.com/adityar224/FlutterMarkdownEditor/releases/download/1.0.0/MarkdownEditor-android-1.0.0.apk)
+[![Download apk](https://img.shields.io/badge/Download-apk-green)](https://github.com/adityar224/FlutterMarkdownEditor/releases/download/1.1.0/MarkdownEditor-android-1.1.0.apk)
 
 ## ✨ Features
 
@@ -32,6 +32,7 @@ Please star⭐ the repo if you like what you see😊.
 - [x] Light and Dark Theme Modes available
 - [x] Dual View Mode available (Both Preview and Editing View)
 - [x] Single View Mode available (Either Preview or the Editing View)
+- [x] Added Multi Language Support (For Some of the most popular languages of the world)
 - [x] Ability to clear text and start from scratch
 - [x] Create new .md files
 - [x] Edit existing .md files
@@ -49,6 +50,8 @@ Please star⭐ the repo if you like what you see😊.
 |[**permission_handler**](https://pub.dev/packages/permission_handler)|To get storage permissions for opening and saving .md files|
 |[**url_launcher**](https://pub.dev/packages/url_launcher)|To launch markdown links|
 |[**file_picker**](https://pub.dev/packages/file_picker)|To open markdown files directly from the app|
+|[**flutter_localizations**](https://pub.dev/packages/flutter_localizations)|Internationalizing app|
+|[**intl**](https://pub.dev/packages/intl)|Provides internationalization and localization facilities|
 |[**flutter_lints**](https://pub.dev/packages/flutter_lints)|For linting|
 
 ## 🤓 Author
