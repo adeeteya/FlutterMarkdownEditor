@@ -1,0 +1,108 @@
+{
+  "ok": "Ok",
+  "@ok": {
+    "description": "Positive Action for the Alert Dialog"
+  },
+  "yes": "Yes",
+  "@yes": {
+    "description": "Alternate Positive Action for the Alert Dialog"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Negative Action for the Alert Dialog"
+  },
+  "appTitle": "Markdown Editor",
+  "@appTitle": {
+    "description": "The Name of the app"
+  },
+  "previewToolTip": "Preview",
+  "@previewToolTip": {
+    "description": "Tooltip for the Preview Icon Button"
+  },
+  "switchThemeMenuItem": "Switch Theme",
+  "@switchThemeMenuItem": {
+    "description": "Menu Item of Switch Theme"
+  },
+  "switchViewMenuItem": "Switch View",
+  "@switchViewMenuItem": {
+    "description": "Menu Item of Switch View"
+  },
+  "openFileMenuItem": "Open",
+  "@openFileMenuItem": {
+    "description": "Menu Item of Open File"
+  },
+  "defaultFileName": "Markdown",
+  "@defaultFileName": {
+    "description": "Default File Name of a new Markdown File"
+  },
+  "markdownTextInputLabel": "Enter your markdown text here",
+  "@markdownTextInputLabel": {
+    "description": "InputText Label for the MarkDownTextInput Widget"
+  },
+  "storagePermission": "Storage Permission",
+  "@storagePermission": {
+    "description": "Title for the Storage Permission Alert Dialog"
+  },
+  "storagePermissionContent": "Please allow external storage permissions on the next screen to be able to open, edit and save markdown files",
+  "@storagePermissionContent": {
+    "description": "Content for the Storage Permission Alert Dialog"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Title for the Error Alert Dialog"
+  },
+  "unableToOpenFileError": "Unable to open the file, try opening it from open file option on the menu",
+  "@unableToOpenFileError": {
+    "description": "Content for the Error Alert Dialog when the file can't be opened"
+  },
+  "unableToOpenFileFromMenuError": "Unable to open the file",
+  "@unableToOpenFileFromMenuError": {
+    "description": "Content for the Error Alert Dialog when the file can't be opened from the menu"
+  },
+  "emptyInputTextContent": "Please enter some text",
+  "@emptyInputTextContent": {
+    "description": "Content for the SnackBar when input text is empty"
+  },
+  "clear": "Clear",
+  "@clear": {
+    "description": "Menu Item for Clearing Text"
+  },
+  "clearAllTitle": "Clear All",
+  "@clearAllTitle": {
+    "description": "Title for the Clear All Dialog"
+  },
+  "clearAllContent": "Are you sure do you want to clear all the text?",
+  "@clearAllContent": {
+    "description": "Content for the Clear All Dialog"
+  },
+  "saveFileDialogTitle": "Enter the name of the file",
+  "@saveFileDialogTitle": {
+    "description": "Title for the Save File Dialog"
+  },
+  "saveFileDialogHintText": "FileName",
+  "@saveFileDialogHintText": {
+    "description": "Hint Text for the TextField of the Save File Dialog"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Positive Action for the Save File Alert Dialog and the Save File Menu Item"
+  },
+  "fileSaveSuccess": "File Saved successfully at {filePath}",
+  "@fileSaveSuccess": {
+    "description": "File Save Success Message",
+    "placeholders": {
+      "filePath": {
+        "type": "String",
+        "example": "/storage/emulated/0/Download/Markdown.md"
+      }
+    }
+  },
+  "fileSaveError": "Error Saving the file, Try Granting File Access Permission in the settings",
+  "@fileSaveError": {
+    "description": "File Save Error Message"
+  },
+  "imageAlternateTextFallback": "Unable to Display the Image",
+  "@imageAlternateTextFallback": {
+    "description": "Fallback Text if any case even altText of te image can't be displayed or isn't provided"
+  }
+}

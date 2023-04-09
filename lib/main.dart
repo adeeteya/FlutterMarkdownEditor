@@ -8,6 +8,7 @@ import 'package:markdown_editable_textinput/format_markdown.dart';
 import 'package:markdown_editable_textinput/markdown_text_input.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() => runApp(const MarkdownEditorApp());
 
@@ -33,7 +34,7 @@ class MarkdownEditorApp extends StatelessWidget {
       builder: (context, isDarkTheme, _) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: "Markdown Editor",
+          title: 'Markdown Editor',
           themeMode: isDarkTheme ? ThemeMode.dark : ThemeMode.light,
           theme: ThemeData(
             useMaterial3: true,
@@ -47,6 +48,8 @@ class MarkdownEditorApp extends StatelessWidget {
               brightness: Brightness.dark,
             ),
           ),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           home: const Home(),
         );
       },
@@ -112,9 +115,9 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
           context: context,
           barrierDismissible: false,
           builder: (context) => AlertDialog(
-            title: const Text("Storage Permission"),
-            content: const Text(
-                "Please allow external storage permissions on the next screen to be able to open, edit and save markdown files"),
+            title: Text(AppLocalizations.of(context)!.storagePermission),
+            content:
+                Text(AppLocalizations.of(context)!.storagePermissionContent),
             actions: [
               TextButton(
                 onPressed: () async {
@@ -122,7 +125,7 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                       .request()
                       .then((_) => Navigator.pop(context));
                 },
-                child: const Text("Ok"),
+                child: Text(AppLocalizations.of(context)!.ok),
               ),
             ],
           ),
@@ -164,13 +167,12 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: const Text("Error"),
-            content: const Text(
-                "Unable to open the file, try opening it from open file option on the menu"),
+            title: Text(AppLocalizations.of(context)!.error),
+            content: Text(AppLocalizations.of(context)!.unableToOpenFileError),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: const Text("Ok"),
+                child: Text(AppLocalizations.of(context)!.ok),
               )
             ],
           ),
@@ -198,12 +200,13 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text("Error"),
-          content: const Text("Unable to open the file"),
+          title: Text(AppLocalizations.of(context)!.error),
+          content:
+              Text(AppLocalizations.of(context)!.unableToOpenFileFromMenuError),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text("Ok"),
+              child: Text(AppLocalizations.of(context)!.ok),
             )
           ],
         ),
@@ -213,20 +216,20 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
 
   void clearText() async {
     if (inputText.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Please enter some text")));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(AppLocalizations.of(context)!.emptyInputTextContent)));
       return;
     }
     FocusScope.of(context).unfocus();
     await showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text("Clear All"),
-        content: const Text("Are you sure do you want to clear all the text?"),
+        title: Text(AppLocalizations.of(context)!.clearAllTitle),
+        content: Text(AppLocalizations.of(context)!.clearAllContent),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text("Cancel"),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
           TextButton(
             onPressed: () {
@@ -237,7 +240,7 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
               Navigator.pop(context);
             },
             style: TextButton.styleFrom(foregroundColor: Colors.red),
-            child: const Text("Yes"),
+            child: Text(AppLocalizations.of(context)!.yes),
           ),
         ],
       ),
@@ -246,15 +249,15 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
 
   void saveFileDialog() async {
     if (inputText.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Please enter some text")));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(AppLocalizations.of(context)!.emptyInputTextContent)));
       return;
     } else {
       await showDialog(
         context: context,
         barrierDismissible: false,
         builder: (context) => AlertDialog(
-          title: const Text("Enter the name of the file"),
+          title: Text(AppLocalizations.of(context)!.saveFileDialogTitle),
           content: TextFormField(
             initialValue: fileName,
             keyboardType: TextInputType.name,
@@ -264,8 +267,8 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                 fileName = "Markdown";
               }
             },
-            decoration: const InputDecoration(
-              hintText: "FileName",
+            decoration: InputDecoration(
+              hintText: AppLocalizations.of(context)!.saveFileDialogHintText,
               suffixText: ".md",
             ),
           ),
@@ -275,14 +278,14 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                 Navigator.pop(context);
               },
               style: TextButton.styleFrom(foregroundColor: Colors.red),
-              child: const Text("Cancel"),
+              child: Text(AppLocalizations.of(context)!.cancel),
             ),
             TextButton(
               onPressed: () async {
                 await saveFile(fileName)
                     .then((value) => Navigator.pop(context));
               },
-              child: const Text("Save"),
+              child: Text(AppLocalizations.of(context)!.save),
             ),
           ],
         ),
@@ -299,17 +302,17 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
       await file.writeAsString(inputText).then(
             (value) => ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text("File Saved successfully at ${file.path}"),
+                content: Text(
+                    AppLocalizations.of(context)!.fileSaveSuccess(file.path)),
                 duration: const Duration(seconds: 5),
               ),
             ),
           );
     } catch (_) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text(
-              "Error Saving the file, Try Granting File Access Permission in the settings"),
-          duration: Duration(seconds: 5),
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.fileSaveError),
+          duration: const Duration(seconds: 5),
         ),
       );
     }
@@ -332,7 +335,9 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                 return Image.network(
                   imageUri.toString(),
                   errorBuilder: (_, __, ___) {
-                    return Text(alternateText ?? "Unable to Display the Image");
+                    return Text(alternateText ??
+                        AppLocalizations.of(context)!
+                            .imageAlternateTextFallback);
                   },
                 );
               },
@@ -360,7 +365,7 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
             inputText,
             controller: _inputTextEditingController,
             maxLines: 4,
-            label: 'Enter your markdown text here',
+            label: AppLocalizations.of(context)!.markdownTextInputLabel,
             actions: MarkdownType.values,
           ),
         ],
@@ -380,7 +385,7 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                 (String value) => setState(() => inputText = value),
                 inputText,
                 controller: _inputTextEditingController,
-                label: 'Enter your markdown text here',
+                label: AppLocalizations.of(context)!.markdownTextInputLabel,
                 actions: MarkdownType.values,
               ),
       ),
@@ -394,12 +399,12 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title: const Text("Markdown Editor"),
+          title: Text(AppLocalizations.of(context)!.appTitle),
           actions: [
             if (!isVerticalView)
               IconButton(
                 onPressed: switchPreview,
-                tooltip: "Preview",
+                tooltip: AppLocalizations.of(context)!.previewToolTip,
                 icon: Icon(isPreview ? Icons.visibility_off : Icons.visibility),
               ),
             PopupMenuButton<MenuItem>(
@@ -431,47 +436,47 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                           ? Icons.dark_mode
                           : Icons.light_mode),
                       const SizedBox(width: 8),
-                      const Text("Switch Theme"),
+                      Text(AppLocalizations.of(context)!.switchThemeMenuItem),
                     ],
                   ),
                 ),
                 PopupMenuItem(
                   value: MenuItem.switchView,
                   child: Row(
-                    children: const [
-                      Icon(Icons.rotate_left),
-                      SizedBox(width: 8),
-                      Text("Switch View"),
+                    children: [
+                      const Icon(Icons.rotate_left),
+                      const SizedBox(width: 8),
+                      Text(AppLocalizations.of(context)!.switchViewMenuItem),
                     ],
                   ),
                 ),
                 PopupMenuItem(
                   value: MenuItem.open,
                   child: Row(
-                    children: const [
-                      Icon(Icons.file_open),
-                      SizedBox(width: 8),
-                      Text("Open"),
+                    children: [
+                      const Icon(Icons.file_open),
+                      const SizedBox(width: 8),
+                      Text(AppLocalizations.of(context)!.openFileMenuItem),
                     ],
                   ),
                 ),
                 PopupMenuItem(
                   value: MenuItem.clear,
                   child: Row(
-                    children: const [
-                      Icon(Icons.clear_all),
-                      SizedBox(width: 8),
-                      Text("Clear"),
+                    children: [
+                      const Icon(Icons.clear_all),
+                      const SizedBox(width: 8),
+                      Text(AppLocalizations.of(context)!.clear),
                     ],
                   ),
                 ),
                 PopupMenuItem(
                   value: MenuItem.save,
                   child: Row(
-                    children: const [
-                      Icon(Icons.save),
-                      SizedBox(width: 8),
-                      Text("Save"),
+                    children: [
+                      const Icon(Icons.save),
+                      const SizedBox(width: 8),
+                      Text(AppLocalizations.of(context)!.save),
                     ],
                   ),
                 ),
