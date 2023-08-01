@@ -23,5 +23,8 @@
   "save": "保存",
   "fileSaveSuccess": "文件已成功保存在{filePath}",
   "fileSaveError": "保存文件时出错,请尝试在设置中授予文件访问权限",
-  "imageAlternateTextFallback": "无法显示图片"
+  "imageAlternateTextFallback": "无法显示图片",
+  "example": "例子",
+    "linkDialogTextTitle": "文本",
+    "linkDialogLinkTitle": "链接"
 }

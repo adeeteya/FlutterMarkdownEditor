@@ -23,5 +23,8 @@
   "save": "सहेजें",
   "fileSaveSuccess": "फ़ाइल सफलतापूर्वक {filePath} में सहेजी गई",
   "fileSaveError": "त्रुटि फ़ाइल सहेजते समय, सेटिंग में फ़ाइल एक्सेस अनुमति प्रदान करने का प्रयास करें",
-  "imageAlternateTextFallback": "चित्र नहीं दिखा सकता"
+  "imageAlternateTextFallback": "चित्र नहीं दिखा सकता",
+  "example": "उदाहरण",
+    "linkDialogTextTitle": "टेक्स्ट",
+    "linkDialogLinkTitle": "लिंक"
 }

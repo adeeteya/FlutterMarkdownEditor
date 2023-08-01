@@ -20,7 +20,7 @@ Please star⭐ the repo if you like what you see😊.
 
 (or)
 
-[![Download apk](https://img.shields.io/badge/Download-apk-green)](https://github.com/adityar224/FlutterMarkdownEditor/releases/download/1.1.0/MarkdownEditor-android-1.1.0.apk)
+[![Download apk](https://img.shields.io/badge/Download-apk-green)](https://github.com/adityar224/FlutterMarkdownEditor/releases/download/1.2.0/MarkdownEditor-android-1.2.0.apk)
 
 ## ✨ Features
 
@@ -45,11 +45,11 @@ Please star⭐ the repo if you like what you see😊.
 
 |Name|Usage|
 |-|-|
-|[**markdown_editable_textinput**](https://pub.dev/packages/markdown_editable_textinput)|Text field with useful markdown helper buttons|
 |[**flutter_markdown**](https://pub.dev/packages/flutter_markdown)|To render markdown text|
 |[**permission_handler**](https://pub.dev/packages/permission_handler)|To get storage permissions for opening and saving .md files|
 |[**url_launcher**](https://pub.dev/packages/url_launcher)|To launch markdown links|
 |[**file_picker**](https://pub.dev/packages/file_picker)|To open markdown files directly from the app|
+|[**expandable**](https://pub.dev/packages/expandable)|To create expandable header buttons|
 |[**flutter_localizations**](https://pub.dev/packages/flutter_localizations)|Internationalizing app|
 |[**intl**](https://pub.dev/packages/intl)|Provides internationalization and localization facilities|
 |[**flutter_lints**](https://pub.dev/packages/flutter_lints)|For linting|

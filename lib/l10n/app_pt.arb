@@ -23,5 +23,8 @@
   "save": "Salvar",
   "fileSaveSuccess": "Arquivo salvo com sucesso em {filePath}",
   "fileSaveError": "Erro ao salvar o arquivo, tente conceder permissão de acesso ao arquivo nas configurações.",
-  "imageAlternateTextFallback": "Não é possível exibir a imagem"
+  "imageAlternateTextFallback": "Não é possível exibir a imagem",
+  "example": "exemplo",
+  "linkDialogTextTitle": "Texto",
+  "linkDialogLinkTitle": "Link"
 }

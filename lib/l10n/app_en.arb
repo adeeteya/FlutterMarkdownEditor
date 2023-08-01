@@ -104,5 +104,17 @@
   "imageAlternateTextFallback": "Unable to Display the Image",
   "@imageAlternateTextFallback": {
     "description": "Fallback Text if any case even altText of te image can't be displayed or isn't provided"
-  }
+  },
+  "example": "example",
+      "@example": {
+        "description": "Hint Text for Input Fields"
+      },
+  "linkDialogTextTitle": "Text",
+    "@linkDialogTextTitle": {
+      "description": "Text Field Title of The Link Dialog Box"
+    },
+    "linkDialogLinkTitle": "Link",
+        "@linkDialogLinkTitle": {
+          "description": "Link Field Title of The Link Dialog Box"
+        }
 }

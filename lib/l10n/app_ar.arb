@@ -23,5 +23,8 @@
   "save": "حفظ",
   "fileSaveSuccess": "تم حفظ الملف بنجاح في {filePath}",
   "fileSaveError": "خطأ في حفظ الملف، جرب منح إذن الوصول إلى الملف في الإعدادات",
-  "imageAlternateTextFallback": "غير قادر على عرض الصورة"
+  "imageAlternateTextFallback": "غير قادر على عرض الصورة",
+  "example": "مثال",
+    "linkDialogTextTitle": "نص",
+    "linkDialogLinkTitle": "رابط"
 }

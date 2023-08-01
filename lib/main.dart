@@ -1,16 +1,25 @@
 import 'dart:io';
+import 'dart:ui';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:markdown_editable_textinput/format_markdown.dart';
-import 'package:markdown_editable_textinput/markdown_text_input.dart';
+import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() => runApp(const MarkdownEditorApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      systemNavigationBarColor: Colors.transparent,
+      statusBarColor: Colors.transparent,
+    ),
+  );
+  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  runApp(const MarkdownEditorApp());
+}
 
 class ThemeNotifier extends ValueNotifier<bool> {
   ThemeNotifier(super.value);
@@ -22,7 +31,7 @@ class ThemeNotifier extends ValueNotifier<bool> {
 }
 
 ThemeNotifier isDarkNotifier = ThemeNotifier(
-    SchedulerBinding.instance.window.platformBrightness == Brightness.dark);
+    PlatformDispatcher.instance.platformBrightness == Brightness.dark);
 
 class MarkdownEditorApp extends StatelessWidget {
   const MarkdownEditorApp({Key? key}) : super(key: key);
@@ -42,14 +51,21 @@ class MarkdownEditorApp extends StatelessWidget {
           ),
           darkTheme: ThemeData(
             useMaterial3: true,
-            primaryColor: Colors.white,
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.indigo,
-              brightness: Brightness.dark,
-            ),
+            brightness: Brightness.dark,
+            colorSchemeSeed: Colors.indigo,
           ),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
+          supportedLocales: const [
+            Locale('en'),
+            Locale('ar'),
+            Locale('es'),
+            Locale('fr'),
+            Locale('hi'),
+            Locale('ja'),
+            Locale('pt'),
+            Locale('ru'),
+            Locale('zh'),
+          ],
           home: const Home(),
         );
       },
@@ -331,6 +347,7 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
             child: MarkdownBody(
               data: inputText,
               shrinkWrap: true,
+              softLineBreak: true,
               imageBuilder: (imageUri, _, alternateText) {
                 return Image.network(
                   imageUri.toString(),
@@ -364,9 +381,8 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
             (String value) => setState(() => inputText = value),
             inputText,
             controller: _inputTextEditingController,
-            maxLines: 4,
+            maxLines: 8,
             label: AppLocalizations.of(context)!.markdownTextInputLabel,
-            actions: MarkdownType.values,
           ),
         ],
       ),
@@ -386,7 +402,6 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                 inputText,
                 controller: _inputTextEditingController,
                 label: AppLocalizations.of(context)!.markdownTextInputLabel,
-                actions: MarkdownType.values,
               ),
       ),
     );

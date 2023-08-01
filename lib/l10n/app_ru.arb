@@ -23,5 +23,8 @@
   "save": "Сохранить",
   "fileSaveSuccess": "Файл успешно сохранен в {filePath}",
   "fileSaveError": "Ошибка сохранения файла. Попробуйте предоставить разрешение на доступ к файлам в настройках",
-  "imageAlternateTextFallback": "Невозможно отобразить изображение"
+  "imageAlternateTextFallback": "Невозможно отобразить изображение",
+  "example": "Пример",
+    "linkDialogTextTitle": "Текст",
+    "linkDialogLinkTitle": "Ссылка"
 }

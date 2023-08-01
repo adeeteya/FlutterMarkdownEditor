@@ -23,5 +23,8 @@
   "save": "Guardar",
   "fileSaveSuccess": "Archivo guardado exitosamente en {filePath}",
   "fileSaveError": "Error al guardar el archivo, intente otorgar permisos de acceso al archivo en la configuración",
-  "imageAlternateTextFallback": "No se puede mostrar la imagen"
+  "imageAlternateTextFallback": "No se puede mostrar la imagen",
+  "example": "ejemplo",
+    "linkDialogTextTitle": "Texto",
+    "linkDialogLinkTitle": "Enlace"
 }
