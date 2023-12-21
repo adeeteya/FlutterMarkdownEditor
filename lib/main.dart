@@ -34,7 +34,7 @@ ThemeNotifier isDarkNotifier = ThemeNotifier(
     PlatformDispatcher.instance.platformBrightness == Brightness.dark);
 
 class MarkdownEditorApp extends StatelessWidget {
-  const MarkdownEditorApp({Key? key}) : super(key: key);
+  const MarkdownEditorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,7 @@ enum MenuItem {
 }
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
@@ -125,29 +125,6 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
     if (!status.isGranted) {
       await Permission.storage.request();
     }
-    await Permission.manageExternalStorage.status.then((status) {
-      if (!status.isGranted) {
-        showDialog(
-          context: context,
-          barrierDismissible: false,
-          builder: (context) => AlertDialog(
-            title: Text(AppLocalizations.of(context)!.storagePermission),
-            content:
-                Text(AppLocalizations.of(context)!.storagePermissionContent),
-            actions: [
-              TextButton(
-                onPressed: () async {
-                  await Permission.manageExternalStorage
-                      .request()
-                      .then((_) => Navigator.pop(context));
-                },
-                child: Text(AppLocalizations.of(context)!.ok),
-              ),
-            ],
-          ),
-        );
-      }
-    });
   }
 
   void switchView() {
