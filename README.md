@@ -20,7 +20,7 @@ Please star⭐ the repo if you like what you see😊.
 
 (or)
 
-[![Download apk](https://img.shields.io/badge/Download-apk-green)](https://github.com/adityar224/FlutterMarkdownEditor/releases/download/1.2.1/MarkdownEditor-android-1.2.1.apk)
+[![Download apk](https://img.shields.io/badge/Download-apk-green)](https://github.com/adeeteya/FlutterMarkdownEditor/releases/download/1.2.1/MarkdownEditor-android-1.2.1.apk)
 
 ## ✨ Features
 
@@ -56,11 +56,11 @@ Please star⭐ the repo if you like what you see😊.
 
 ## 🤓 Author
 
-**[Aditya R](https://github.com/adityar224)**
+**[Aditya R](https://github.com/adeeteya)**
 
 ## 🔖 LICENCE
 Copyright (c) 2023 Aditya R
-[MIT LICENCE](https://github.com/adityar224/FlutterMarkdownEditor/blob/master/LICENSE)
+[MIT LICENCE](https://github.com/adeeteya/FlutterMarkdownEditor/blob/master/LICENSE)
 
 ## 🙏 Attributions
 <a href="https://www.flaticon.com/free-icons/text-editor" title="text editor icons">Text Editor icons created by Freepik - Flaticon</a>
