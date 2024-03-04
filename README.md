@@ -17,6 +17,7 @@ Please star⭐ the repo if you like what you see😊.
 ## 💻 Installation links
 
 [<img alt='Get it on Google Play' src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="250">](https://play.google.com/store/apps/details?id=com.adeeteya.markdown_editor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+[<img alt="Get it on IzzyOnDroid" src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="100">](https://apt.izzysoft.de/fdroid/index/apk/com.adeeteya.markdown_editor)
 
 (or)
 
