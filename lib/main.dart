@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:ui';
 import 'package:file_picker/file_picker.dart';
@@ -5,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'l10n/app_localizations.dart';
@@ -18,7 +18,6 @@ Future<void> main() async {
       statusBarColor: Colors.transparent,
     ),
   );
-  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   runApp(const MarkdownEditorApp());
 }
 
@@ -84,18 +83,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final TextEditingController _inputTextEditingController =
       TextEditingController();
-  static const platform = MethodChannel("Markdown_Editor_Channel");
-  String filePath = "/storage/emulated/0/Download";
-  String fileName = 'Markdown';
-  String inputText = '';
-  bool isVerticalView = true;
-  bool isPreview = false;
+  final _methodChannel = MethodChannel("Markdown_Editor_Channel");
+  String _filePath = "/storage/emulated/0/Download";
+  String _fileName = 'Markdown';
+  bool _isVerticalView = true;
+  bool _isPreview = false;
 
   @override
   void initState() {
-    requestPermissions();
     super.initState();
-    getFileContents();
+    _getFileContents();
   }
 
   @override
@@ -104,32 +101,24 @@ class _HomeState extends State<Home> {
     super.dispose();
   }
 
-  void requestPermissions() async {
-    var status = await Permission.storage.status;
-    if (!status.isGranted) {
-      await Permission.storage.request();
-    }
-  }
-
-  void switchView() {
+  void _switchView() {
     setState(() {
-      isVerticalView = !isVerticalView;
+      _isVerticalView = !_isVerticalView;
     });
   }
 
-  void switchPreview() {
+  void _switchPreview() {
     setState(() {
-      isPreview = !isPreview;
+      _isPreview = !_isPreview;
     });
   }
 
-  void getFileContents() async {
-    await platform.invokeMethod<String>('getFileContent').then((
+  void _getFileContents() async {
+    await _methodChannel.invokeMethod<String>('getFileContent').then((
       fileContent,
     ) async {
       try {
-        inputText = fileContent ?? '';
-        _inputTextEditingController.text = inputText;
+        _inputTextEditingController.text = fileContent ?? '';
         setState(() {});
       } catch (e) {
         if (fileContent == null) {
@@ -157,22 +146,20 @@ class _HomeState extends State<Home> {
     });
   }
 
-  void openFilePicker() async {
+  void _openFilePicker() async {
     try {
       FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['md'],
       );
       if (result != null) {
-        filePath = result.files.single.path ?? "";
-        fileName = filePath.substring(
-          filePath.lastIndexOf("/") + 1,
-          filePath.lastIndexOf("."),
+        _filePath = result.files.single.path ?? "";
+        _fileName = _filePath.substring(
+          _filePath.lastIndexOf("/") + 1,
+          _filePath.lastIndexOf("."),
         );
-        File file = File(filePath);
-        inputText = await file.readAsString();
-        _inputTextEditingController.text = inputText;
-        setState(() {});
+        File file = File(_filePath);
+        _inputTextEditingController.text = await file.readAsString();
       }
     } catch (e) {
       if (mounted) {
@@ -196,8 +183,8 @@ class _HomeState extends State<Home> {
     }
   }
 
-  void clearText() async {
-    if (inputText.isEmpty) {
+  void _clearText() async {
+    if (_inputTextEditingController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
@@ -219,9 +206,6 @@ class _HomeState extends State<Home> {
               ),
               TextButton(
                 onPressed: () {
-                  setState(() {
-                    inputText = "";
-                  });
                   _inputTextEditingController.clear();
                   Navigator.pop(context);
                 },
@@ -233,8 +217,8 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void saveFileDialog() async {
-    if (inputText.isEmpty) {
+  void _saveFile() async {
+    if (_inputTextEditingController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
@@ -242,80 +226,17 @@ class _HomeState extends State<Home> {
       );
       return;
     } else {
-      await showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder:
-            (context) => AlertDialog(
-              title: Text(AppLocalizations.of(context)!.saveFileDialogTitle),
-              content: TextFormField(
-                initialValue: fileName,
-                keyboardType: TextInputType.name,
-                onChanged: (val) {
-                  fileName = val;
-                  if (val.isEmpty) {
-                    fileName = "Markdown";
-                  }
-                },
-                decoration: InputDecoration(
-                  hintText:
-                      AppLocalizations.of(context)!.saveFileDialogHintText,
-                  suffixText: ".md",
-                ),
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  style: TextButton.styleFrom(foregroundColor: Colors.red),
-                  child: Text(AppLocalizations.of(context)!.cancel),
-                ),
-                TextButton(
-                  onPressed: () async {
-                    await saveFile(fileName);
-                    if (context.mounted) {
-                      Navigator.pop(context);
-                    }
-                  },
-                  child: Text(AppLocalizations.of(context)!.save),
-                ),
-              ],
-            ),
+      FilePicker.platform.saveFile(
+        dialogTitle: AppLocalizations.of(context)!.saveFileDialogTitle,
+        fileName: "$_fileName.md",
+        type: FileType.custom,
+        allowedExtensions: ['md'],
+        bytes: utf8.encode(_inputTextEditingController.text),
       );
     }
   }
 
-  Future saveFile(String fileName) async {
-    if (filePath.contains(".md")) {
-      filePath = filePath.substring(0, filePath.lastIndexOf("/"));
-    }
-    File file = File("$filePath/$fileName.md");
-    try {
-      await file.writeAsString(inputText);
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(
-              AppLocalizations.of(context)!.fileSaveSuccess(file.path),
-            ),
-            duration: const Duration(seconds: 5),
-          ),
-        );
-      }
-    } catch (_) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(AppLocalizations.of(context)!.fileSaveError),
-            duration: const Duration(seconds: 5),
-          ),
-        );
-      }
-    }
-  }
-
-  Widget markdownPreviewWidget() {
+  Widget _markdownPreviewWidget() {
     return Card(
       child: SizedBox(
         height: double.infinity,
@@ -326,7 +247,7 @@ class _HomeState extends State<Home> {
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(8),
             child: MarkdownBody(
-              data: inputText,
+              data: _inputTextEditingController.text,
               shrinkWrap: true,
               softLineBreak: true,
               sizedImageBuilder: (imageConfig) {
@@ -352,16 +273,19 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget verticalView() {
+  Widget _verticalView() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(4, 0, 4, 5),
       child: Column(
         children: [
-          Expanded(child: markdownPreviewWidget()),
+          Expanded(child: _markdownPreviewWidget()),
           const SizedBox(height: 5),
           MarkdownTextInput(
-            (String value) => setState(() => inputText = value),
-            inputText,
+            (String value) {
+              _inputTextEditingController.text = value;
+              setState(() {});
+            },
+            _inputTextEditingController.text,
             controller: _inputTextEditingController,
             maxLines: 8,
             label: AppLocalizations.of(context)!.markdownTextInputLabel,
@@ -371,20 +295,23 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget hiddenView() {
+  Widget _hiddenView() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
       child: AnimatedSwitcher(
         duration: const Duration(milliseconds: 300),
         reverseDuration: const Duration(milliseconds: 300),
         child:
-            (isPreview)
-                ? markdownPreviewWidget()
+            (_isPreview)
+                ? _markdownPreviewWidget()
                 : Expanded(
                   child: SingleChildScrollView(
                     child: MarkdownTextInput(
-                      (String value) => setState(() => inputText = value),
-                      inputText,
+                      (String value) {
+                        _inputTextEditingController.text = value;
+                        setState(() {});
+                      },
+                      _inputTextEditingController.text,
                       controller: _inputTextEditingController,
                       label:
                           AppLocalizations.of(context)!.markdownTextInputLabel,
@@ -404,11 +331,13 @@ class _HomeState extends State<Home> {
           elevation: 0,
           title: Text(AppLocalizations.of(context)!.appTitle),
           actions: [
-            if (!isVerticalView)
+            if (!_isVerticalView)
               IconButton(
-                onPressed: switchPreview,
+                onPressed: _switchPreview,
                 tooltip: AppLocalizations.of(context)!.previewToolTip,
-                icon: Icon(isPreview ? Icons.visibility_off : Icons.visibility),
+                icon: Icon(
+                  _isPreview ? Icons.visibility_off : Icons.visibility,
+                ),
               ),
             PopupMenuButton<MenuItem>(
               onSelected: (selectedMenuItem) {
@@ -417,16 +346,16 @@ class _HomeState extends State<Home> {
                     isDarkNotifier.switchTheme();
                     break;
                   case MenuItem.switchView:
-                    switchView();
+                    _switchView();
                     break;
                   case MenuItem.open:
-                    openFilePicker();
+                    _openFilePicker();
                     break;
                   case MenuItem.clear:
-                    clearText();
+                    _clearText();
                     break;
                   case MenuItem.save:
-                    saveFileDialog();
+                    _saveFile();
                     break;
                 }
               },
@@ -494,7 +423,7 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-        body: (isVerticalView) ? verticalView() : hiddenView(),
+        body: (_isVerticalView) ? _verticalView() : _hiddenView(),
       ),
     );
   }
