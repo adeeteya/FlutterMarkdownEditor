@@ -1,6 +1,6 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:markdown_editor/l10n/app_localizations.dart';
+import 'package:markdown_editor/l10n/generated/app_localizations.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/format_markdown.dart';
 
 class MarkdownTextInput extends StatefulWidget {

@@ -5,10 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:markdown_editor/device_preference_notifier.dart';
+import 'package:markdown_editor/l10n/generated/app_localizations.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:markdown_widget/markdown_widget.dart';
-
-import 'l10n/app_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,17 +45,7 @@ class MarkdownEditorApp extends StatelessWidget {
             colorSchemeSeed: Colors.indigo,
           ),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: const [
-            Locale('en'),
-            Locale('ar'),
-            Locale('es'),
-            Locale('fr'),
-            Locale('hi'),
-            Locale('ja'),
-            Locale('pt'),
-            Locale('ru'),
-            Locale('zh'),
-          ],
+          supportedLocales: AppLocalizations.supportedLocales,
           home: Home(devicePreferenceNotifier: devicePreferenceNotifier),
         );
       },

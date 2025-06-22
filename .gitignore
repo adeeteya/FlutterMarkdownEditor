@@ -51,3 +51,4 @@ google_service_account.json
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
+/lib/l10n/generated/

@@ -1,0 +1,113 @@
+{
+  "ar": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ],
+
+  "es": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ],
+
+  "fr": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ],
+
+  "hi": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ],
+
+  "ja": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ],
+
+  "pt": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ],
+
+  "ru": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ],
+
+  "zh": [
+    "enterLinkTextDialogTitle",
+    "bold",
+    "italic",
+    "link",
+    "image",
+    "heading",
+    "code",
+    "bulletList",
+    "quote",
+    "horizontalRule",
+    "strikethrough"
+  ]
+}

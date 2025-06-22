@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:markdown_editor/l10n/app_localizations.dart';
+import 'package:markdown_editor/l10n/generated/app_localizations.dart';
 
 /// Use this class for converting String to [ResultMarkdown]
 class FormatMarkdown {
