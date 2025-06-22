@@ -96,4 +96,37 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get linkDialogLinkTitle => 'लिंक';
+
+  @override
+  String get enterLinkTextDialogTitle => 'Enter Link';
+
+  @override
+  String get bold => 'Bold';
+
+  @override
+  String get italic => 'Italic';
+
+  @override
+  String get link => 'Link';
+
+  @override
+  String get image => 'Image';
+
+  @override
+  String get heading => 'Heading';
+
+  @override
+  String get code => 'Code';
+
+  @override
+  String get bulletList => 'Bullet List';
+
+  @override
+  String get quote => 'Quote';
+
+  @override
+  String get horizontalRule => 'Horizontal Rule';
+
+  @override
+  String get strikethrough => 'Strikethrough';
 }

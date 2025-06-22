@@ -47,7 +47,7 @@ class MarkdownTextInput extends StatefulWidget {
     this.actions = const [
       MarkdownType.bold,
       MarkdownType.italic,
-      MarkdownType.title,
+      MarkdownType.heading,
       MarkdownType.link,
       MarkdownType.list,
       MarkdownType.strikethrough,
@@ -136,56 +136,68 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
   }
 
   Widget _basicInkwell(MarkdownType type, {Function? customOnTap}) {
-    return InkWell(
-      key: Key(type.key),
-      onTap: () => customOnTap != null ? customOnTap() : onTap(type),
-      child: Padding(padding: const EdgeInsets.all(10), child: Icon(type.icon)),
+    return Tooltip(
+      message: type.title(context),
+      child: InkWell(
+        key: Key(type.key),
+        onTap: () => customOnTap != null ? customOnTap() : onTap(type),
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Icon(type.icon),
+        ),
+      ),
     );
   }
 
   Widget actionWidget(MarkdownType type) {
     switch (type) {
-      case MarkdownType.title:
-        return ExpandableNotifier(
-          child: Expandable(
-            key: const Key('H#_button'),
-            collapsed: ExpandableButton(
-              child: const Center(
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    'H#',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+      case MarkdownType.heading:
+        return Tooltip(
+          message: type.title(context),
+          child: ExpandableNotifier(
+            child: Expandable(
+              key: const Key('H#_button'),
+              collapsed: ExpandableButton(
+                child: const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      'H#',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
-            expanded: Container(
-              color: Colors.white10,
-              child: Row(
-                children: [
-                  for (int i = 1; i <= 6; i++)
-                    InkWell(
-                      key: Key('H${i}_button'),
-                      onTap: () => onTap(MarkdownType.title, titleSize: i),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Text(
-                          'H$i',
-                          style: TextStyle(
-                            fontSize: (18 - i).toDouble(),
-                            fontWeight: FontWeight.w700,
+              expanded: Container(
+                color: Colors.white10,
+                child: Row(
+                  children: [
+                    for (int i = 1; i <= 6; i++)
+                      InkWell(
+                        key: Key('H${i}_button'),
+                        onTap: () => onTap(MarkdownType.heading, titleSize: i),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            'H$i',
+                            style: TextStyle(
+                              fontSize: (18 - i).toDouble(),
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
                         ),
                       ),
+                    ExpandableButton(
+                      child: const Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Icon(Icons.close),
+                      ),
                     ),
-                  ExpandableButton(
-                    child: const Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Icon(Icons.close),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -214,11 +226,16 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                       builder: (context) {
                         return AlertDialog(
                           title: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              GestureDetector(
-                                child: const Icon(Icons.close),
-                                onTap: () => Navigator.pop(context),
+                              Text(
+                                AppLocalizations.of(
+                                  context,
+                                )!.enterLinkTextDialogTitle,
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.close),
+                                onPressed: () => Navigator.pop(context),
                               ),
                             ],
                           ),
@@ -287,11 +304,9 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                               ),
                             ],
                           ),
-                          contentPadding: const EdgeInsets.fromLTRB(
-                            24.0,
-                            20.0,
-                            24.0,
-                            0,
+                          contentPadding: const EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 24,
                           ),
                           actions: [
                             TextButton(
@@ -318,7 +333,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
+    return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         border: Border.all(

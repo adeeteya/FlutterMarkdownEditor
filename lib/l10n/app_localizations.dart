@@ -279,6 +279,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Link'**
   String get linkDialogLinkTitle;
+
+  /// Title for the Enter Link Dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Link'**
+  String get enterLinkTextDialogTitle;
+
+  /// Tooltip for the Bold Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Bold'**
+  String get bold;
+
+  /// Tooltip for the Italic Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Italic'**
+  String get italic;
+
+  /// Tooltip for the Link Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Link'**
+  String get link;
+
+  /// Tooltip for the Image Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Image'**
+  String get image;
+
+  /// Tooltip for the Heading Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Heading'**
+  String get heading;
+
+  /// Tooltip for the Code Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Code'**
+  String get code;
+
+  /// Tooltip for the Bullet List Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Bullet List'**
+  String get bulletList;
+
+  /// Tooltip for the Quote Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Quote'**
+  String get quote;
+
+  /// Tooltip for the Horizontal Rule Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Horizontal Rule'**
+  String get horizontalRule;
+
+  /// Tooltip for the Strikethrough Icon Button
+  ///
+  /// In en, this message translates to:
+  /// **'Strikethrough'**
+  String get strikethrough;
 }
 
 class _AppLocalizationsDelegate

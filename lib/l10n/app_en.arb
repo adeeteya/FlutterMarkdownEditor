@@ -106,15 +106,59 @@
     "description": "Fallback Text if any case even altText of te image can't be displayed or isn't provided"
   },
   "example": "example",
-      "@example": {
-        "description": "Hint Text for Input Fields"
-      },
+  "@example": {
+    "description": "Hint Text for Input Fields"
+  },
   "linkDialogTextTitle": "Text",
-    "@linkDialogTextTitle": {
-      "description": "Text Field Title of The Link Dialog Box"
-    },
-    "linkDialogLinkTitle": "Link",
-        "@linkDialogLinkTitle": {
-          "description": "Link Field Title of The Link Dialog Box"
-        }
+  "@linkDialogTextTitle": {
+    "description": "Text Field Title of The Link Dialog Box"
+  },
+  "linkDialogLinkTitle": "Link",
+  "@linkDialogLinkTitle": {
+    "description": "Link Field Title of The Link Dialog Box"
+  },
+  "enterLinkTextDialogTitle": "Enter Link",
+  "@enterLinkTextDialogTitle": {
+    "description": "Title for the Enter Link Dialog"
+  },
+  "bold": "Bold",
+  "@bold": {
+    "description": "Tooltip for the Bold Icon Button"
+  },
+  "italic": "Italic",
+  "@italic": {
+    "description": "Tooltip for the Italic Icon Button"
+  },
+  "link": "Link",
+  "@link": {
+    "description": "Tooltip for the Link Icon Button"
+  },
+  "image": "Image",
+  "@image": {
+    "description": "Tooltip for the Image Icon Button"
+  },
+  "heading": "Heading",
+  "@heading": {
+    "description": "Tooltip for the Heading Icon Button"
+  },
+  "code": "Code",
+  "@code": {
+    "description": "Tooltip for the Code Icon Button"
+  },
+  "bulletList": "Bullet List",
+  "@bulletList": {
+    "description": "Tooltip for the Bullet List Icon Button"
+  },
+  "quote": "Quote",
+  "@quote": {
+    "description": "Tooltip for the Quote Icon Button"
+  },
+  "horizontalRule": "Horizontal Rule",
+  "@horizontalRule": {
+    "description": "Tooltip for the Horizontal Rule Icon Button"
+  },
+  "strikethrough": "Strikethrough",
+  "@strikethrough": {
+    "description": "Tooltip for the Strikethrough Icon Button"
+  }
 }
