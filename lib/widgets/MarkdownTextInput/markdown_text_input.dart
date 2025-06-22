@@ -67,11 +67,11 @@ class MarkdownTextInput extends StatefulWidget {
 
 class _MarkdownTextInputState extends State<MarkdownTextInput> {
   late final TextEditingController _controller;
-  TextSelection textSelection = const TextSelection(
+  TextSelection _textSelection = const TextSelection(
     baseOffset: 0,
     extentOffset: 0,
   );
-  FocusNode focusNode = FocusNode();
+  final FocusNode _focusNode = FocusNode();
 
   void onTap(
     MarkdownType type, {
@@ -79,12 +79,12 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
     String? link,
     String? selectedText,
   }) {
-    final basePosition = textSelection.baseOffset;
+    final basePosition = _textSelection.baseOffset;
     var noTextSelected =
-        (textSelection.baseOffset - textSelection.extentOffset) == 0;
+        (_textSelection.baseOffset - _textSelection.extentOffset) == 0;
 
-    var fromIndex = textSelection.baseOffset;
-    var toIndex = textSelection.extentOffset;
+    var fromIndex = _textSelection.baseOffset;
+    var toIndex = _textSelection.extentOffset;
 
     final result = FormatMarkdown.convertToMarkdown(
       type,
@@ -108,7 +108,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
       _controller.selection = TextSelection.collapsed(
         offset: _controller.selection.end - result.replaceCursorIndex,
       );
-      focusNode.requestFocus();
+      _focusNode.requestFocus();
     }
   }
 
@@ -116,19 +116,22 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
   void initState() {
     _controller = widget.controller ?? TextEditingController();
     _controller.text = widget.initialValue;
-    _controller.addListener(() {
-      if (_controller.selection.baseOffset != -1) {
-        textSelection = _controller.selection;
-      }
-      widget.onTextChanged(_controller.text);
-    });
+    _controller.addListener(_controllerListener);
     super.initState();
+  }
+
+  void _controllerListener() {
+    if (_controller.selection.baseOffset != -1) {
+      _textSelection = _controller.selection;
+    }
+    widget.onTextChanged(_controller.text);
   }
 
   @override
   void dispose() {
+    _controller.removeListener(_controllerListener);
     if (widget.controller == null) _controller.dispose();
-    focusNode.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
@@ -195,8 +198,8 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                   ? null
                   : () async {
                     var text = _controller.text.substring(
-                      textSelection.baseOffset,
-                      textSelection.extentOffset,
+                      _textSelection.baseOffset,
+                      _textSelection.extentOffset,
                     );
 
                     var textController = TextEditingController()..text = text;
@@ -315,7 +318,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         border: Border.all(
@@ -343,7 +346,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
           ),
           const Divider(height: 0),
           TextFormField(
-            focusNode: focusNode,
+            focusNode: _focusNode,
             textInputAction: TextInputAction.newline,
             maxLines: widget.maxLines,
             controller: _controller,

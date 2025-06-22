@@ -75,22 +75,25 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final TextEditingController _inputTextEditingController =
-      TextEditingController();
-  final _methodChannel = MethodChannel("Markdown_Editor_Channel");
+  final _methodChannel = MethodChannel("com.adeeteya.markdown_editor/channel");
   String _filePath = "/storage/emulated/0/Download";
   String _fileName = 'Markdown';
   bool _isPreview = false;
+  bool _isLoading = true;
+  String _inputText = '';
+  final TextEditingController _textEditingController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _getFileContents();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getFileContents();
+    });
   }
 
   @override
   void dispose() {
-    _inputTextEditingController.dispose();
+    _textEditingController.dispose();
     super.dispose();
   }
 
@@ -100,37 +103,40 @@ class _HomeState extends State<Home> {
     });
   }
 
-  void _getFileContents() async {
-    await _methodChannel.invokeMethod<String>('getFileContent').then((
-      fileContent,
-    ) async {
-      try {
-        _inputTextEditingController.text = fileContent ?? '';
-        setState(() {});
-      } catch (e) {
-        if (fileContent == null) {
-          return;
-        }
-        if (mounted) {
-          showDialog(
-            context: context,
-            builder:
-                (context) => AlertDialog(
-                  title: Text(AppLocalizations.of(context)!.error),
-                  content: Text(
-                    AppLocalizations.of(context)!.unableToOpenFileError,
-                  ),
-                  actions: [
-                    TextButton(
-                      onPressed: () => Navigator.pop(context),
-                      child: Text(AppLocalizations.of(context)!.ok),
-                    ),
-                  ],
+  Future<void> _getFileContents() async {
+    try {
+      final fileContent = await _methodChannel.invokeMethod<String>(
+        'getFileContent',
+      );
+
+      _inputText = fileContent ?? '';
+      _textEditingController.text = _inputText;
+      setState(() {});
+    } catch (e) {
+      debugPrint("Error getting file content: $e");
+      if (mounted) {
+        showDialog(
+          context: context,
+          builder:
+              (context) => AlertDialog(
+                title: Text(AppLocalizations.of(context)!.error),
+                content: Text(
+                  AppLocalizations.of(context)!.unableToOpenFileError,
                 ),
-          );
-        }
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: Text(AppLocalizations.of(context)!.ok),
+                  ),
+                ],
+              ),
+        );
       }
-    });
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
   }
 
   void _openFilePicker() async {
@@ -146,7 +152,9 @@ class _HomeState extends State<Home> {
           _filePath.lastIndexOf("."),
         );
         File file = File(_filePath);
-        _inputTextEditingController.text = await file.readAsString();
+        _inputText = await file.readAsString();
+        _textEditingController.text = _inputText;
+        setState(() {});
       }
     } catch (e) {
       if (mounted) {
@@ -171,7 +179,7 @@ class _HomeState extends State<Home> {
   }
 
   void _clearText() async {
-    if (_inputTextEditingController.text.isEmpty) {
+    if (_inputText.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
@@ -193,7 +201,10 @@ class _HomeState extends State<Home> {
               ),
               TextButton(
                 onPressed: () {
-                  _inputTextEditingController.clear();
+                  setState(() {
+                    _inputText = "";
+                    _textEditingController.clear();
+                  });
                   Navigator.pop(context);
                 },
                 style: TextButton.styleFrom(foregroundColor: Colors.red),
@@ -205,7 +216,7 @@ class _HomeState extends State<Home> {
   }
 
   void _saveFile() async {
-    if (_inputTextEditingController.text.isEmpty) {
+    if (_inputText.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
@@ -218,7 +229,7 @@ class _HomeState extends State<Home> {
         fileName: "$_fileName.md",
         type: FileType.custom,
         allowedExtensions: ['md'],
-        bytes: utf8.encode(_inputTextEditingController.text),
+        bytes: utf8.encode(_inputText),
       );
     }
   }
@@ -234,7 +245,7 @@ class _HomeState extends State<Home> {
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(8),
             child: MarkdownBody(
-              data: _inputTextEditingController.text,
+              data: _inputText,
               shrinkWrap: true,
               softLineBreak: true,
               sizedImageBuilder: (imageConfig) {
@@ -269,11 +280,12 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 5),
           MarkdownTextInput(
             (String value) {
-              _inputTextEditingController.text = value;
-              setState(() {});
+              setState(() {
+                _inputText = value;
+              });
             },
-            _inputTextEditingController.text,
-            controller: _inputTextEditingController,
+            _inputText,
+            controller: _textEditingController,
             maxLines: 8,
             label: AppLocalizations.of(context)!.markdownTextInputLabel,
           ),
@@ -283,6 +295,7 @@ class _HomeState extends State<Home> {
   }
 
   Widget _hiddenView() {
+    final size = MediaQuery.sizeOf(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
       child: AnimatedSwitcher(
@@ -291,15 +304,18 @@ class _HomeState extends State<Home> {
         child:
             (_isPreview)
                 ? _markdownPreviewWidget()
-                : Expanded(
+                : SizedBox(
+                  height: size.height,
+                  width: size.width,
                   child: SingleChildScrollView(
                     child: MarkdownTextInput(
                       (String value) {
-                        _inputTextEditingController.text = value;
-                        setState(() {});
+                        setState(() {
+                          _inputText = value;
+                        });
                       },
-                      _inputTextEditingController.text,
-                      controller: _inputTextEditingController,
+                      _inputText,
+                      controller: _textEditingController,
                       label:
                           AppLocalizations.of(context)!.markdownTextInputLabel,
                     ),
@@ -411,7 +427,9 @@ class _HomeState extends State<Home> {
           ],
         ),
         body:
-            (widget.devicePreferenceNotifier.value.isVerticalLayout)
+            _isLoading
+                ? Center(child: CircularProgressIndicator.adaptive())
+                : (widget.devicePreferenceNotifier.value.isVerticalLayout)
                 ? _verticalView()
                 : _hiddenView(),
       ),

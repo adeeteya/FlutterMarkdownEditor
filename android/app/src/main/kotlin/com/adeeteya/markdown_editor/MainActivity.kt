@@ -10,7 +10,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 class MainActivity : FlutterActivity() {
-    private val CHANNEL = "Markdown_Editor_Channel"
+    private val CHANNEL = "com.adeeteya.markdown_editor/channel"
     private var fileContentToSend: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
