@@ -38,12 +38,15 @@
                 <action android:name="android.intent.action.EDIT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.OPENABLE" />
-                <data android:scheme="content" />
-                <data android:scheme="http" />
-                <data android:scheme="file" />
-                <data android:mimeType="text/markdown" />
-                <data android:pathPattern=".*\\.md" />
+                <category android:name="android.intent.category.OPENABLE"/>
+
+                <!-- Markdown MIME type -->
+                <data android:scheme="file" android:pathPattern=".*\\.md" android:mimeType="text/markdown"/>
+                <data android:scheme="content" android:mimeType="text/markdown"/>
+
+                <!-- Add support for text/plain for compatibility -->
+                <data android:scheme="file" android:pathPattern=".*\\.md" android:mimeType="text/plain"/>
+                <data android:scheme="content" android:mimeType="text/plain"/>
             </intent-filter>
 
         </activity>

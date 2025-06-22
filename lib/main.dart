@@ -81,7 +81,7 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with WidgetsBindingObserver {
+class _HomeState extends State<Home> {
   final TextEditingController _inputTextEditingController =
       TextEditingController();
   static const platform = MethodChannel("Markdown_Editor_Channel");
@@ -95,22 +95,13 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
   void initState() {
     requestPermissions();
     super.initState();
-    getOpenFileUrl();
-    WidgetsBinding.instance.addObserver(this);
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed) {
-      getOpenFileUrl();
-    }
+    getFileContents();
   }
 
   @override
   void dispose() {
     _inputTextEditingController.dispose();
     super.dispose();
-    WidgetsBinding.instance.removeObserver(this);
   }
 
   void requestPermissions() async {
@@ -132,24 +123,16 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
     });
   }
 
-  void getOpenFileUrl() async {
-    await platform.invokeMethod("getOpenFileUrl").then((fileUrl) async {
+  void getFileContents() async {
+    await platform.invokeMethod<String>('getFileContent').then((
+      fileContent,
+    ) async {
       try {
-        filePath = fileUrl as String;
-        if (filePath.contains(":")) {
-          filePath = filePath.split(":").last;
-          filePath = "/storage/emulated/0/$filePath";
-          fileName = filePath.substring(
-            filePath.lastIndexOf("/") + 1,
-            filePath.lastIndexOf("."),
-          );
-        }
-        File file = File(filePath);
-        inputText = await file.readAsString();
+        inputText = fileContent ?? '';
         _inputTextEditingController.text = inputText;
         setState(() {});
       } catch (e) {
-        if (fileUrl == null) {
+        if (fileContent == null) {
           return;
         }
         if (mounted) {
