@@ -155,7 +155,7 @@ jobs:
       - name: Upload Windows Release Artifact to GitHub Release
         shell: cmd
         run: |
-          gh release upload ${{ inputs.version_number }} C:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\MarkdownEditor-Windows.exe
+          gh release upload ${{ inputs.version_number }} D:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\MarkdownEditor-Windows.exe
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -195,7 +195,7 @@ jobs:
           cat <<EOF > android/key.properties
           storePassword=${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
           keyPassword=${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
-          keyAlias=release
+          keyAlias=upload
           storeFile=../key.jks
           EOF
         env:
