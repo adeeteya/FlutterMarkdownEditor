@@ -250,7 +250,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget _verticalView() {
+  Widget _splitView() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(4, 0, 4, 5),
       child: Column(
@@ -273,7 +273,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget _hiddenView() {
+  Widget _fullView() {
     final size = MediaQuery.sizeOf(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
@@ -313,7 +313,7 @@ class _HomeState extends State<Home> {
           elevation: 0,
           title: Text(AppLocalizations.of(context)!.appTitle),
           actions: [
-            if (!widget.devicePreferenceNotifier.value.isVerticalLayout)
+            if (!widget.devicePreferenceNotifier.value.isSplitLayout)
               IconButton(
                 onPressed: _switchPreview,
                 tooltip: AppLocalizations.of(context)!.previewToolTip,
@@ -408,9 +408,9 @@ class _HomeState extends State<Home> {
         body:
             _isLoading
                 ? Center(child: CircularProgressIndicator.adaptive())
-                : (widget.devicePreferenceNotifier.value.isVerticalLayout)
-                ? _verticalView()
-                : _hiddenView(),
+                : (widget.devicePreferenceNotifier.value.isSplitLayout)
+                ? _splitView()
+                : _fullView(),
       ),
     );
   }

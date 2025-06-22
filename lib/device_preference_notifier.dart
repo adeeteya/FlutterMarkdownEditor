@@ -1,18 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum _SharedPreferencesKeys { isDarkMode, isVerticalLayout }
+enum _SharedPreferencesKeys { isDarkMode, isSplitLayout }
 
 class DevicePreferences {
   final bool isDarkMode;
-  final bool isVerticalLayout;
+  final bool isSplitLayout;
 
-  DevicePreferences({this.isDarkMode = false, this.isVerticalLayout = false});
+  DevicePreferences({this.isDarkMode = false, this.isSplitLayout = false});
 
-  DevicePreferences copyWith({bool? isDarkMode, bool? isVerticalLayout}) {
+  DevicePreferences copyWith({bool? isDarkMode, bool? isSplitLayout}) {
     return DevicePreferences(
       isDarkMode: isDarkMode ?? this.isDarkMode,
-      isVerticalLayout: isVerticalLayout ?? this.isVerticalLayout,
+      isSplitLayout: isSplitLayout ?? this.isSplitLayout,
     );
   }
 
@@ -20,15 +20,15 @@ class DevicePreferences {
   bool operator ==(Object other) {
     return other is DevicePreferences &&
         other.isDarkMode == isDarkMode &&
-        other.isVerticalLayout == isVerticalLayout;
+        other.isSplitLayout == isSplitLayout;
   }
 
   @override
-  int get hashCode => Object.hash(isDarkMode, isVerticalLayout);
+  int get hashCode => Object.hash(isDarkMode, isSplitLayout);
 
   @override
   String toString() {
-    return 'DevicePreferences(isDarkMode: $isDarkMode, isVerticalLayout: $isVerticalLayout)';
+    return 'DevicePreferences(isDarkMode: $isDarkMode, isSplitLayout: $isSplitLayout)';
   }
 }
 
@@ -43,11 +43,11 @@ class DevicePreferenceNotifier extends ValueNotifier<DevicePreferences> {
     final isDarkMode =
         _prefs.getBool(_SharedPreferencesKeys.isDarkMode.name) ??
         PlatformDispatcher.instance.platformBrightness == Brightness.dark;
-    final isVerticalLayout =
-        _prefs.getBool(_SharedPreferencesKeys.isVerticalLayout.name) ?? true;
+    final isSplitLayout =
+        _prefs.getBool(_SharedPreferencesKeys.isSplitLayout.name) ?? true;
     value = DevicePreferences(
       isDarkMode: isDarkMode,
-      isVerticalLayout: isVerticalLayout,
+      isSplitLayout: isSplitLayout,
     );
     notifyListeners();
   }
@@ -59,10 +59,10 @@ class DevicePreferenceNotifier extends ValueNotifier<DevicePreferences> {
   }
 
   void toggleLayout() {
-    value = value.copyWith(isVerticalLayout: !value.isVerticalLayout);
+    value = value.copyWith(isSplitLayout: !value.isSplitLayout);
     _prefs.setBool(
-      _SharedPreferencesKeys.isVerticalLayout.name,
-      value.isVerticalLayout,
+      _SharedPreferencesKeys.isSplitLayout.name,
+      value.isSplitLayout,
     );
     notifyListeners();
   }
