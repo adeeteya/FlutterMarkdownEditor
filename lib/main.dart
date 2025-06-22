@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:markdown_editor/device_preference_notifier.dart';
@@ -81,6 +82,7 @@ class _HomeState extends State<Home> {
   bool _isLoading = true;
   String _inputText = '';
   final TextEditingController _textEditingController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
@@ -92,6 +94,7 @@ class _HomeState extends State<Home> {
 
   @override
   void dispose() {
+    _scrollController.dispose();
     _textEditingController.dispose();
     super.dispose();
   }
@@ -111,6 +114,8 @@ class _HomeState extends State<Home> {
       _inputText = fileContent ?? '';
       _textEditingController.text = _inputText;
       setState(() {});
+    } on MissingPluginException {
+      debugPrint("Method channel not available on this platform");
     } catch (e) {
       debugPrint("Error getting file content: $e");
       if (mounted) {
@@ -225,7 +230,7 @@ class _HomeState extends State<Home> {
     } else {
       FilePicker.platform.saveFile(
         dialogTitle: AppLocalizations.of(context)!.saveFileDialogTitle,
-        fileName: "$_fileName.md",
+        fileName: (!kIsWeb && Platform.isWindows) ? null : "$_fileName.md",
         type: FileType.custom,
         allowedExtensions: ['md'],
         bytes: utf8.encode(_inputText),
@@ -240,8 +245,10 @@ class _HomeState extends State<Home> {
         width: double.infinity,
         child: Scrollbar(
           interactive: true,
+          controller: _scrollController,
           radius: const Radius.circular(8),
           child: SingleChildScrollView(
+            controller: _scrollController,
             padding: const EdgeInsets.all(8),
             child: MarkdownBlock(data: _inputText),
           ),
