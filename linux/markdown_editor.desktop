@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.4.0
+Name=Markdown Editor
+Comment=Markdown Editor is a lightweight and intuitive app for creating and editing .md files with ease
+Exec=/usr/bin/markdown-editor
+Icon=/usr/share/icons/markdown-editor/markdown-editor.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+StartupWMClass=markdown-editor
