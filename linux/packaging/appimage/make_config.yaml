@@ -1,0 +1,15 @@
+display_name: Markdown Editor
+icon: snap/gui/markdown-editor.png
+
+keywords:
+  - Readme
+  - Text
+  - Markdown
+  - Editor
+  - Utility
+
+generic_name: Markdown Editor
+categories:
+  - Utility
+
+startup_notify: true

@@ -1,0 +1,29 @@
+display_name: Markdown Editor
+package_name: markdown-editor
+maintainer:
+  name: Aditya
+  email: adeeteya@gmail.com
+priority: optional
+section: x11
+installed_size: 9280
+essential: false
+icon: snap/gui/markdown-editor.png
+
+postinstall_scripts:
+  - echo "Thanks for installing Markdown Editor. If you like the app please give it a star on GitHub"
+postuninstall_scripts:
+  - echo "Sorry to see you go. If there are problems in the app please open an issue on GitHub"
+
+keywords:
+  - Readme
+  - Text
+  - Markdown
+  - Editor
+  - Utility
+
+generic_name: Markdown Editor
+
+categories:
+  - Utility
+
+startup_notify: true

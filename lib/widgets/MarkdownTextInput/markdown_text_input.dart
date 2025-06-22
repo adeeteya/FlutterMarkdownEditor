@@ -1,6 +1,6 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:markdown_editor/l10n/app_localizations.dart';
+import 'package:markdown_editor/l10n/generated/app_localizations.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/format_markdown.dart';
 
 class MarkdownTextInput extends StatefulWidget {
@@ -47,7 +47,7 @@ class MarkdownTextInput extends StatefulWidget {
     this.actions = const [
       MarkdownType.bold,
       MarkdownType.italic,
-      MarkdownType.title,
+      MarkdownType.heading,
       MarkdownType.link,
       MarkdownType.list,
       MarkdownType.strikethrough,
@@ -67,11 +67,11 @@ class MarkdownTextInput extends StatefulWidget {
 
 class _MarkdownTextInputState extends State<MarkdownTextInput> {
   late final TextEditingController _controller;
-  TextSelection textSelection = const TextSelection(
+  TextSelection _textSelection = const TextSelection(
     baseOffset: 0,
     extentOffset: 0,
   );
-  FocusNode focusNode = FocusNode();
+  final FocusNode _focusNode = FocusNode();
 
   void onTap(
     MarkdownType type, {
@@ -79,12 +79,12 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
     String? link,
     String? selectedText,
   }) {
-    final basePosition = textSelection.baseOffset;
-    var noTextSelected =
-        (textSelection.baseOffset - textSelection.extentOffset) == 0;
+    final basePosition = _textSelection.baseOffset;
+    final noTextSelected =
+        (_textSelection.baseOffset - _textSelection.extentOffset) == 0;
 
-    var fromIndex = textSelection.baseOffset;
-    var toIndex = textSelection.extentOffset;
+    final fromIndex = _textSelection.baseOffset;
+    final toIndex = _textSelection.extentOffset;
 
     final result = FormatMarkdown.convertToMarkdown(
       type,
@@ -108,7 +108,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
       _controller.selection = TextSelection.collapsed(
         offset: _controller.selection.end - result.replaceCursorIndex,
       );
-      focusNode.requestFocus();
+      _focusNode.requestFocus();
     }
   }
 
@@ -116,73 +116,88 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
   void initState() {
     _controller = widget.controller ?? TextEditingController();
     _controller.text = widget.initialValue;
-    _controller.addListener(() {
-      if (_controller.selection.baseOffset != -1) {
-        textSelection = _controller.selection;
-      }
-      widget.onTextChanged(_controller.text);
-    });
+    _controller.addListener(_controllerListener);
     super.initState();
+  }
+
+  void _controllerListener() {
+    if (_controller.selection.baseOffset != -1) {
+      _textSelection = _controller.selection;
+    }
+    widget.onTextChanged(_controller.text);
   }
 
   @override
   void dispose() {
+    _controller.removeListener(_controllerListener);
     if (widget.controller == null) _controller.dispose();
-    focusNode.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
   Widget _basicInkwell(MarkdownType type, {Function? customOnTap}) {
-    return InkWell(
-      key: Key(type.key),
-      onTap: () => customOnTap != null ? customOnTap() : onTap(type),
-      child: Padding(padding: const EdgeInsets.all(10), child: Icon(type.icon)),
+    return Tooltip(
+      message: type.title(context),
+      child: InkWell(
+        key: Key(type.key),
+        onTap: () => customOnTap != null ? customOnTap() : onTap(type),
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Icon(type.icon),
+        ),
+      ),
     );
   }
 
   Widget actionWidget(MarkdownType type) {
     switch (type) {
-      case MarkdownType.title:
-        return ExpandableNotifier(
-          child: Expandable(
-            key: const Key('H#_button'),
-            collapsed: ExpandableButton(
-              child: const Center(
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    'H#',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+      case MarkdownType.heading:
+        return Tooltip(
+          message: type.title(context),
+          child: ExpandableNotifier(
+            child: Expandable(
+              key: const Key('H#_button'),
+              collapsed: ExpandableButton(
+                child: const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(
+                      'H#',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
-            expanded: Container(
-              color: Colors.white10,
-              child: Row(
-                children: [
-                  for (int i = 1; i <= 6; i++)
-                    InkWell(
-                      key: Key('H${i}_button'),
-                      onTap: () => onTap(MarkdownType.title, titleSize: i),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Text(
-                          'H$i',
-                          style: TextStyle(
-                            fontSize: (18 - i).toDouble(),
-                            fontWeight: FontWeight.w700,
+              expanded: ColoredBox(
+                color: Colors.white10,
+                child: Row(
+                  children: [
+                    for (int i = 1; i <= 6; i++)
+                      InkWell(
+                        key: Key('H${i}_button'),
+                        onTap: () => onTap(MarkdownType.heading, titleSize: i),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            'H$i',
+                            style: TextStyle(
+                              fontSize: (18 - i).toDouble(),
+                              fontWeight: FontWeight.w700,
+                            ),
                           ),
                         ),
                       ),
+                    ExpandableButton(
+                      child: const Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Icon(Icons.close),
+                      ),
                     ),
-                  ExpandableButton(
-                    child: const Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Icon(Icons.close),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -194,28 +209,33 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
               !widget.insertLinksByDialog
                   ? null
                   : () async {
-                    var text = _controller.text.substring(
-                      textSelection.baseOffset,
-                      textSelection.extentOffset,
+                    final text = _controller.text.substring(
+                      _textSelection.baseOffset,
+                      _textSelection.extentOffset,
                     );
 
-                    var textController = TextEditingController()..text = text;
-                    var linkController = TextEditingController();
-                    var textFocus = FocusNode();
-                    var linkFocus = FocusNode();
+                    final textController = TextEditingController()..text = text;
+                    final linkController = TextEditingController();
+                    final textFocus = FocusNode();
+                    final linkFocus = FocusNode();
 
-                    var color = Theme.of(context).colorScheme.secondary;
+                    final color = Theme.of(context).colorScheme.secondary;
 
                     await showDialog<void>(
                       context: context,
                       builder: (context) {
                         return AlertDialog(
                           title: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              GestureDetector(
-                                child: const Icon(Icons.close),
-                                onTap: () => Navigator.pop(context),
+                              Text(
+                                AppLocalizations.of(
+                                  context,
+                                )!.enterLinkTextDialogTitle,
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.close),
+                                onPressed: () => Navigator.pop(context),
                               ),
                             ],
                           ),
@@ -284,11 +304,9 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                               ),
                             ],
                           ),
-                          contentPadding: const EdgeInsets.fromLTRB(
-                            24.0,
-                            20.0,
-                            24.0,
-                            0,
+                          contentPadding: const EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 24,
                           ),
                           actions: [
                             TextButton(
@@ -315,6 +333,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: use_decorated_box
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
@@ -336,14 +355,13 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
               ),
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children:
-                    widget.actions.map((type) => actionWidget(type)).toList(),
+                children: widget.actions.map(actionWidget).toList(),
               ),
             ),
           ),
           const Divider(height: 0),
           TextFormField(
-            focusNode: focusNode,
+            focusNode: _focusNode,
             textInputAction: TextInputAction.newline,
             maxLines: widget.maxLines,
             controller: _controller,

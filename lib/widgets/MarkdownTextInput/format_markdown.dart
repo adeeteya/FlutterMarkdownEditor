@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:markdown_editor/l10n/generated/app_localizations.dart';
 
 /// Use this class for converting String to [ResultMarkdown]
 class FormatMarkdown {
@@ -8,68 +9,77 @@ class FormatMarkdown {
   /// [titleSize] is used for markdown titles
   /// [link] is used for link conversion type
   static ResultMarkdown convertToMarkdown(
-      MarkdownType type, String data, int fromIndex, int toIndex,
-      {int titleSize = 1, String? link, String selectedText = ''}) {
+    MarkdownType type,
+    String data,
+    int fromIndex,
+    int toIndex, {
+    int titleSize = 1,
+    String? link,
+    String selectedText = '',
+  }) {
     late String changedData;
     late int replaceCursorIndex;
 
     final lesserIndex = min(fromIndex, toIndex);
     final greaterIndex = max(fromIndex, toIndex);
 
-    fromIndex = lesserIndex;
-    toIndex = greaterIndex;
-
     switch (type) {
       case MarkdownType.bold:
-        changedData = '**${data.substring(fromIndex, toIndex)}**';
+        changedData = '**${data.substring(lesserIndex, greaterIndex)}**';
         replaceCursorIndex = 2;
         break;
       case MarkdownType.italic:
-        changedData = '_${data.substring(fromIndex, toIndex)}_';
+        changedData = '_${data.substring(lesserIndex, greaterIndex)}_';
         replaceCursorIndex = 1;
         break;
       case MarkdownType.strikethrough:
-        changedData = '~~${data.substring(fromIndex, toIndex)}~~';
+        changedData = '~~${data.substring(lesserIndex, greaterIndex)}~~';
         replaceCursorIndex = 2;
         break;
       case MarkdownType.link:
         changedData = '[$selectedText](${link ?? selectedText})';
         replaceCursorIndex = 0;
         break;
-      case MarkdownType.title:
+      case MarkdownType.heading:
         changedData =
-            "${"#" * titleSize} ${data.substring(fromIndex, toIndex)}";
+            "${"#" * titleSize} ${data.substring(lesserIndex, greaterIndex)}";
         replaceCursorIndex = 0;
         break;
       case MarkdownType.list:
         var index = 0;
-        final splitedData = data.substring(fromIndex, toIndex).split('\n');
-        changedData = splitedData.map((value) {
-          index++;
-          return index == splitedData.length ? '* $value' : '* $value\n';
-        }).join();
+        final splitedData = data
+            .substring(lesserIndex, greaterIndex)
+            .split('\n');
+        changedData =
+            splitedData.map((value) {
+              index++;
+              return index == splitedData.length ? '* $value' : '* $value\n';
+            }).join();
         replaceCursorIndex = 0;
         break;
       case MarkdownType.code:
-        changedData = '```${data.substring(fromIndex, toIndex)}```';
+        changedData = '```${data.substring(lesserIndex, greaterIndex)}```';
         replaceCursorIndex = 3;
         break;
       case MarkdownType.blockquote:
         var index = 0;
-        final splitedData = data.substring(fromIndex, toIndex).split('\n');
-        changedData = splitedData.map((value) {
-          index++;
-          return index == splitedData.length ? '> $value' : '> $value\n';
-        }).join();
+        final splitedData = data
+            .substring(lesserIndex, greaterIndex)
+            .split('\n');
+        changedData =
+            splitedData.map((value) {
+              index++;
+              return index == splitedData.length ? '> $value' : '> $value\n';
+            }).join();
         replaceCursorIndex = 0;
         break;
       case MarkdownType.separator:
-        changedData = '\n------\n${data.substring(fromIndex, toIndex)}';
+        changedData = '\n------\n${data.substring(lesserIndex, greaterIndex)}';
         replaceCursorIndex = 0;
         break;
       case MarkdownType.image:
         changedData =
-            '![${data.substring(fromIndex, toIndex)}](${data.substring(fromIndex, toIndex)})';
+            '![${data.substring(lesserIndex, greaterIndex)}](${data.substring(lesserIndex, greaterIndex)})';
         replaceCursorIndex = 3;
         break;
     }
@@ -77,11 +87,12 @@ class FormatMarkdown {
     final cursorIndex = changedData.length;
 
     return ResultMarkdown(
-        data.substring(0, fromIndex) +
-            changedData +
-            data.substring(toIndex, data.length),
-        cursorIndex,
-        replaceCursorIndex);
+      data.substring(0, lesserIndex) +
+          changedData +
+          data.substring(greaterIndex, data.length),
+      cursorIndex,
+      replaceCursorIndex,
+    );
   }
 }
 
@@ -114,8 +125,8 @@ enum MarkdownType {
   /// For [link](https://flutter.dev)
   link,
 
-  /// For # Title or ## Title or ### Title
-  title,
+  /// For # Heading or ## Heading or ### Heading
+  heading,
 
   /// For :
   ///   * Item 1
@@ -136,11 +147,33 @@ enum MarkdownType {
   separator,
 
   /// For ![Alt text](link)
-  image,
-}
+  image;
 
-/// Add data to [MarkdownType] enum
-extension MarkownTypeExtension on MarkdownType {
+  String title(BuildContext context) {
+    switch (this) {
+      case MarkdownType.bold:
+        return AppLocalizations.of(context)!.bold;
+      case MarkdownType.italic:
+        return AppLocalizations.of(context)!.italic;
+      case MarkdownType.strikethrough:
+        return AppLocalizations.of(context)!.strikethrough;
+      case MarkdownType.link:
+        return AppLocalizations.of(context)!.link;
+      case MarkdownType.heading:
+        return AppLocalizations.of(context)!.heading;
+      case MarkdownType.list:
+        return AppLocalizations.of(context)!.bulletList;
+      case MarkdownType.code:
+        return AppLocalizations.of(context)!.code;
+      case MarkdownType.blockquote:
+        return AppLocalizations.of(context)!.quote;
+      case MarkdownType.separator:
+        return AppLocalizations.of(context)!.horizontalRule;
+      case MarkdownType.image:
+        return AppLocalizations.of(context)!.image;
+    }
+  }
+
   /// Get String used in widget's key
   String get key {
     switch (this) {
@@ -152,7 +185,7 @@ extension MarkownTypeExtension on MarkdownType {
         return 'strikethrough_button';
       case MarkdownType.link:
         return 'link_button';
-      case MarkdownType.title:
+      case MarkdownType.heading:
         return 'H#_button';
       case MarkdownType.list:
         return 'list_button';
@@ -178,7 +211,7 @@ extension MarkownTypeExtension on MarkdownType {
         return Icons.format_strikethrough;
       case MarkdownType.link:
         return Icons.link;
-      case MarkdownType.title:
+      case MarkdownType.heading:
         return Icons.text_fields;
       case MarkdownType.list:
         return Icons.list;
