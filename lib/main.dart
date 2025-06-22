@@ -7,7 +7,8 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'l10n/app_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +32,8 @@ class ThemeNotifier extends ValueNotifier<bool> {
 }
 
 ThemeNotifier isDarkNotifier = ThemeNotifier(
-    PlatformDispatcher.instance.platformBrightness == Brightness.dark);
+  PlatformDispatcher.instance.platformBrightness == Brightness.dark,
+);
 
 class MarkdownEditorApp extends StatelessWidget {
   const MarkdownEditorApp({super.key});
@@ -45,10 +47,7 @@ class MarkdownEditorApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Markdown Editor',
           themeMode: isDarkTheme ? ThemeMode.dark : ThemeMode.light,
-          theme: ThemeData(
-            useMaterial3: true,
-            colorSchemeSeed: Colors.indigo,
-          ),
+          theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
           darkTheme: ThemeData(
             useMaterial3: true,
             brightness: Brightness.dark,
@@ -73,13 +72,7 @@ class MarkdownEditorApp extends StatelessWidget {
   }
 }
 
-enum MenuItem {
-  switchTheme,
-  switchView,
-  open,
-  clear,
-  save,
-}
+enum MenuItem { switchTheme, switchView, open, clear, save }
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -147,7 +140,9 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
           filePath = filePath.split(":").last;
           filePath = "/storage/emulated/0/$filePath";
           fileName = filePath.substring(
-              filePath.lastIndexOf("/") + 1, filePath.lastIndexOf("."));
+            filePath.lastIndexOf("/") + 1,
+            filePath.lastIndexOf("."),
+          );
         }
         File file = File(filePath);
         inputText = await file.readAsString();
@@ -157,19 +152,24 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
         if (fileUrl == null) {
           return;
         }
-        showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-            title: Text(AppLocalizations.of(context)!.error),
-            content: Text(AppLocalizations.of(context)!.unableToOpenFileError),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: Text(AppLocalizations.of(context)!.ok),
-              )
-            ],
-          ),
-        );
+        if (mounted) {
+          showDialog(
+            context: context,
+            builder:
+                (context) => AlertDialog(
+                  title: Text(AppLocalizations.of(context)!.error),
+                  content: Text(
+                    AppLocalizations.of(context)!.unableToOpenFileError,
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: Text(AppLocalizations.of(context)!.ok),
+                    ),
+                  ],
+                ),
+          );
+        }
       }
     });
   }
@@ -183,105 +183,122 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
       if (result != null) {
         filePath = result.files.single.path ?? "";
         fileName = filePath.substring(
-            filePath.lastIndexOf("/") + 1, filePath.lastIndexOf("."));
+          filePath.lastIndexOf("/") + 1,
+          filePath.lastIndexOf("."),
+        );
         File file = File(filePath);
         inputText = await file.readAsString();
         _inputTextEditingController.text = inputText;
         setState(() {});
       }
     } catch (e) {
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text(AppLocalizations.of(context)!.error),
-          content:
-              Text(AppLocalizations.of(context)!.unableToOpenFileFromMenuError),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text(AppLocalizations.of(context)!.ok),
-            )
-          ],
-        ),
-      );
+      if (mounted) {
+        showDialog(
+          context: context,
+          builder:
+              (context) => AlertDialog(
+                title: Text(AppLocalizations.of(context)!.error),
+                content: Text(
+                  AppLocalizations.of(context)!.unableToOpenFileFromMenuError,
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: Text(AppLocalizations.of(context)!.ok),
+                  ),
+                ],
+              ),
+        );
+      }
     }
   }
 
   void clearText() async {
     if (inputText.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text(AppLocalizations.of(context)!.emptyInputTextContent)));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
+        ),
+      );
       return;
     }
     FocusScope.of(context).unfocus();
     await showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text(AppLocalizations.of(context)!.clearAllTitle),
-        content: Text(AppLocalizations.of(context)!.clearAllContent),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(AppLocalizations.of(context)!.cancel),
+      builder:
+          (context) => AlertDialog(
+            title: Text(AppLocalizations.of(context)!.clearAllTitle),
+            content: Text(AppLocalizations.of(context)!.clearAllContent),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(AppLocalizations.of(context)!.cancel),
+              ),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    inputText = "";
+                  });
+                  _inputTextEditingController.clear();
+                  Navigator.pop(context);
+                },
+                style: TextButton.styleFrom(foregroundColor: Colors.red),
+                child: Text(AppLocalizations.of(context)!.yes),
+              ),
+            ],
           ),
-          TextButton(
-            onPressed: () {
-              setState(() {
-                inputText = "";
-              });
-              _inputTextEditingController.clear();
-              Navigator.pop(context);
-            },
-            style: TextButton.styleFrom(foregroundColor: Colors.red),
-            child: Text(AppLocalizations.of(context)!.yes),
-          ),
-        ],
-      ),
     );
   }
 
   void saveFileDialog() async {
     if (inputText.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text(AppLocalizations.of(context)!.emptyInputTextContent)));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
+        ),
+      );
       return;
     } else {
       await showDialog(
         context: context,
         barrierDismissible: false,
-        builder: (context) => AlertDialog(
-          title: Text(AppLocalizations.of(context)!.saveFileDialogTitle),
-          content: TextFormField(
-            initialValue: fileName,
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              fileName = val;
-              if (val.isEmpty) {
-                fileName = "Markdown";
-              }
-            },
-            decoration: InputDecoration(
-              hintText: AppLocalizations.of(context)!.saveFileDialogHintText,
-              suffixText: ".md",
+        builder:
+            (context) => AlertDialog(
+              title: Text(AppLocalizations.of(context)!.saveFileDialogTitle),
+              content: TextFormField(
+                initialValue: fileName,
+                keyboardType: TextInputType.name,
+                onChanged: (val) {
+                  fileName = val;
+                  if (val.isEmpty) {
+                    fileName = "Markdown";
+                  }
+                },
+                decoration: InputDecoration(
+                  hintText:
+                      AppLocalizations.of(context)!.saveFileDialogHintText,
+                  suffixText: ".md",
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  style: TextButton.styleFrom(foregroundColor: Colors.red),
+                  child: Text(AppLocalizations.of(context)!.cancel),
+                ),
+                TextButton(
+                  onPressed: () async {
+                    await saveFile(fileName);
+                    if (context.mounted) {
+                      Navigator.pop(context);
+                    }
+                  },
+                  child: Text(AppLocalizations.of(context)!.save),
+                ),
+              ],
             ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: TextButton.styleFrom(foregroundColor: Colors.red),
-              child: Text(AppLocalizations.of(context)!.cancel),
-            ),
-            TextButton(
-              onPressed: () async {
-                await saveFile(fileName)
-                    .then((value) => Navigator.pop(context));
-              },
-              child: Text(AppLocalizations.of(context)!.save),
-            ),
-          ],
-        ),
       );
     }
   }
@@ -292,22 +309,26 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
     }
     File file = File("$filePath/$fileName.md");
     try {
-      await file.writeAsString(inputText).then(
-            (value) => ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text(
-                    AppLocalizations.of(context)!.fileSaveSuccess(file.path)),
-                duration: const Duration(seconds: 5),
-              ),
+      await file.writeAsString(inputText);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              AppLocalizations.of(context)!.fileSaveSuccess(file.path),
             ),
-          );
+            duration: const Duration(seconds: 5),
+          ),
+        );
+      }
     } catch (_) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(AppLocalizations.of(context)!.fileSaveError),
-          duration: const Duration(seconds: 5),
-        ),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(AppLocalizations.of(context)!.fileSaveError),
+            duration: const Duration(seconds: 5),
+          ),
+        );
+      }
     }
   }
 
@@ -325,13 +346,16 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
               data: inputText,
               shrinkWrap: true,
               softLineBreak: true,
-              imageBuilder: (imageUri, _, alternateText) {
+              sizedImageBuilder: (imageConfig) {
                 return Image.network(
-                  imageUri.toString(),
-                  errorBuilder: (_, __, ___) {
-                    return Text(alternateText ??
-                        AppLocalizations.of(context)!
-                            .imageAlternateTextFallback);
+                  imageConfig.uri.toString(),
+                  errorBuilder: (_, _, _) {
+                    return Text(
+                      imageConfig.alt ??
+                          AppLocalizations.of(
+                            context,
+                          )!.imageAlternateTextFallback,
+                    );
                   },
                 );
               },
@@ -350,9 +374,7 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
       padding: const EdgeInsets.fromLTRB(4, 0, 4, 5),
       child: Column(
         children: [
-          Expanded(
-            child: markdownPreviewWidget(),
-          ),
+          Expanded(child: markdownPreviewWidget()),
           const SizedBox(height: 5),
           MarkdownTextInput(
             (String value) => setState(() => inputText = value),
@@ -372,14 +394,20 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
       child: AnimatedSwitcher(
         duration: const Duration(milliseconds: 300),
         reverseDuration: const Duration(milliseconds: 300),
-        child: (isPreview)
-            ? markdownPreviewWidget()
-            : MarkdownTextInput(
-                (String value) => setState(() => inputText = value),
-                inputText,
-                controller: _inputTextEditingController,
-                label: AppLocalizations.of(context)!.markdownTextInputLabel,
-              ),
+        child:
+            (isPreview)
+                ? markdownPreviewWidget()
+                : Expanded(
+                  child: SingleChildScrollView(
+                    child: MarkdownTextInput(
+                      (String value) => setState(() => inputText = value),
+                      inputText,
+                      controller: _inputTextEditingController,
+                      label:
+                          AppLocalizations.of(context)!.markdownTextInputLabel,
+                    ),
+                  ),
+                ),
       ),
     );
   }
@@ -419,60 +447,67 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                     break;
                 }
               },
-              itemBuilder: (context) => [
-                PopupMenuItem(
-                  value: MenuItem.switchTheme,
-                  child: Row(
-                    children: [
-                      Icon(isDarkNotifier.value
-                          ? Icons.dark_mode
-                          : Icons.light_mode),
-                      const SizedBox(width: 8),
-                      Text(AppLocalizations.of(context)!.switchThemeMenuItem),
-                    ],
-                  ),
-                ),
-                PopupMenuItem(
-                  value: MenuItem.switchView,
-                  child: Row(
-                    children: [
-                      const Icon(Icons.rotate_left),
-                      const SizedBox(width: 8),
-                      Text(AppLocalizations.of(context)!.switchViewMenuItem),
-                    ],
-                  ),
-                ),
-                PopupMenuItem(
-                  value: MenuItem.open,
-                  child: Row(
-                    children: [
-                      const Icon(Icons.file_open),
-                      const SizedBox(width: 8),
-                      Text(AppLocalizations.of(context)!.openFileMenuItem),
-                    ],
-                  ),
-                ),
-                PopupMenuItem(
-                  value: MenuItem.clear,
-                  child: Row(
-                    children: [
-                      const Icon(Icons.clear_all),
-                      const SizedBox(width: 8),
-                      Text(AppLocalizations.of(context)!.clear),
-                    ],
-                  ),
-                ),
-                PopupMenuItem(
-                  value: MenuItem.save,
-                  child: Row(
-                    children: [
-                      const Icon(Icons.save),
-                      const SizedBox(width: 8),
-                      Text(AppLocalizations.of(context)!.save),
-                    ],
-                  ),
-                ),
-              ],
+              itemBuilder:
+                  (context) => [
+                    PopupMenuItem(
+                      value: MenuItem.switchTheme,
+                      child: Row(
+                        children: [
+                          Icon(
+                            isDarkNotifier.value
+                                ? Icons.dark_mode
+                                : Icons.light_mode,
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            AppLocalizations.of(context)!.switchThemeMenuItem,
+                          ),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: MenuItem.switchView,
+                      child: Row(
+                        children: [
+                          const Icon(Icons.rotate_left),
+                          const SizedBox(width: 8),
+                          Text(
+                            AppLocalizations.of(context)!.switchViewMenuItem,
+                          ),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: MenuItem.open,
+                      child: Row(
+                        children: [
+                          const Icon(Icons.file_open),
+                          const SizedBox(width: 8),
+                          Text(AppLocalizations.of(context)!.openFileMenuItem),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: MenuItem.clear,
+                      child: Row(
+                        children: [
+                          const Icon(Icons.clear_all),
+                          const SizedBox(width: 8),
+                          Text(AppLocalizations.of(context)!.clear),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: MenuItem.save,
+                      child: Row(
+                        children: [
+                          const Icon(Icons.save),
+                          const SizedBox(width: 8),
+                          Text(AppLocalizations.of(context)!.save),
+                        ],
+                      ),
+                    ),
+                  ],
             ),
           ],
         ),

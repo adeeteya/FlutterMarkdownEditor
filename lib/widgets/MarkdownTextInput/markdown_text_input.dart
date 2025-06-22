@@ -1,6 +1,6 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:markdown_editor/l10n/app_localizations.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/format_markdown.dart';
 
 class MarkdownTextInput extends StatefulWidget {
@@ -54,7 +54,7 @@ class MarkdownTextInput extends StatefulWidget {
       MarkdownType.code,
       MarkdownType.blockquote,
       MarkdownType.separator,
-      MarkdownType.image
+      MarkdownType.image,
     ],
     this.textStyle,
     this.controller,
@@ -67,12 +67,18 @@ class MarkdownTextInput extends StatefulWidget {
 
 class _MarkdownTextInputState extends State<MarkdownTextInput> {
   late final TextEditingController _controller;
-  TextSelection textSelection =
-      const TextSelection(baseOffset: 0, extentOffset: 0);
+  TextSelection textSelection = const TextSelection(
+    baseOffset: 0,
+    extentOffset: 0,
+  );
   FocusNode focusNode = FocusNode();
 
-  void onTap(MarkdownType type,
-      {int titleSize = 1, String? link, String? selectedText}) {
+  void onTap(
+    MarkdownType type, {
+    int titleSize = 1,
+    String? link,
+    String? selectedText,
+  }) {
     final basePosition = textSelection.baseOffset;
     var noTextSelected =
         (textSelection.baseOffset - textSelection.extentOffset) == 0;
@@ -81,20 +87,27 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
     var toIndex = textSelection.extentOffset;
 
     final result = FormatMarkdown.convertToMarkdown(
-        type, _controller.text, fromIndex, toIndex,
-        titleSize: titleSize,
-        link: link,
-        selectedText:
-            selectedText ?? _controller.text.substring(fromIndex, toIndex));
+      type,
+      _controller.text,
+      fromIndex,
+      toIndex,
+      titleSize: titleSize,
+      link: link,
+      selectedText:
+          selectedText ?? _controller.text.substring(fromIndex, toIndex),
+    );
 
     _controller.value = _controller.value.copyWith(
-        text: result.data,
-        selection:
-            TextSelection.collapsed(offset: basePosition + result.cursorIndex));
+      text: result.data,
+      selection: TextSelection.collapsed(
+        offset: basePosition + result.cursorIndex,
+      ),
+    );
 
     if (noTextSelected) {
       _controller.selection = TextSelection.collapsed(
-          offset: _controller.selection.end - result.replaceCursorIndex);
+        offset: _controller.selection.end - result.replaceCursorIndex,
+      );
       focusNode.requestFocus();
     }
   }
@@ -123,10 +136,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
     return InkWell(
       key: Key(type.key),
       onTap: () => customOnTap != null ? customOnTap() : onTap(type),
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Icon(type.icon),
-      ),
+      child: Padding(padding: const EdgeInsets.all(10), child: Icon(type.icon)),
     );
   }
 
@@ -160,17 +170,16 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                         child: Text(
                           'H$i',
                           style: TextStyle(
-                              fontSize: (18 - i).toDouble(),
-                              fontWeight: FontWeight.w700),
+                            fontSize: (18 - i).toDouble(),
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
                     ),
                   ExpandableButton(
                     child: const Padding(
                       padding: EdgeInsets.all(10),
-                      child: Icon(
-                        Icons.close,
-                      ),
+                      child: Icon(Icons.close),
                     ),
                   ),
                 ],
@@ -181,95 +190,123 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
       case MarkdownType.link:
         return _basicInkwell(
           type,
-          customOnTap: !widget.insertLinksByDialog
-              ? null
-              : () async {
-                  var text = _controller.text.substring(
-                      textSelection.baseOffset, textSelection.extentOffset);
+          customOnTap:
+              !widget.insertLinksByDialog
+                  ? null
+                  : () async {
+                    var text = _controller.text.substring(
+                      textSelection.baseOffset,
+                      textSelection.extentOffset,
+                    );
 
-                  var textController = TextEditingController()..text = text;
-                  var linkController = TextEditingController();
-                  var textFocus = FocusNode();
-                  var linkFocus = FocusNode();
+                    var textController = TextEditingController()..text = text;
+                    var linkController = TextEditingController();
+                    var textFocus = FocusNode();
+                    var linkFocus = FocusNode();
 
-                  var color = Theme.of(context).colorScheme.secondary;
+                    var color = Theme.of(context).colorScheme.secondary;
 
-                  await showDialog<void>(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            GestureDetector(
+                    await showDialog<void>(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              GestureDetector(
                                 child: const Icon(Icons.close),
-                                onTap: () => Navigator.pop(context))
-                          ],
-                        ),
-                        content: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            TextField(
-                              controller: textController,
-                              decoration: InputDecoration(
-                                hintText: 'example',
-                                label: Text(AppLocalizations.of(context)!
-                                    .linkDialogTextTitle),
-                                labelStyle: TextStyle(color: color),
-                                focusedBorder: OutlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: color, width: 2)),
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: color, width: 2)),
+                                onTap: () => Navigator.pop(context),
                               ),
-                              autofocus: text.isEmpty,
-                              focusNode: textFocus,
-                              textInputAction: TextInputAction.next,
-                              onSubmitted: (value) {
-                                textFocus.unfocus();
-                                FocusScope.of(context).requestFocus(linkFocus);
-                              },
-                            ),
-                            const SizedBox(height: 10),
-                            TextField(
-                              controller: linkController,
-                              decoration: InputDecoration(
-                                hintText: 'https://www.example.com',
-                                label: Text(AppLocalizations.of(context)!
-                                    .linkDialogLinkTitle),
-                                labelStyle: TextStyle(color: color),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: color, width: 2),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide:
-                                      BorderSide(color: color, width: 2),
-                                ),
-                              ),
-                              autofocus: text.isNotEmpty,
-                              focusNode: linkFocus,
-                            ),
-                          ],
-                        ),
-                        contentPadding:
-                            const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              onTap(type,
-                                  link: linkController.text,
-                                  selectedText: textController.text);
-                              Navigator.pop(context);
-                            },
-                            child: Text(AppLocalizations.of(context)!.ok),
+                            ],
                           ),
-                        ],
-                      );
-                    },
-                  );
-                },
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              TextField(
+                                controller: textController,
+                                decoration: InputDecoration(
+                                  hintText: 'example',
+                                  label: Text(
+                                    AppLocalizations.of(
+                                      context,
+                                    )!.linkDialogTextTitle,
+                                  ),
+                                  labelStyle: TextStyle(color: color),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: color,
+                                      width: 2,
+                                    ),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: color,
+                                      width: 2,
+                                    ),
+                                  ),
+                                ),
+                                autofocus: text.isEmpty,
+                                focusNode: textFocus,
+                                textInputAction: TextInputAction.next,
+                                onSubmitted: (value) {
+                                  textFocus.unfocus();
+                                  FocusScope.of(
+                                    context,
+                                  ).requestFocus(linkFocus);
+                                },
+                              ),
+                              const SizedBox(height: 10),
+                              TextField(
+                                controller: linkController,
+                                decoration: InputDecoration(
+                                  hintText: 'https://www.example.com',
+                                  label: Text(
+                                    AppLocalizations.of(
+                                      context,
+                                    )!.linkDialogLinkTitle,
+                                  ),
+                                  labelStyle: TextStyle(color: color),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: color,
+                                      width: 2,
+                                    ),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: color,
+                                      width: 2,
+                                    ),
+                                  ),
+                                ),
+                                autofocus: text.isNotEmpty,
+                                focusNode: linkFocus,
+                              ),
+                            ],
+                          ),
+                          contentPadding: const EdgeInsets.fromLTRB(
+                            24.0,
+                            20.0,
+                            24.0,
+                            0,
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                onTap(
+                                  type,
+                                  link: linkController.text,
+                                  selectedText: textController.text,
+                                );
+                                Navigator.pop(context);
+                              },
+                              child: Text(AppLocalizations.of(context)!.ok),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
         );
       default:
         return _basicInkwell(type);
@@ -311,26 +348,32 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
             maxLines: widget.maxLines,
             controller: _controller,
             textCapitalization: TextCapitalization.sentences,
-            validator: widget.validators != null
-                ? (value) => widget.validators!(value)
-                : null,
+            validator:
+                widget.validators != null
+                    ? (value) => widget.validators!(value)
+                    : null,
             style: widget.textStyle ?? Theme.of(context).textTheme.bodyLarge,
             cursorColor: Theme.of(context).colorScheme.primary,
             textDirection: widget.textDirection,
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
-                borderSide:
-                    BorderSide(color: Theme.of(context).colorScheme.secondary),
+                borderSide: BorderSide(
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
               ),
               focusedBorder: UnderlineInputBorder(
-                borderSide:
-                    BorderSide(color: Theme.of(context).colorScheme.secondary),
+                borderSide: BorderSide(
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
               ),
               hintText: widget.label,
-              hintStyle:
-                  const TextStyle(color: Color.fromRGBO(63, 61, 86, 0.5)),
-              contentPadding:
-                  const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              hintStyle: const TextStyle(
+                color: Color.fromRGBO(63, 61, 86, 0.5),
+              ),
+              contentPadding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 10,
+              ),
             ),
           ),
         ],
