@@ -21,9 +21,9 @@ AppContact={#MyAppContact}
 AppCopyright={#MyAppCopyright}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-OutputDir=C:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\
+OutputDir=D:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\
 OutputBaseFilename=MarkdownEditor-Windows
-SetupIconFile=C:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\windows\runner\resources\app_icon.ico
+SetupIconFile=D:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\windows\runner\resources\app_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -43,7 +43,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\build\windows\x64\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\build\windows\x64\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
