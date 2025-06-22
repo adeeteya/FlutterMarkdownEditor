@@ -80,11 +80,11 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
     String? selectedText,
   }) {
     final basePosition = _textSelection.baseOffset;
-    var noTextSelected =
+    final noTextSelected =
         (_textSelection.baseOffset - _textSelection.extentOffset) == 0;
 
-    var fromIndex = _textSelection.baseOffset;
-    var toIndex = _textSelection.extentOffset;
+    final fromIndex = _textSelection.baseOffset;
+    final toIndex = _textSelection.extentOffset;
 
     final result = FormatMarkdown.convertToMarkdown(
       type,
@@ -171,7 +171,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                   ),
                 ),
               ),
-              expanded: Container(
+              expanded: ColoredBox(
                 color: Colors.white10,
                 child: Row(
                   children: [
@@ -209,17 +209,17 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
               !widget.insertLinksByDialog
                   ? null
                   : () async {
-                    var text = _controller.text.substring(
+                    final text = _controller.text.substring(
                       _textSelection.baseOffset,
                       _textSelection.extentOffset,
                     );
 
-                    var textController = TextEditingController()..text = text;
-                    var linkController = TextEditingController();
-                    var textFocus = FocusNode();
-                    var linkFocus = FocusNode();
+                    final textController = TextEditingController()..text = text;
+                    final linkController = TextEditingController();
+                    final textFocus = FocusNode();
+                    final linkFocus = FocusNode();
 
-                    var color = Theme.of(context).colorScheme.secondary;
+                    final color = Theme.of(context).colorScheme.secondary;
 
                     await showDialog<void>(
                       context: context,
@@ -333,6 +333,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: use_decorated_box
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
@@ -354,8 +355,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
               ),
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children:
-                    widget.actions.map((type) => actionWidget(type)).toList(),
+                children: widget.actions.map(actionWidget).toList(),
               ),
             ),
           ),

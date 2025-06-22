@@ -23,20 +23,17 @@ class FormatMarkdown {
     final lesserIndex = min(fromIndex, toIndex);
     final greaterIndex = max(fromIndex, toIndex);
 
-    fromIndex = lesserIndex;
-    toIndex = greaterIndex;
-
     switch (type) {
       case MarkdownType.bold:
-        changedData = '**${data.substring(fromIndex, toIndex)}**';
+        changedData = '**${data.substring(lesserIndex, greaterIndex)}**';
         replaceCursorIndex = 2;
         break;
       case MarkdownType.italic:
-        changedData = '_${data.substring(fromIndex, toIndex)}_';
+        changedData = '_${data.substring(lesserIndex, greaterIndex)}_';
         replaceCursorIndex = 1;
         break;
       case MarkdownType.strikethrough:
-        changedData = '~~${data.substring(fromIndex, toIndex)}~~';
+        changedData = '~~${data.substring(lesserIndex, greaterIndex)}~~';
         replaceCursorIndex = 2;
         break;
       case MarkdownType.link:
@@ -45,12 +42,14 @@ class FormatMarkdown {
         break;
       case MarkdownType.heading:
         changedData =
-            "${"#" * titleSize} ${data.substring(fromIndex, toIndex)}";
+            "${"#" * titleSize} ${data.substring(lesserIndex, greaterIndex)}";
         replaceCursorIndex = 0;
         break;
       case MarkdownType.list:
         var index = 0;
-        final splitedData = data.substring(fromIndex, toIndex).split('\n');
+        final splitedData = data
+            .substring(lesserIndex, greaterIndex)
+            .split('\n');
         changedData =
             splitedData.map((value) {
               index++;
@@ -59,12 +58,14 @@ class FormatMarkdown {
         replaceCursorIndex = 0;
         break;
       case MarkdownType.code:
-        changedData = '```${data.substring(fromIndex, toIndex)}```';
+        changedData = '```${data.substring(lesserIndex, greaterIndex)}```';
         replaceCursorIndex = 3;
         break;
       case MarkdownType.blockquote:
         var index = 0;
-        final splitedData = data.substring(fromIndex, toIndex).split('\n');
+        final splitedData = data
+            .substring(lesserIndex, greaterIndex)
+            .split('\n');
         changedData =
             splitedData.map((value) {
               index++;
@@ -73,12 +74,12 @@ class FormatMarkdown {
         replaceCursorIndex = 0;
         break;
       case MarkdownType.separator:
-        changedData = '\n------\n${data.substring(fromIndex, toIndex)}';
+        changedData = '\n------\n${data.substring(lesserIndex, greaterIndex)}';
         replaceCursorIndex = 0;
         break;
       case MarkdownType.image:
         changedData =
-            '![${data.substring(fromIndex, toIndex)}](${data.substring(fromIndex, toIndex)})';
+            '![${data.substring(lesserIndex, greaterIndex)}](${data.substring(lesserIndex, greaterIndex)})';
         replaceCursorIndex = 3;
         break;
     }
@@ -86,9 +87,9 @@ class FormatMarkdown {
     final cursorIndex = changedData.length;
 
     return ResultMarkdown(
-      data.substring(0, fromIndex) +
+      data.substring(0, lesserIndex) +
           changedData +
-          data.substring(toIndex, data.length),
+          data.substring(greaterIndex, data.length),
       cursorIndex,
       replaceCursorIndex,
     );

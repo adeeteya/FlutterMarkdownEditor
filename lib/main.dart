@@ -64,7 +64,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final _methodChannel = MethodChannel("com.adeeteya.markdown_editor/channel");
+  static const _methodChannel = MethodChannel(
+    "com.adeeteya.markdown_editor/channel",
+  );
   String _filePath = "/storage/emulated/0/Download";
   String _fileName = 'Markdown';
   bool _isPreview = false;
@@ -76,8 +78,8 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _getFileContents();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await _getFileContents();
     });
   }
 
@@ -108,7 +110,7 @@ class _HomeState extends State<Home> {
     } catch (e) {
       debugPrint("Error getting file content: $e");
       if (mounted) {
-        showDialog(
+        await showDialog(
           context: context,
           builder:
               (context) => AlertDialog(
@@ -132,9 +134,9 @@ class _HomeState extends State<Home> {
     }
   }
 
-  void _openFilePicker() async {
+  Future<void> _openFilePicker() async {
     try {
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
+      final FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['md'],
       );
@@ -144,14 +146,14 @@ class _HomeState extends State<Home> {
           _filePath.lastIndexOf("/") + 1,
           _filePath.lastIndexOf("."),
         );
-        File file = File(_filePath);
+        final File file = File(_filePath);
         _inputText = await file.readAsString();
         _textEditingController.text = _inputText;
         setState(() {});
       }
     } catch (e) {
       if (mounted) {
-        showDialog(
+        await showDialog(
           context: context,
           builder:
               (context) => AlertDialog(
@@ -171,7 +173,7 @@ class _HomeState extends State<Home> {
     }
   }
 
-  void _clearText() async {
+  Future<void> _clearText() async {
     if (_inputText.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -208,7 +210,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void _saveFile() async {
+  Future<void> _saveFile() async {
     if (_inputText.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -217,7 +219,7 @@ class _HomeState extends State<Home> {
       );
       return;
     } else {
-      FilePicker.platform.saveFile(
+      await FilePicker.platform.saveFile(
         dialogTitle: AppLocalizations.of(context)!.saveFileDialogTitle,
         fileName: (!kIsWeb && Platform.isWindows) ? null : "$_fileName.md",
         type: FileType.custom,
@@ -277,7 +279,7 @@ class _HomeState extends State<Home> {
         duration: const Duration(milliseconds: 300),
         reverseDuration: const Duration(milliseconds: 300),
         child:
-            (_isPreview)
+            _isPreview
                 ? _markdownPreviewWidget()
                 : SizedBox(
                   height: size.height,
@@ -318,22 +320,22 @@ class _HomeState extends State<Home> {
                 ),
               ),
             PopupMenuButton<MenuItem>(
-              onSelected: (selectedMenuItem) {
+              onSelected: (selectedMenuItem) async {
                 switch (selectedMenuItem) {
                   case MenuItem.switchTheme:
-                    widget.devicePreferenceNotifier.toggleTheme();
+                    await widget.devicePreferenceNotifier.toggleTheme();
                     break;
                   case MenuItem.switchView:
-                    widget.devicePreferenceNotifier.toggleLayout();
+                    await widget.devicePreferenceNotifier.toggleLayout();
                     break;
                   case MenuItem.open:
-                    _openFilePicker();
+                    await _openFilePicker();
                     break;
                   case MenuItem.clear:
-                    _clearText();
+                    await _clearText();
                     break;
                   case MenuItem.save:
-                    _saveFile();
+                    await _saveFile();
                     break;
                 }
               },
@@ -403,7 +405,7 @@ class _HomeState extends State<Home> {
         ),
         body:
             _isLoading
-                ? Center(child: CircularProgressIndicator.adaptive())
+                ? const Center(child: CircularProgressIndicator.adaptive())
                 : (widget.devicePreferenceNotifier.value.isSplitLayout)
                 ? _splitView()
                 : _fullView(),

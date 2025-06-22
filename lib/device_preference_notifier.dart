@@ -38,7 +38,7 @@ class DevicePreferenceNotifier extends ValueNotifier<DevicePreferences> {
 
   Future<void> loadDevicePreferences() async {
     _prefs = await SharedPreferencesWithCache.create(
-      cacheOptions: SharedPreferencesWithCacheOptions(),
+      cacheOptions: const SharedPreferencesWithCacheOptions(),
     );
     final isDarkMode =
         _prefs.getBool(_SharedPreferencesKeys.isDarkMode.name) ??
@@ -52,15 +52,18 @@ class DevicePreferenceNotifier extends ValueNotifier<DevicePreferences> {
     notifyListeners();
   }
 
-  void toggleTheme() {
+  Future<void> toggleTheme() async {
     value = value.copyWith(isDarkMode: !value.isDarkMode);
-    _prefs.setBool(_SharedPreferencesKeys.isDarkMode.name, value.isDarkMode);
+    await _prefs.setBool(
+      _SharedPreferencesKeys.isDarkMode.name,
+      value.isDarkMode,
+    );
     notifyListeners();
   }
 
-  void toggleLayout() {
+  Future<void> toggleLayout() async {
     value = value.copyWith(isSplitLayout: !value.isSplitLayout);
-    _prefs.setBool(
+    await _prefs.setBool(
       _SharedPreferencesKeys.isSplitLayout.name,
       value.isSplitLayout,
     );
