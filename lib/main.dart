@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
-import 'dart:ui';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -18,34 +18,27 @@ Future<void> main() async {
       statusBarColor: Colors.transparent,
     ),
   );
-  runApp(const MarkdownEditorApp());
+  final DevicePreferenceNotifier devicePreferenceNotifier =
+      DevicePreferenceNotifier();
+  await devicePreferenceNotifier.loadDevicePreferences();
+
+  runApp(MarkdownEditorApp(devicePreferenceNotifier: devicePreferenceNotifier));
 }
-
-class ThemeNotifier extends ValueNotifier<bool> {
-  ThemeNotifier(super.value);
-
-  void switchTheme() {
-    value = !value;
-    notifyListeners();
-  }
-}
-
-ThemeNotifier isDarkNotifier = ThemeNotifier(
-  PlatformDispatcher.instance.platformBrightness == Brightness.dark,
-);
 
 class MarkdownEditorApp extends StatelessWidget {
-  const MarkdownEditorApp({super.key});
+  final DevicePreferenceNotifier devicePreferenceNotifier;
+  const MarkdownEditorApp({super.key, required this.devicePreferenceNotifier});
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<bool>(
-      valueListenable: isDarkNotifier,
-      builder: (context, isDarkTheme, _) {
+    return ValueListenableBuilder<DevicePreferences>(
+      valueListenable: devicePreferenceNotifier,
+      builder: (context, devicePreference, _) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Markdown Editor',
-          themeMode: isDarkTheme ? ThemeMode.dark : ThemeMode.light,
+          themeMode:
+              devicePreference.isDarkMode ? ThemeMode.dark : ThemeMode.light,
           theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
           darkTheme: ThemeData(
             useMaterial3: true,
@@ -64,7 +57,7 @@ class MarkdownEditorApp extends StatelessWidget {
             Locale('ru'),
             Locale('zh'),
           ],
-          home: const Home(),
+          home: Home(devicePreferenceNotifier: devicePreferenceNotifier),
         );
       },
     );
@@ -74,7 +67,8 @@ class MarkdownEditorApp extends StatelessWidget {
 enum MenuItem { switchTheme, switchView, open, clear, save }
 
 class Home extends StatefulWidget {
-  const Home({super.key});
+  final DevicePreferenceNotifier devicePreferenceNotifier;
+  const Home({super.key, required this.devicePreferenceNotifier});
 
   @override
   State<Home> createState() => _HomeState();
@@ -86,7 +80,6 @@ class _HomeState extends State<Home> {
   final _methodChannel = MethodChannel("Markdown_Editor_Channel");
   String _filePath = "/storage/emulated/0/Download";
   String _fileName = 'Markdown';
-  bool _isVerticalView = true;
   bool _isPreview = false;
 
   @override
@@ -99,12 +92,6 @@ class _HomeState extends State<Home> {
   void dispose() {
     _inputTextEditingController.dispose();
     super.dispose();
-  }
-
-  void _switchView() {
-    setState(() {
-      _isVerticalView = !_isVerticalView;
-    });
   }
 
   void _switchPreview() {
@@ -331,7 +318,7 @@ class _HomeState extends State<Home> {
           elevation: 0,
           title: Text(AppLocalizations.of(context)!.appTitle),
           actions: [
-            if (!_isVerticalView)
+            if (!widget.devicePreferenceNotifier.value.isVerticalLayout)
               IconButton(
                 onPressed: _switchPreview,
                 tooltip: AppLocalizations.of(context)!.previewToolTip,
@@ -343,10 +330,10 @@ class _HomeState extends State<Home> {
               onSelected: (selectedMenuItem) {
                 switch (selectedMenuItem) {
                   case MenuItem.switchTheme:
-                    isDarkNotifier.switchTheme();
+                    widget.devicePreferenceNotifier.toggleTheme();
                     break;
                   case MenuItem.switchView:
-                    _switchView();
+                    widget.devicePreferenceNotifier.toggleLayout();
                     break;
                   case MenuItem.open:
                     _openFilePicker();
@@ -366,7 +353,7 @@ class _HomeState extends State<Home> {
                       child: Row(
                         children: [
                           Icon(
-                            isDarkNotifier.value
+                            widget.devicePreferenceNotifier.value.isDarkMode
                                 ? Icons.dark_mode
                                 : Icons.light_mode,
                           ),
@@ -423,7 +410,10 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-        body: (_isVerticalView) ? _verticalView() : _hiddenView(),
+        body:
+            (widget.devicePreferenceNotifier.value.isVerticalLayout)
+                ? _verticalView()
+                : _hiddenView(),
       ),
     );
   }
