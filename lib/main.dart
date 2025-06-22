@@ -3,10 +3,9 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:markdown_widget/markdown_widget.dart';
 
 import 'l10n/app_localizations.dart';
 
@@ -244,27 +243,7 @@ class _HomeState extends State<Home> {
           radius: const Radius.circular(8),
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(8),
-            child: MarkdownBody(
-              data: _inputText,
-              shrinkWrap: true,
-              softLineBreak: true,
-              sizedImageBuilder: (imageConfig) {
-                return Image.network(
-                  imageConfig.uri.toString(),
-                  errorBuilder: (_, _, _) {
-                    return Text(
-                      imageConfig.alt ??
-                          AppLocalizations.of(
-                            context,
-                          )!.imageAlternateTextFallback,
-                    );
-                  },
-                );
-              },
-              onTapLink: (i, j, k) {
-                launchUrl(Uri.parse(j ?? ""));
-              },
-            ),
+            child: MarkdownBlock(data: _inputText),
           ),
         ),
       ),
