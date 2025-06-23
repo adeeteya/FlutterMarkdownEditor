@@ -16,11 +16,66 @@ Please star⭐ the repo if you like what you see😊.
 
 ## 💻 Installation links
 
-[<img alt='Get it on Google Play' src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="250">](https://play.google.com/store/apps/details?id=com.adeeteya.markdown_editor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
+<table>
+  <tr>
+    <th>Platform</th>
+    <th>Installation Links</th>
+  </tr>
+  <tr>
+    <td>Android</td>
+    <td>
+      <a href="https://play.google.com/store/apps/details?id=com.adeeteya.markdown_editor">
+        <img height="80" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+      </a>
+      <br>
+      <a href="https://f-droid.org/packages/com.adeeteya.markdown_editor">
+        <img height="80" alt="Get it on F-Droid" src="https://f-droid.org/badge/get-it-on.png">
+      </a>
+      <br>
+      <a href="https://github.com/adeeteya/FlutterMarkdownEditor/releases/latest/download/MarkdownEditor-Android.apk">
+        <img alt="APK download" src="https://img.shields.io/static/v1?label=Download&message=Android+.apk&color=2ea44f&style=for-the-badge&logo=Android&logoColor=white&logoSize=auto">
+      </a>
+    </td>
+  </tr>
 
-(or)
+  <tr>
+      <td>Linux</td>
+      <td>
+        <a href="https://github.com/adeeteya/FlutterMarkdownEditor/releases/latest/download/MarkdownEditor-Linux-AppImage.AppImage">
+          <img alt="Download .AppImage" src="https://img.shields.io/static/v1?label=Download&message=.AppImage&color=FCC624&style=for-the-badge&logo=linux&logoColor=white&logoSize=auto">
+        </a>
+        <br>
+        <br>
+        <a href="https://github.com/adeeteya/FlutterMarkdownEditor/releases/latest/download/MarkdownEditor-Linux-deb.deb">
+          <img alt="Download .deb" src="https://img.shields.io/static/v1?label=Download&message=%20%20%20%20%20.deb&color=A81D33&style=for-the-badge&logo=debian&logoColor=white&logoSize=auto">
+        </a>
+        <br>
+        <br>
+        <a href="https://github.com/adeeteya/FlutterMarkdownEditor/releases/latest/download/MarkdownEditor-Linux-rpm.rpm">
+          <img alt="Download .rpm" src="https://img.shields.io/static/v1?label=Download&message=.rpm&color=EE0000&style=for-the-badge&logo=redhat&logoColor=white&logoSize=auto">
+        </a>
+      </td>
+  </tr>
 
-[![Download apk](https://img.shields.io/badge/Download-apk-green)](https://github.com/adeeteya/FlutterMarkdownEditor/releases/download/1.2.1/MarkdownEditor-android-1.2.1.apk)
+  <tr>
+      <td>Windows</td>
+      <td>
+        <a href="https://github.com/adeeteya/FlutterMarkdownEditor/releases/latest/download/MarkdownEditor-Windows.exe">
+          <img alt="Download Windows Installer" src="https://img.shields.io/static/v1?label=Download&message=Windows+.exe&color=blue&style=for-the-badge&logo=webtrees&logoColor=white&logoSize=auto">
+        </a>
+      </td>
+  </tr>
+
+  <tr>
+      <td>Web App</td>
+      <td>
+        <a href="https://adeeteya.github.io/FlutterMarkdownEditor/#/">
+          <img alt="Web App" src="https://img.shields.io/static/v1?label=Webapp&message=Visit+Website&color=blueviolet&style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto">
+        </a>
+      </td>
+  </tr>
+
+</table>
 
 ## ✨ Features
 
