@@ -30,6 +30,11 @@ android {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
 
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     defaultConfig {
         applicationId = "com.adeeteya.markdown_editor"
         minSdk = flutter.minSdkVersion
