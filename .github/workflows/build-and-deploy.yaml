@@ -201,15 +201,6 @@ jobs:
         env:
           ANDROID_KEY_STORE_PASSWORD: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
 
-      - name: Release To Play Store
-        uses: maierj/fastlane-action@v3.1.0
-        with:
-          lane: 'release_play_store'
-          subdirectory: android
-          options: '{ "version_number": "${{ inputs.version_number }}" }'
-        env:
-          APP_PACKAGE_NAME: ${{ secrets.APP_PACKAGE_NAME }}
-
       - name: Build APK
         uses: maierj/fastlane-action@v3.1.0
         with:
@@ -221,3 +212,12 @@ jobs:
         run:  gh release upload ${{ inputs.version_number }} build/app/outputs/flutter-apk/MarkdownEditor-Android.apk
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Release To Play Store
+        uses: maierj/fastlane-action@v3.1.0
+        with:
+          lane: 'release_play_store'
+          subdirectory: android
+          options: '{ "version_number": "${{ inputs.version_number }}" }'
+        env:
+          APP_PACKAGE_NAME: ${{ secrets.APP_PACKAGE_NAME }}
