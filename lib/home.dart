@@ -250,7 +250,6 @@ class _HomeState extends State<Home> {
   }
 
   Widget _fullView() {
-    final size = MediaQuery.sizeOf(context);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
       child: AnimatedSwitcher(
@@ -258,21 +257,15 @@ class _HomeState extends State<Home> {
         reverseDuration: const Duration(milliseconds: 300),
         child: _isPreview
             ? _markdownPreviewWidget()
-            : SizedBox(
-                height: size.height,
-                width: size.width,
-                child: SingleChildScrollView(
-                  child: MarkdownTextInput(
-                    (String value) {
-                      setState(() {
-                        _inputText = value;
-                      });
-                    },
-                    _inputText,
-                    controller: _textEditingController,
-                    label: AppLocalizations.of(context)!.markdownTextInputLabel,
-                  ),
-                ),
+            : MarkdownTextInput(
+                (String value) {
+                  setState(() {
+                    _inputText = value;
+                  });
+                },
+                _inputText,
+                controller: _textEditingController,
+                label: AppLocalizations.of(context)!.markdownTextInputLabel,
               ),
       ),
     );
