@@ -341,6 +341,7 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
         borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(
             height: 44,
@@ -357,36 +358,38 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
             ),
           ),
           const Divider(height: 0),
-          TextFormField(
-            focusNode: _focusNode,
-            textInputAction: TextInputAction.newline,
-            maxLines: widget.maxLines,
-            controller: _controller,
-            textCapitalization: TextCapitalization.sentences,
-            validator: widget.validators != null
-                ? (value) => widget.validators!(value)
-                : null,
-            style: widget.textStyle ?? Theme.of(context).textTheme.bodyLarge,
-            cursorColor: Theme.of(context).colorScheme.primary,
-            textDirection: widget.textDirection,
-            decoration: InputDecoration(
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(
-                  color: Theme.of(context).colorScheme.secondary,
+          Flexible(
+            child: TextFormField(
+              focusNode: _focusNode,
+              textInputAction: TextInputAction.newline,
+              maxLines: widget.maxLines,
+              controller: _controller,
+              textCapitalization: TextCapitalization.sentences,
+              validator: widget.validators != null
+                  ? (value) => widget.validators!(value)
+                  : null,
+              style: widget.textStyle ?? Theme.of(context).textTheme.bodyLarge,
+              cursorColor: Theme.of(context).colorScheme.primary,
+              textDirection: widget.textDirection,
+              decoration: InputDecoration(
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
-              ),
-              focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(
-                  color: Theme.of(context).colorScheme.secondary,
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
-              ),
-              hintText: widget.label,
-              hintStyle: const TextStyle(
-                color: Color.fromRGBO(63, 61, 86, 0.5),
-              ),
-              contentPadding: const EdgeInsets.symmetric(
-                vertical: 5,
-                horizontal: 10,
+                hintText: widget.label,
+                hintStyle: const TextStyle(
+                  color: Color.fromRGBO(63, 61, 86, 0.5),
+                ),
+                contentPadding: const EdgeInsets.symmetric(
+                  vertical: 5,
+                  horizontal: 10,
+                ),
               ),
             ),
           ),
