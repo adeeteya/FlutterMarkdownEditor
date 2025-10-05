@@ -31,8 +31,9 @@ class MarkdownEditorApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Markdown Editor',
-          themeMode:
-              devicePreference.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+          themeMode: devicePreference.isDarkMode
+              ? ThemeMode.dark
+              : ThemeMode.light,
           theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
           darkTheme: ThemeData(
             useMaterial3: true,
