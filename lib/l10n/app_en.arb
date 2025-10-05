@@ -122,5 +122,13 @@
   "strikethrough": "Strikethrough",
   "@strikethrough": {
     "description": "Tooltip for the Strikethrough Icon Button"
+  },
+  "confirmAppExitTitle": "Confirm Exit",
+  "@confirmAppExitTitle": {
+    "description": "Title for the Confirm Exit Dialog"
+  },
+  "confirmAppExitContent": "Are you sure you want to exit this app?",
+  "@confirmAppExitContent": {
+    "description": "Content for the Confirm Exit Dialog"
   }
 }

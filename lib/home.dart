@@ -69,19 +69,16 @@ class _HomeState extends State<Home> {
       if (mounted) {
         await showDialog(
           context: context,
-          builder:
-              (context) => AlertDialog(
-                title: Text(AppLocalizations.of(context)!.error),
-                content: Text(
-                  AppLocalizations.of(context)!.unableToOpenFileError,
-                ),
-                actions: [
-                  TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: Text(AppLocalizations.of(context)!.ok),
-                  ),
-                ],
+          builder: (context) => AlertDialog(
+            title: Text(AppLocalizations.of(context)!.error),
+            content: Text(AppLocalizations.of(context)!.unableToOpenFileError),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(AppLocalizations.of(context)!.ok),
               ),
+            ],
+          ),
         );
       }
     } finally {
@@ -112,19 +109,18 @@ class _HomeState extends State<Home> {
       if (mounted) {
         await showDialog(
           context: context,
-          builder:
-              (context) => AlertDialog(
-                title: Text(AppLocalizations.of(context)!.error),
-                content: Text(
-                  AppLocalizations.of(context)!.unableToOpenFileFromMenuError,
-                ),
-                actions: [
-                  TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: Text(AppLocalizations.of(context)!.ok),
-                  ),
-                ],
+          builder: (context) => AlertDialog(
+            title: Text(AppLocalizations.of(context)!.error),
+            content: Text(
+              AppLocalizations.of(context)!.unableToOpenFileFromMenuError,
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(AppLocalizations.of(context)!.ok),
               ),
+            ],
+          ),
         );
       }
     }
@@ -142,28 +138,27 @@ class _HomeState extends State<Home> {
     FocusScope.of(context).unfocus();
     await showDialog(
       context: context,
-      builder:
-          (context) => AlertDialog(
-            title: Text(AppLocalizations.of(context)!.clearAllTitle),
-            content: Text(AppLocalizations.of(context)!.clearAllContent),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: Text(AppLocalizations.of(context)!.cancel),
-              ),
-              TextButton(
-                onPressed: () {
-                  setState(() {
-                    _inputText = "";
-                    _textEditingController.clear();
-                  });
-                  Navigator.pop(context);
-                },
-                style: TextButton.styleFrom(foregroundColor: Colors.red),
-                child: Text(AppLocalizations.of(context)!.yes),
-              ),
-            ],
+      builder: (context) => AlertDialog(
+        title: Text(AppLocalizations.of(context)!.clearAllTitle),
+        content: Text(AppLocalizations.of(context)!.clearAllContent),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(AppLocalizations.of(context)!.cancel),
           ),
+          TextButton(
+            onPressed: () {
+              setState(() {
+                _inputText = "";
+                _textEditingController.clear();
+              });
+              Navigator.pop(context);
+            },
+            style: TextButton.styleFrom(foregroundColor: Colors.red),
+            child: Text(AppLocalizations.of(context)!.yes),
+          ),
+        ],
+      ),
     );
   }
 
@@ -184,6 +179,32 @@ class _HomeState extends State<Home> {
         bytes: utf8.encode(_inputText),
       );
     }
+  }
+
+  Future<bool> _showExitConfirmationDialog() async {
+    return await showDialog<bool>(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(AppLocalizations.of(context)!.confirmAppExitTitle),
+              content: Text(
+                AppLocalizations.of(context)!.confirmAppExitContent,
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: Text(AppLocalizations.of(context)!.cancel),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(true),
+                  style: TextButton.styleFrom(foregroundColor: Colors.red),
+                  child: Text(AppLocalizations.of(context)!.yes),
+                ),
+              ],
+            );
+          },
+        ) ??
+        false; // Return false if dialog is dismissed
   }
 
   Widget _markdownPreviewWidget() {
@@ -235,26 +256,24 @@ class _HomeState extends State<Home> {
       child: AnimatedSwitcher(
         duration: const Duration(milliseconds: 300),
         reverseDuration: const Duration(milliseconds: 300),
-        child:
-            _isPreview
-                ? _markdownPreviewWidget()
-                : SizedBox(
-                  height: size.height,
-                  width: size.width,
-                  child: SingleChildScrollView(
-                    child: MarkdownTextInput(
-                      (String value) {
-                        setState(() {
-                          _inputText = value;
-                        });
-                      },
-                      _inputText,
-                      controller: _textEditingController,
-                      label:
-                          AppLocalizations.of(context)!.markdownTextInputLabel,
-                    ),
+        child: _isPreview
+            ? _markdownPreviewWidget()
+            : SizedBox(
+                height: size.height,
+                width: size.width,
+                child: SingleChildScrollView(
+                  child: MarkdownTextInput(
+                    (String value) {
+                      setState(() {
+                        _inputText = value;
+                      });
+                    },
+                    _inputText,
+                    controller: _textEditingController,
+                    label: AppLocalizations.of(context)!.markdownTextInputLabel,
                   ),
                 ),
+              ),
       ),
     );
   }
@@ -263,109 +282,115 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          title: Text(AppLocalizations.of(context)!.appTitle),
-          actions: [
-            if (!widget.devicePreferenceNotifier.value.isSplitLayout)
-              IconButton(
-                onPressed: _switchPreview,
-                tooltip: AppLocalizations.of(context)!.previewToolTip,
-                icon: Icon(
-                  _isPreview ? Icons.visibility_off : Icons.visibility,
+      child: PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, _) async {
+          if (didPop) {
+            return;
+          }
+          final bool shouldPop = await _showExitConfirmationDialog();
+          if (shouldPop && context.mounted) {
+            await SystemNavigator.pop(animated: true);
+          }
+        },
+        child: Scaffold(
+          appBar: AppBar(
+            elevation: 0,
+            title: Text(AppLocalizations.of(context)!.appTitle),
+            actions: [
+              if (!widget.devicePreferenceNotifier.value.isSplitLayout)
+                IconButton(
+                  onPressed: _switchPreview,
+                  tooltip: AppLocalizations.of(context)!.previewToolTip,
+                  icon: Icon(
+                    _isPreview ? Icons.visibility_off : Icons.visibility,
+                  ),
                 ),
+              PopupMenuButton<MenuItem>(
+                onSelected: (selectedMenuItem) async {
+                  switch (selectedMenuItem) {
+                    case MenuItem.switchTheme:
+                      await widget.devicePreferenceNotifier.toggleTheme();
+                      break;
+                    case MenuItem.switchView:
+                      await widget.devicePreferenceNotifier.toggleLayout();
+                      break;
+                    case MenuItem.open:
+                      await _openFilePicker();
+                      break;
+                    case MenuItem.clear:
+                      await _clearText();
+                      break;
+                    case MenuItem.save:
+                      await _saveFile();
+                      break;
+                  }
+                },
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    value: MenuItem.switchTheme,
+                    child: Row(
+                      children: [
+                        Icon(
+                          widget.devicePreferenceNotifier.value.isDarkMode
+                              ? Icons.dark_mode
+                              : Icons.light_mode,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.switchThemeMenuItem),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.switchView,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.rotate_left),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.switchViewMenuItem),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.open,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.file_open),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.openFileMenuItem),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.clear,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.clear_all),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.clear),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.save,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.save),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.save),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            PopupMenuButton<MenuItem>(
-              onSelected: (selectedMenuItem) async {
-                switch (selectedMenuItem) {
-                  case MenuItem.switchTheme:
-                    await widget.devicePreferenceNotifier.toggleTheme();
-                    break;
-                  case MenuItem.switchView:
-                    await widget.devicePreferenceNotifier.toggleLayout();
-                    break;
-                  case MenuItem.open:
-                    await _openFilePicker();
-                    break;
-                  case MenuItem.clear:
-                    await _clearText();
-                    break;
-                  case MenuItem.save:
-                    await _saveFile();
-                    break;
-                }
-              },
-              itemBuilder:
-                  (context) => [
-                    PopupMenuItem(
-                      value: MenuItem.switchTheme,
-                      child: Row(
-                        children: [
-                          Icon(
-                            widget.devicePreferenceNotifier.value.isDarkMode
-                                ? Icons.dark_mode
-                                : Icons.light_mode,
-                          ),
-                          const SizedBox(width: 8),
-                          Text(
-                            AppLocalizations.of(context)!.switchThemeMenuItem,
-                          ),
-                        ],
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: MenuItem.switchView,
-                      child: Row(
-                        children: [
-                          const Icon(Icons.rotate_left),
-                          const SizedBox(width: 8),
-                          Text(
-                            AppLocalizations.of(context)!.switchViewMenuItem,
-                          ),
-                        ],
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: MenuItem.open,
-                      child: Row(
-                        children: [
-                          const Icon(Icons.file_open),
-                          const SizedBox(width: 8),
-                          Text(AppLocalizations.of(context)!.openFileMenuItem),
-                        ],
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: MenuItem.clear,
-                      child: Row(
-                        children: [
-                          const Icon(Icons.clear_all),
-                          const SizedBox(width: 8),
-                          Text(AppLocalizations.of(context)!.clear),
-                        ],
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: MenuItem.save,
-                      child: Row(
-                        children: [
-                          const Icon(Icons.save),
-                          const SizedBox(width: 8),
-                          Text(AppLocalizations.of(context)!.save),
-                        ],
-                      ),
-                    ),
-                  ],
-            ),
-          ],
+            ],
+          ),
+          body: _isLoading
+              ? const Center(child: CircularProgressIndicator.adaptive())
+              : (widget.devicePreferenceNotifier.value.isSplitLayout)
+              ? _splitView()
+              : _fullView(),
         ),
-        body:
-            _isLoading
-                ? const Center(child: CircularProgressIndicator.adaptive())
-                : (widget.devicePreferenceNotifier.value.isSplitLayout)
-                ? _splitView()
-                : _fullView(),
       ),
     );
   }
