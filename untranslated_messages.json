@@ -1,1 +1,981 @@
-{}
+{
+  "ace": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ach": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "af": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ak": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "alz": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "am": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ar": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "as": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "awa": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ay": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "az": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bal": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ban": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bbc": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bci": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "be": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bem": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ber": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bew": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bg": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bho": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bik": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bm": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bs": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bts": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "btx": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "bua": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ca": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ceb": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "cgg": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "chk": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ckb": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "cnh": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "co": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "crh": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "crs": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "cs": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "cy": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "da": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "de": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "din": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "doi": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "dv": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "dyu": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "el": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "eo": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "es": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "et": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "eu": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "fa": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "fi": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "fil": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "fon": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "fr": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "fur": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "fy": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ga": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "gaa": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "gd": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "gl": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "gn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "gom": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "gu": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ha": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "haw": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "he": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "hi": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "hil": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "hmn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "hr": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "hrx": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ht": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "hu": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "hy": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "iba": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "id": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ig": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ilo": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "is": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "it": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ja": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "jam": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "jv": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ka": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "kac": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "kek": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "kha": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "kk": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "km": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "kn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ko": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "kri": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ktu": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ku": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ky": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "la": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lb": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lg": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lij": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lmo": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ln": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lo": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lt": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ltg": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "luo": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lus": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "lv": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mai": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mak": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mam": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mfe": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mg": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mhr": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mi": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "min": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mk": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ml": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mr": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ms": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mt": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "mwr": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "my": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ne": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "new": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "nhe": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "nl": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "no": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "nso": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "nus": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ny": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "om": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "or": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "pa": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "pag": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "pam": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "pap": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "pl": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ps": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "pt": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "qu": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ro": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "rom": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ru": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "rw": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sa": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sah": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sat": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "scn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sd": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "shn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "si": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sk": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sl": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sm": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sn": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "so": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sq": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sr": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "st": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "su": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sus": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sv": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "sw": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "szl": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ta": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "te": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tet": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tg": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "th": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ti": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tiv": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tk": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tl": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tpi": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tr": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ts": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tt": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "tum": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "udm": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ug": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "uk": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "ur": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "uz": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "vec": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "vi": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "war": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "xh": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "yi": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "yo": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "yua": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "yue": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "zap": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "zh": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ],
+
+  "zu": [
+    "confirmAppExitTitle",
+    "confirmAppExitContent"
+  ]
+}
