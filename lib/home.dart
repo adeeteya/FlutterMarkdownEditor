@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/l10n/generated/app_localizations.dart';
+import 'package:markdown_editor/widgets/MarkdownBody/custom_image_config.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/custom_text_node.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:markdown_widget/markdown_widget.dart';
@@ -231,7 +232,7 @@ class _HomeState extends State<Home> {
                     CustomTextNode(node.textContent, config, visitor),
                 richTextBuilder: Text.rich,
               ),
-              config: config,
+              config: config.copy(configs: [CustomImgConfig()]),
             ),
           ),
         ),
