@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/l10n/generated/app_localizations.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
+import 'package:markdown_widget/config/configs.dart';
 import 'package:markdown_widget/widget/markdown_block.dart';
 
 enum MenuItem { switchTheme, switchView, open, clear, save }
@@ -208,6 +209,10 @@ class _HomeState extends State<Home> {
   }
 
   Widget _markdownPreviewWidget() {
+    final isDark = widget.devicePreferenceNotifier.value.isDarkMode;
+    final config = isDark
+        ? MarkdownConfig.darkConfig
+        : MarkdownConfig.defaultConfig;
     return Card(
       child: SizedBox(
         height: double.infinity,
@@ -219,7 +224,7 @@ class _HomeState extends State<Home> {
           child: SingleChildScrollView(
             controller: _scrollController,
             padding: const EdgeInsets.all(8),
-            child: MarkdownBlock(data: _inputText),
+            child: MarkdownBlock(data: _inputText, config: config),
           ),
         ),
       ),
