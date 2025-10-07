@@ -16,7 +16,11 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.2.1
+  flutter_widget_from_html_core: ^0.17.0
+  html: ^0.15.6
   intl: any
+  markdown: ^7.3.0
   markdown_widget: ^2.3.2+8
   permission_handler: ^12.0.1
   shared_preferences: ^2.5.3
