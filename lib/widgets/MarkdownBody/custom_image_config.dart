@@ -35,44 +35,23 @@ class CustomImgConfig extends ImgConfig {
                lower.endsWith('.svg') ||
                attrs['type']?.toLowerCase() == 'image/svg+xml';
 
-           Widget buildError(Object error, {bool trySvg = false}) {
+           Widget buildError(Object error) {
              if (errorBuilder != null) return errorBuilder(url, alt, error);
-             if (trySvg) {
-               return isNetwork
-                   ? SvgPicture.network(
-                       url,
-                       width: width,
-                       height: height,
-                       fit: svgFit,
-                       alignment: alignment,
-                       clipBehavior: Clip.none,
-                       errorBuilder: (ctx, error, stack) => buildError(error),
-                     )
-                   : SvgPicture.asset(
-                       url,
-                       width: width,
-                       height: height,
-                       fit: svgFit,
-                       alignment: alignment,
-                       clipBehavior: Clip.none,
-                       errorBuilder: (ctx, error, stack) => buildError(error),
-                     );
-             } else {
-               return Row(
-                 mainAxisSize: MainAxisSize.min,
-                 children: [
-                   const Icon(
-                     Icons.broken_image,
-                     color: Colors.redAccent,
-                     size: 16,
-                   ),
-                   if (alt.isNotEmpty) ...[
-                     const SizedBox(width: 6),
-                     Flexible(child: Text(alt)),
-                   ],
+
+             return Row(
+               mainAxisSize: MainAxisSize.min,
+               children: [
+                 const Icon(
+                   Icons.broken_image,
+                   color: Colors.redAccent,
+                   size: 16,
+                 ),
+                 if (alt.isNotEmpty) ...[
+                   const SizedBox(width: 6),
+                   Flexible(child: Text(alt)),
                  ],
-               );
-             }
+               ],
+             );
            }
 
            Widget img;
@@ -105,8 +84,7 @@ class CustomImgConfig extends ImgConfig {
                      height: height,
                      fit: rasterFit,
                      alignment: alignment,
-                     errorBuilder: (ctx, error, stack) =>
-                         buildError(error, trySvg: true),
+                     errorBuilder: (ctx, error, stack) => buildError(error),
                    )
                  : Image.asset(
                      url,
@@ -114,8 +92,7 @@ class CustomImgConfig extends ImgConfig {
                      height: height,
                      fit: rasterFit,
                      alignment: alignment,
-                     errorBuilder: (ctx, error, stack) =>
-                         buildError(error, trySvg: true),
+                     errorBuilder: (ctx, error, stack) => buildError(error),
                    );
            }
 
