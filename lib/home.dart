@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/l10n/generated/app_localizations.dart';
+import 'package:markdown_editor/widgets/MarkdownBody/custom_image_config.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
-import 'package:markdown_widget/config/configs.dart';
-import 'package:markdown_widget/widget/markdown_block.dart';
+import 'package:markdown_widget/markdown_widget.dart';
 
 enum MenuItem { switchTheme, switchView, open, clear, save }
 
@@ -224,7 +224,10 @@ class _HomeState extends State<Home> {
           child: SingleChildScrollView(
             controller: _scrollController,
             padding: const EdgeInsets.all(8),
-            child: MarkdownBlock(data: _inputText, config: config),
+            child: MarkdownBlock(
+              data: _inputText,
+              config: config.copy(configs: [CustomImgConfig()]),
+            ),
           ),
         ),
       ),
