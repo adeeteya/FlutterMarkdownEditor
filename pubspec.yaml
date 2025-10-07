@@ -24,7 +24,6 @@ dependencies:
   markdown_widget: ^2.3.2+8
   permission_handler: ^12.0.1
   shared_preferences: ^2.5.3
-  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_lints: ^6.0.0
