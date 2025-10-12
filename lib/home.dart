@@ -13,8 +13,9 @@ import 'package:markdown_editor/widgets/MarkdownBody/custom_text_node.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/latex_node.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:markdown_widget/markdown_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-enum MenuItem { switchTheme, switchView, open, clear, save }
+enum MenuItem { switchTheme, switchView, open, clear, save, donate }
 
 class Home extends StatefulWidget {
   final DevicePreferenceNotifier devicePreferenceNotifier;
@@ -365,6 +366,12 @@ class _HomeState extends State<Home> {
                     case MenuItem.save:
                       await _saveFile();
                       break;
+                    case MenuItem.donate:
+                      await launchUrl(
+                        Uri.parse("https://buymeacoffee.com/adeeteya"),
+                        mode: LaunchMode.externalApplication,
+                      );
+                      break;
                   }
                 },
                 itemBuilder: (context) => [
@@ -419,6 +426,16 @@ class _HomeState extends State<Home> {
                         const Icon(Icons.save),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.save),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.donate,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.volunteer_activism),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.donate),
                       ],
                     ),
                   ),
