@@ -6,6 +6,8 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:htmltopdfwidgets/htmltopdfwidgets.dart' as html2pdf;
+import 'package:markdown/markdown.dart' as md;
 import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/l10n/generated/app_localizations.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/custom_image_config.dart';
@@ -13,9 +15,11 @@ import 'package:markdown_editor/widgets/MarkdownBody/custom_text_node.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/latex_node.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:markdown_widget/markdown_widget.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:printing/printing.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-enum MenuItem { switchTheme, switchView, open, clear, save, donate }
+enum MenuItem { switchTheme, switchView, open, clear, save, print, donate }
 
 class Home extends StatefulWidget {
   final DevicePreferenceNotifier devicePreferenceNotifier;
@@ -206,6 +210,28 @@ class _HomeState extends State<Home> {
     }
   }
 
+  Future<void> _printFile() async {
+    if (_inputText.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
+        ),
+      );
+      return;
+    } else {
+      final htmlFromMarkdown = md.markdownToHtml(_inputText);
+      await Printing.layoutPdf(
+        usePrinterSettings: true,
+        onLayout: (format) async {
+          final pdf = pw.Document();
+          final widgets = await html2pdf.HTMLToPdf().convert(htmlFromMarkdown);
+          pdf.addPage(pw.MultiPage(build: (context) => widgets));
+          return pdf.save();
+        },
+      );
+    }
+  }
+
   Future<bool> _showExitConfirmationDialog() async {
     return await showDialog<bool>(
           context: context,
@@ -366,6 +392,9 @@ class _HomeState extends State<Home> {
                     case MenuItem.save:
                       await _saveFile();
                       break;
+                    case MenuItem.print:
+                      await _printFile();
+                      break;
                     case MenuItem.donate:
                       await launchUrl(
                         Uri.parse("https://buymeacoffee.com/adeeteya"),
@@ -426,6 +455,16 @@ class _HomeState extends State<Home> {
                         const Icon(Icons.save),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.save),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.print,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.print),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.print),
                       ],
                     ),
                   ),
