@@ -30,5 +30,13 @@
   "bulletList": "သဵၼ်ႈမၢႆမၢၵ်ႇၵွင်ႈ",
   "quote": "ၶေႃႈဢၢင်ႈဢိင်ႈ",
   "horizontalRule": "ပၵ်းပိူင်ထုိင်",
-  "strikethrough": "Strikethroad"
+  "strikethrough": "Strikethroad",
+  "confirmAppExitTitle": "မၵ်းမၼ်ႈဢွၵ်ႇ",
+  "confirmAppExitContent": "ၶႂ်ႈဢွၵ်ႇဢႅပ်ႉၼႆႉယူႇႁႃႉ?",
+  "donate": "လူႇတၢၼ်း",
+  "print": "ဢိတ်ႇလိၵ်ႈ",
+  "table": "ၽိူၼ်",
+  "rows": "ၶိူဝ်းၵူၼ်း",
+  "columns": "ထၼ်ႇထိပ်ႇ",
+  "insert": "မူင်ႈမႅင်း"
 }

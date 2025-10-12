@@ -29,5 +29,14 @@
   "bulletList": "ਬੁਲੇਟ ਲਿਸਟ",
   "quote": "ਹਵਾਲਾ",
   "horizontalRule": "ਹਰੀਜ਼ਟਲ ਨਿਯਮ",
-  "strikethrough": "ਹੜਤਾਲ"
+  "strikethrough": "ਹੜਤਾਲ",
+  "@@locale": "pa",
+  "confirmAppExitTitle": "ਬਾਹਰ ਜਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+  "confirmAppExitContent": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਐਪ ਤੋਂ ਬਾਹਰ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+  "donate": "ਦਾਨ",
+  "print": "ਪ੍ਰਿੰਟ",
+  "table": "ਟੇਬਲ",
+  "rows": "ਕਤਾਰਾਂ",
+  "columns": "ਕਾਲਮ",
+  "insert": "ਸੰਮਿਲਿਤ ਕਰੋ"
 }

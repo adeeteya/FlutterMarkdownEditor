@@ -29,5 +29,14 @@
   "bulletList": "Golyó lista",
   "quote": "Idézet",
   "horizontalRule": "Horizontális szabály",
-  "strikethrough": "Robbantás"
+  "strikethrough": "Robbantás",
+  "@@locale": "hu",
+  "confirmAppExitTitle": "Erősítse meg a kilépést",
+  "confirmAppExitContent": "Biztos benne, hogy ki akar lépni ebből az alkalmazásból?",
+  "donate": "Adományoz",
+  "print": "Nyomtatás",
+  "table": "Táblázat",
+  "rows": "Sorok",
+  "columns": "Oszlopok",
+  "insert": "Beilleszt"
 }

@@ -29,5 +29,14 @@
   "bulletList": "弾丸リスト",
   "quote": "引用",
   "horizontalRule": "水平ルール",
-  "strikethrough": "strikethrough"
+  "strikethrough": "strikethrough",
+  "@@locale": "ja",
+  "confirmAppExitTitle": "終了の確認",
+  "confirmAppExitContent": "このアプリを終了してもよろしいですか?",
+  "donate": "寄付する",
+  "print": "印刷する",
+  "table": "テーブル",
+  "rows": "行",
+  "columns": "コラム",
+  "insert": "入れる"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Bullet Lëscht",
   "quote": "Zitzbete kackelt",
   "horizontalRule": "Horizontal Regel",
-  "strikethrough": "Streiksthrough"
+  "strikethrough": "Streiksthrough",
+  "@@locale": "lb",
+  "confirmAppExitTitle": "Bestätegt Ausgang",
+  "confirmAppExitContent": "Sidd Dir sécher, datt Dir dës App wëllt erausgoen?",
+  "donate": "Spenden",
+  "print": "Técke full",
+  "table": "Dëschten",
+  "rows": "Rohws",
+  "columns": "Socueles",
+  "insert": "INor andafen"
 }

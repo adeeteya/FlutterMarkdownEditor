@@ -29,5 +29,14 @@
   "bulletList": "Lista de gloanțe",
   "quote": "Citat",
   "horizontalRule": "Regula orizontală",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "ro",
+  "confirmAppExitTitle": "Confirmați ieșirea",
+  "confirmAppExitContent": "Ești sigur că vrei să ieși din această aplicație?",
+  "donate": "Dona",
+  "print": "Imprimare",
+  "table": "Masă",
+  "rows": "Rânduri",
+  "columns": "Coloane",
+  "insert": "Introduce"
 }

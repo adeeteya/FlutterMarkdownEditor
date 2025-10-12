@@ -30,5 +30,13 @@
   "bulletList": "Буллетнай испииһэк",
   "quote": "Цитата",
   "horizontalRule": "Горизонтальнай быраабыла",
-  "strikethrough": "Убаастабыл"
+  "strikethrough": "Убаастабыл",
+  "confirmAppExitTitle": "Бигэргэтии тахсыыта",
+  "confirmAppExitContent": "Бу приложениены тахсыаххын баҕараҕын дуо диэн эрэнэҕин дуо?",
+  "donate": "Сиэртибэлээ",
+  "print": "Бэчээт",
+  "table": "Остуол",
+  "rows": "Баһылыктар",
+  "columns": "Колонцалар",
+  "insert": "Кыбыт"
 }

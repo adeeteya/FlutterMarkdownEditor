@@ -29,5 +29,14 @@
   "bulletList": "Kuulide nimekiri",
   "quote": "Tsitaat",
   "horizontalRule": "Horisontaalne reegel",
-  "strikethrough": "Löök"
+  "strikethrough": "Löök",
+  "@@locale": "et",
+  "confirmAppExitTitle": "Kinnitage väljumine",
+  "confirmAppExitContent": "Kas olete kindel, et soovite sellest rakendusest väljuda?",
+  "donate": "Annetama",
+  "print": "Trükk",
+  "table": "Laud",
+  "rows": "Read",
+  "columns": "Veerud",
+  "insert": "Vahetama"
 }

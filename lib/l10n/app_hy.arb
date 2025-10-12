@@ -29,5 +29,14 @@
   "bulletList": "Փամփուշտների ցուցակ",
   "quote": "Մեջբերում",
   "horizontalRule": "Հորիզոնական կանոն",
-  "strikethrough": "Գործադուլ"
+  "strikethrough": "Գործադուլ",
+  "@@locale": "hy",
+  "confirmAppExitTitle": "Հաստատեք ելքը",
+  "confirmAppExitContent": "Համոզված եք, որ ցանկանում եք դուրս գալ այս հավելվածից:",
+  "donate": "Նվիրել",
+  "print": "Տպարան",
+  "table": "Սեղան",
+  "rows": "Տողեր",
+  "columns": "Սյուներ",
+  "insert": "Տեղադրել"
 }

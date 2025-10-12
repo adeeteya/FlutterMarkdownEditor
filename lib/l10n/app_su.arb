@@ -29,5 +29,14 @@
   "bulletList": "Daptar pelor",
   "quote": "Cutatan",
   "horizontalRule": "Aturan horisontal",
-  "strikethrough": "Strikethugh"
+  "strikethrough": "Strikethugh",
+  "@@locale": "su",
+  "confirmAppExitTitle": "Konpirmasi kaluar",
+  "confirmAppExitContent": "Naha anjeun badé kaluar aplikasi ieu?",
+  "donate": "Nulungan",
+  "print": "Nyitak",
+  "table": "Tabél",
+  "rows": "Jurung",
+  "columns": "Kolom",
+  "insert": "Nyelapkeun"
 }

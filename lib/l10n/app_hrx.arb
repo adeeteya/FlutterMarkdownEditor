@@ -30,5 +30,13 @@
   "bulletList": "Kurs List",
   "quote": "Foer pringe",
   "horizontalRule": "Horizontaal Rechnung",
-  "strikethrough": "Klechtunge"
+  "strikethrough": "Klechtunge",
+  "confirmAppExitTitle": "Konfirmiire",
+  "confirmAppExitContent": "Sin se sicher tas tuu tiise app raus fine wilst?",
+  "donate": "Aan wëne",
+  "print": "Print",
+  "table": "Tix",
+  "rows": "Roone",
+  "columns": "Kolone",
+  "insert": "Infeere"
 }

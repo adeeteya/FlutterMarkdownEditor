@@ -29,5 +29,14 @@
   "bulletList": "Atokọ ọta ibọn",
   "quote": "Ṣagbasọ",
   "horizontalRule": "Ofin Petele",
-  "strikethrough": "Ikọsilẹ"
+  "strikethrough": "Ikọsilẹ",
+  "@@locale": "yo",
+  "confirmAppExitTitle": "Jẹrisi ijade",
+  "confirmAppExitContent": "Ṣe o da ọ loju pe o fẹ lati jade kuro ni app yii?",
+  "donate": "Ṣetọrẹ",
+  "print": "Tẹjade",
+  "table": "Tabili",
+  "rows": "Ori ila",
+  "columns": "Awọn ọwọn",
+  "insert": "Fisi"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Daftar Syarat",
   "quote": "Mangutip",
   "horizontalRule": "Aturan Horizontal",
-  "strikethrough": "Panundaan"
+  "strikethrough": "Panundaan",
+  "confirmAppExitTitle": "Kaluakan Konfirmasi",
+  "confirmAppExitContent": "Lai yakin sanak nio kalua dari aplikasi ko?",
+  "donate": "Sumbang",
+  "print": "Cetak",
+  "table": "Meja",
+  "rows": "Barisan",
+  "columns": "Kolom",
+  "insert": "Masuakan"
 }

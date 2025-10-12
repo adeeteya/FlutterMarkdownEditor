@@ -30,5 +30,13 @@
   "bulletList": "Список со куршуми",
   "quote": "Цитат",
   "horizontalRule": "Хоризонтално правило",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "Потврдете го излезот",
+  "confirmAppExitContent": "Дали сте сигурни дека сакате да излезете од оваа апликација?",
+  "donate": "Донирај",
+  "print": "Печатете",
+  "table": "Табела",
+  "rows": "Редови",
+  "columns": "Колони",
+  "insert": "Вметнете"
 }

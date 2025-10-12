@@ -29,5 +29,14 @@
   "bulletList": "Raarangi Raarangi",
   "quote": "Whakahua",
   "horizontalRule": "Ture Hori",
-  "strikethrough": "Tuhinga o mua"
+  "strikethrough": "Tuhinga o mua",
+  "@@locale": "mi",
+  "confirmAppExitTitle": "Whakaū i te putanga",
+  "confirmAppExitContent": "Kei te hiahia koe ki te whakaputa i tenei taupānga?",
+  "donate": "Hoatu koha",
+  "print": "Tapuwae",
+  "table": "Tēpu",
+  "rows": "Rārangi",
+  "columns": "Pou hōiho",
+  "insert": "Puru"
 }

@@ -29,5 +29,14 @@
   "bulletList": "قائمة الرصاص",
   "quote": "يقتبس",
   "horizontalRule": "القاعدة الأفقية",
-  "strikethrough": "strikethrough"
+  "strikethrough": "strikethrough",
+  "@@locale": "ar",
+  "confirmAppExitTitle": "تأكيد الخروج",
+  "confirmAppExitContent": "هل أنت متأكد أنك تريد الخروج من هذا التطبيق؟",
+  "donate": "يتبرع",
+  "print": "مطبعة",
+  "table": "طاولة",
+  "rows": "الصفوف",
+  "columns": "أعمدة",
+  "insert": "إدراج"
 }

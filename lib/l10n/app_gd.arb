@@ -30,5 +30,13 @@
   "bulletList": "Liosta peilear",
   "quote": "Cuòt",
   "horizontalRule": "Riaghailt chòmhnard",
-  "strikethrough": "Strikthrough"
+  "strikethrough": "Strikthrough",
+  "confirmAppExitTitle": "Dearbhaich fàgail",
+  "confirmAppExitContent": "A bheil thu cinnteach gu bheil thu airson an aplacaid seo fhàgail?",
+  "donate": "Thoir seachad",
+  "print": "Clò-bhuail",
+  "table": "Clàr",
+  "rows": "Sreathan",
+  "columns": "Colbhan",
+  "insert": "Cuir a-steach"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Luodin luettelo",
   "quote": "Lainata",
   "horizontalRule": "Vaakasuuntainen sääntö",
-  "strikethrough": "Aukko"
+  "strikethrough": "Aukko",
+  "@@locale": "fi",
+  "confirmAppExitTitle": "Vahvista poistuminen",
+  "confirmAppExitContent": "Oletko varma, että haluat poistua tästä sovelluksesta?",
+  "donate": "Lahjoittaa",
+  "print": "Painaa",
+  "table": "Taulukko",
+  "rows": "Rivit",
+  "columns": "Pylväät",
+  "insert": "Lisätä"
 }

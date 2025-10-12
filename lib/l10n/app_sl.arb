@@ -29,5 +29,14 @@
   "bulletList": "Seznam kroglic",
   "quote": "Citat",
   "horizontalRule": "Vodoravno pravilo",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "sl",
+  "confirmAppExitTitle": "Potrdite izhod",
+  "confirmAppExitContent": "Ali ste prepričani, da želite zapustiti to aplikacijo?",
+  "donate": "Donirajte",
+  "print": "Tisk",
+  "table": "Miza",
+  "rows": "Vrstice",
+  "columns": "Stolpci",
+  "insert": "Vstavite"
 }

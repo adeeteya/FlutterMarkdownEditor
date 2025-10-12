@@ -30,5 +30,13 @@
   "bulletList": "Listi mar bil",
   "quote": "Poro kaka owacho",
   "horizontalRule": "Chike mag nyuol",
-  "strikethrough": "Duoko"
+  "strikethrough": "Duoko",
+  "confirmAppExitTitle": "Kontera mar Wuok",
+  "confirmAppExitContent": "Be in gadier ni idwaro wuok e programni?",
+  "donate": "Chiwo ne jomoko",
+  "print": "duong'",
+  "table": "Mesa",
+  "rows": "Yore mag timo gik moko",
+  "columns": "Kolon",
+  "insert": "Soyo"
 }

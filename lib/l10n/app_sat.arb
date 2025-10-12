@@ -30,5 +30,13 @@
   "bulletList": "ᱣᱟᱨᱟᱱᱴᱤ ᱠᱚ",
   "quote": "ᱥᱤᱢᱮᱱᱴ",
   "horizontalRule": "ᱨᱚᱥ ᱨᱚᱥ ᱦᱚᱛᱮᱛᱮ",
-  "strikethrough": "ᱥᱟᱭᱠᱤᱞᱤᱝ"
+  "strikethrough": "ᱥᱟᱭᱠᱤᱞᱤᱝ",
+  "confirmAppExitTitle": "ᱯᱷᱤᱪᱟᱨ ᱠᱚ",
+  "confirmAppExitContent": "ᱪᱮᱫ ᱟᱢ ᱱᱚᱣᱟᱢ ᱠᱷᱚᱡᱚᱜ ᱠᱟᱱᱟ ᱡᱮ ᱟᱢ ᱱᱚᱣᱟ ᱮᱯ ᱮᱢ ᱠᱷᱚᱡᱚᱜ ᱠᱟᱱᱟ?",
+  "donate": "ᱟᱠᱤᱱ",
+  "print": "ᱯᱨᱤᱠ",
+  "table": "ᱯᱩᱸᱰ",
+  "rows": "ᱨᱮᱰᱤ",
+  "columns": "ᱠᱚᱞᱚᱱᱤ",
+  "insert": "ᱟᱨ"
 }

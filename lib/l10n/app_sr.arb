@@ -29,5 +29,14 @@
   "bulletList": "Листа мека",
   "quote": "Цитирати",
   "horizontalRule": "Хоризонтално правило",
-  "strikethrough": "СтрикеТхроугх"
+  "strikethrough": "СтрикеТхроугх",
+  "@@locale": "sr",
+  "confirmAppExitTitle": "Потврдите излаз",
+  "confirmAppExitContent": "Јесте ли сигурни да желите да изађете из ове апликације?",
+  "donate": "Донирати",
+  "print": "Штампа",
+  "table": "Сто",
+  "rows": "Редови",
+  "columns": "Колоне",
+  "insert": "Уметнути"
 }

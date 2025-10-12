@@ -29,5 +29,14 @@
   "bulletList": "Liosta Bullet",
   "quote": "Luailt",
   "horizontalRule": "Riail chothrománach",
-  "strikethrough": "Strócóideacht"
+  "strikethrough": "Strócóideacht",
+  "@@locale": "ga",
+  "confirmAppExitTitle": "Deimhnigh Scoir",
+  "confirmAppExitContent": "An bhfuil tú cinnte gur mhaith leat an feidhmchlár seo a fhágáil?",
+  "donate": "Síntigh",
+  "print": "Cinn",
+  "table": "Cuir ar an méar fhada",
+  "rows": "Sraitheanna",
+  "columns": "Colúin",
+  "insert": "Cuir isteach"
 }

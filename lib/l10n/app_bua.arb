@@ -30,5 +30,13 @@
   "bulletList": "Субаргануудай жагсаалта",
   "quote": "Эшэ татаха",
   "horizontalRule": "Горизонтальна дүрим",
-  "strikethrough": "Гүйдэл"
+  "strikethrough": "Гүйдэл",
+  "confirmAppExitTitle": "Гаралта баталха",
+  "confirmAppExitContent": "Энэ апп-һаа гараха һанаатай гүт гэжэ бата найданабта?",
+  "donate": "Мүнгэ үгэхэ",
+  "print": "Хэблэл",
+  "table": "Шэрээ",
+  "rows": "Мүр",
+  "columns": "Багаса",
+  "insert": "Оруулха"
 }

@@ -30,5 +30,13 @@
   "bulletList": "子弹列表",
   "quote": "引用",
   "horizontalRule": "水平规则",
-  "strikethrough": "罢工"
+  "strikethrough": "罢工",
+  "confirmAppExitTitle": "确认退出",
+  "confirmAppExitContent": "您确定要退出此应用程序吗？",
+  "donate": "捐",
+  "print": "打印",
+  "table": "桌子",
+  "rows": "行数",
+  "columns": "专栏",
+  "insert": "插入"
 }

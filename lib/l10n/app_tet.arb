@@ -30,5 +30,13 @@
   "bulletList": "Lista Bala",
   "quote": "Sitasaun",
   "horizontalRule": "Regra Orizontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "Konfirma Saída",
+  "confirmAppExitContent": "Ita iha serteza katak ita hakarak sai husi app ne’e?",
+  "donate": "Doasaun",
+  "print": "Imprime",
+  "table": "Meza",
+  "rows": "Fila",
+  "columns": "Koluna",
+  "insert": "Hatama"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Listë e plumbave",
   "quote": "Citoj",
   "horizontalRule": "Sundim horizontal",
-  "strikethrough": "Që ka kohë"
+  "strikethrough": "Që ka kohë",
+  "@@locale": "sq",
+  "confirmAppExitTitle": "Konfirmoni daljen",
+  "confirmAppExitContent": "A jeni i sigurt që doni të dilni nga kjo aplikacion?",
+  "donate": "Dhuroj",
+  "print": "Printim",
+  "table": "Tavolinë",
+  "rows": "Rresht",
+  "columns": "Kolona",
+  "insert": "Fut"
 }

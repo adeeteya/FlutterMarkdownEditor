@@ -30,5 +30,13 @@
   "bulletList": "Icitabo ca Buuta",
   "quote": "Ukwambula",
   "horizontalRule": "Ifunde lyalinga",
-  "strikethrough": "Ukupita"
+  "strikethrough": "Ukupita",
+  "confirmAppExitTitle": "Ukushininkisha Ukufuma",
+  "confirmAppExitContent": "Bushe nashininkisha ukuti mulefwaya ukufuma muli iyi app?",
+  "donate": "Ukusonka",
+  "print": "Ukulungika",
+  "table": "Itebulo",
+  "rows": "bakapokola",
+  "columns": "Imipenga",
+  "insert": "Ukwingisha"
 }

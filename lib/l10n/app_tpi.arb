@@ -30,5 +30,13 @@
   "bulletList": "Bullet Lis",
   "quote": "Kwot",
   "horizontalRule": "Rul bilong Horisontal",
-  "strikethrough": "Strikim tru"
+  "strikethrough": "Strikim tru",
+  "confirmAppExitTitle": "Konfem Eksit",
+  "confirmAppExitContent": "Yu sua se yu wantem kamaot long ap ia?",
+  "donate": "Donetim",
+  "print": "Prenim",
+  "table": "Tebol",
+  "rows": "Ol lain",
+  "columns": "Ol mun",
+  "insert": "Putim i go insait"
 }

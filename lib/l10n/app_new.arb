@@ -30,5 +30,13 @@
   "bulletList": "बुले लिस्ट",
   "quote": "उद्धरण",
   "horizontalRule": "होरिजोंटल नियम ४.",
-  "strikethrough": "तच्व"
+  "strikethrough": "तच्व",
+  "confirmAppExitTitle": "उद्गार उद्घोष",
+  "confirmAppExitContent": "छिं थुगु एपं पिहां वने मास्ति वःगु पक्का खः ला ?",
+  "donate": "दान य",
+  "print": "प्रिंट",
+  "table": "टेबिल",
+  "rows": "रोस",
+  "columns": "कोलम",
+  "insert": "दुत छ्वेउ"
 }

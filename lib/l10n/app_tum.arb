@@ -30,5 +30,13 @@
   "bulletList": "Mndandanda wa Bullet",
   "quote": "Tchaja mtengo",
   "horizontalRule": "Nthowa ya Horizonttal",
-  "strikethrough": "Kuzizwira"
+  "strikethrough": "Kuzizwira",
+  "confirmAppExitTitle": "Kukhozgera",
+  "confirmAppExitContent": "Kasi mukusimikizga kuti mukukhumba kufumapo pa pulogiramu iyi?",
+  "donate": "Peleka",
+  "print": "Cnt",
+  "table": "Thebulu",
+  "rows": "Nthonga",
+  "columns": "Ŵanthu awo ŵakuchemeka",
+  "insert": "Kunjirisa"
 }

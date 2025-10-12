@@ -29,5 +29,14 @@
   "bulletList": "বুলেট তালিকা",
   "quote": "উদ্ধৃতি",
   "horizontalRule": "অনুভূমিক নিয়ম",
-  "strikethrough": "স্ট্রাইকথ্রু"
+  "strikethrough": "স্ট্রাইকথ্রু",
+  "@@locale": "bn",
+  "confirmAppExitTitle": "প্রস্থান নিশ্চিত করুন",
+  "confirmAppExitContent": "আপনি কি নিশ্চিত যে আপনি এই অ্যাপ্লিকেশনটি প্রস্থান করতে চান?",
+  "donate": "দান করুন",
+  "print": "মুদ্রণ",
+  "table": "টেবিল",
+  "rows": "সারি",
+  "columns": "কলাম",
+  "insert": ".োকান"
 }

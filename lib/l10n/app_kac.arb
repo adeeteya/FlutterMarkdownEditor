@@ -30,5 +30,13 @@
   "bulletList": "Bullet List",
   "quote": "La kap la ai",
   "horizontalRule": "Horizontal Rule",
-  "strikethrough": "zai ladat"
+  "strikethrough": "zai ladat",
+  "confirmAppExitTitle": "N-gun madun ai lam",
+  "confirmAppExitContent": "Ndai app kaw na pru mayu ai hpe kam ai kun?",
+  "donate": "Gam jaw ai",
+  "print": "Prilen kau ai; agrin ai",
+  "table": "Sha ku",
+  "rows": "Rows",
+  "columns": "Hkalut",
+  "insert": "Matep bang ai"
 }

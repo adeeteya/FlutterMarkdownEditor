@@ -30,5 +30,13 @@
   "bulletList": "子彈清單",
   "quote": "語錄",
   "horizontalRule": "橫向規則",
-  "strikethrough": "攻略"
+  "strikethrough": "攻略",
+  "confirmAppExitTitle": "確認退出",
+  "confirmAppExitContent": "你肯定你想退出呢個應用程式？",
+  "donate": "捐",
+  "print": "印刷",
+  "table": "枱",
+  "rows": "排",
+  "columns": "欄",
+  "insert": "插入"
 }

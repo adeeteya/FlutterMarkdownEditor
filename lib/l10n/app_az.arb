@@ -29,5 +29,14 @@
   "bulletList": "Güllə siyahısı",
   "quote": "Sitat gətirmək",
   "horizontalRule": "Üfüqi qayda",
-  "strikethrough": "Vurmaq"
+  "strikethrough": "Vurmaq",
+  "@@locale": "az",
+  "confirmAppExitTitle": "Çıxış təsdiq edin",
+  "confirmAppExitContent": "Bu tətbiqdən çıxmaq istədiyinizə əminsiniz?",
+  "donate": "Hədiyyə etmək",
+  "print": "Çap etmək",
+  "table": "Masa",
+  "rows": "Cərgə",
+  "columns": "Sütunlar",
+  "insert": "Daxil etmək"
 }

@@ -30,5 +30,13 @@
   "bulletList": "«Копек» джедвели .",
   "quote": "Алынма",
   "horizontalRule": "Горизонталь къаиде .",
-  "strikethrough": "Стрейкинг"
+  "strikethrough": "Стрейкинг",
+  "confirmAppExitTitle": "Тастыкътан чыкъыш .",
+  "confirmAppExitContent": "Бу къулланмадан чыкъмакъ истегенинъизге эминсинъизми?",
+  "donate": "Багъышламакъ",
+  "print": "Басма",
+  "table": "Маса",
+  "rows": "Сыралар",
+  "columns": "Сутунлар .",
+  "insert": "Сокъмакъ"
 }

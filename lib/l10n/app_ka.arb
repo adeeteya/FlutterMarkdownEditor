@@ -29,5 +29,14 @@
   "bulletList": "ტყვიების სია",
   "quote": "ციტატის მოყვანა",
   "horizontalRule": "ჰორიზონტალური წესი",
-  "strikethrough": "გაფიცვა"
+  "strikethrough": "გაფიცვა",
+  "@@locale": "ka",
+  "confirmAppExitTitle": "დაადასტურეთ გასასვლელი",
+  "confirmAppExitContent": "დარწმუნებული ხართ, რომ გსურთ ამ აპის გასვლა?",
+  "donate": "ჩუქება",
+  "print": "ბეჭდვა",
+  "table": "მაგიდა",
+  "rows": "რიგები",
+  "columns": "სვეტები",
+  "insert": "ჩასმა"
 }

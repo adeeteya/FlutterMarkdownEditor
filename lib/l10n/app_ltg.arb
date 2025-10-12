@@ -30,5 +30,13 @@
   "bulletList": "Vuļteņa saroksts",
   "quote": "Citāts",
   "horizontalRule": "Horizontalais nūteikums",
-  "strikethrough": "Szint"
+  "strikethrough": "Szint",
+  "confirmAppExitTitle": "Apstyprynuojuma izeja",
+  "confirmAppExitContent": "Voi esi drūss, ka gribi izīt nu ituos lītys?",
+  "donate": "Zīduot",
+  "print": "Drukuot",
+  "table": "Tabula",
+  "rows": "ryndys",
+  "columns": "Ailis",
+  "insert": "Īlikt"
 }

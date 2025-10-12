@@ -30,5 +30,13 @@
   "bulletList": "बुलेट लिस्ट 2019।",
   "quote": "उद्धरण",
   "horizontalRule": "क्षैतिज नियम २.",
-  "strikethrough": "स्ट्राइकथ्रू 2019।"
+  "strikethrough": "स्ट्राइकथ्रू 2019।",
+  "confirmAppExitTitle": "निकास के पुष्टि करू",
+  "confirmAppExitContent": "की अहाँ निश्चित छी जे अहाँ एहि ऐप सँ बाहर निकलय चाहैत छी?",
+  "donate": "दान करनाइ",
+  "print": "प्रिंट 10।",
+  "table": "टेबल",
+  "rows": "पंक्ति ८.",
+  "columns": "स्तम्भ 10।",
+  "insert": "डालब"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Orodha ya risasi",
   "quote": "Nukuu",
   "horizontalRule": "Utawala wa usawa",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "sw",
+  "confirmAppExitTitle": "Thibitisha exit",
+  "confirmAppExitContent": "Je! Una uhakika unataka kutoka kwa programu hii?",
+  "donate": "Toa",
+  "print": "Chapisha",
+  "table": "Meza",
+  "rows": "Safu",
+  "columns": "Nguzo",
+  "insert": "Ingiza"
 }

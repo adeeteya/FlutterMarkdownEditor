@@ -29,5 +29,14 @@
   "bulletList": "Llista de bala",
   "quote": "Citar",
   "horizontalRule": "Regla horitzontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "ca",
+  "confirmAppExitTitle": "Confirmeu la sortida",
+  "confirmAppExitContent": "Esteu segur que voleu sortir d'aquesta aplicació?",
+  "donate": "Donar",
+  "print": "Imprimir",
+  "table": "Taula",
+  "rows": "Fileres",
+  "columns": "Columnes",
+  "insert": "Inserir"
 }

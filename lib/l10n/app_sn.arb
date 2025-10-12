@@ -29,5 +29,14 @@
   "bulletList": "Bullet rondedzero",
   "quote": "Quote",
   "horizontalRule": "Kutonga kwakatwasuka",
-  "strikethrough": "Kurova"
+  "strikethrough": "Kurova",
+  "@@locale": "sn",
+  "confirmAppExitTitle": "Simbisa Kubuda",
+  "confirmAppExitContent": "Une chokwadi here kuti unoda kubuda ichi app?",
+  "donate": "Kupa",
+  "print": "Dhinda",
+  "table": "Tafura",
+  "rows": "Mitsara",
+  "columns": "Makoramu",
+  "insert": "Isa"
 }

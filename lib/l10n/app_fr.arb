@@ -29,5 +29,14 @@
   "bulletList": "Liste de balles",
   "quote": "Citation",
   "horizontalRule": "Règle horizontale",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "fr",
+  "confirmAppExitTitle": "Confirmer la sortie",
+  "confirmAppExitContent": "Êtes-vous sûr de vouloir quitter cette application ?",
+  "donate": "Faire un don",
+  "print": "Imprimer",
+  "table": "Tableau",
+  "rows": "Lignes",
+  "columns": "Colonnes",
+  "insert": "Insérer"
 }

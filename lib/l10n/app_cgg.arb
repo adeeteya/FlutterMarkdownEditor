@@ -30,5 +30,13 @@
   "bulletList": "Orukarara rwa Bullet",
   "quote": "Okugambwa",
   "horizontalRule": "Embaraasi",
-  "strikethrough": "Okuha"
+  "strikethrough": "Okuha",
+  "confirmAppExitTitle": "Okuruga",
+  "confirmAppExitContent": "Noohamya ngu nooyenda kuruga omu app egi?",
+  "donate": "Okugabira",
+  "print": "Enyimaho",
+  "table": "Emeza",
+  "rows": "Enkuru",
+  "columns": "Ebiragiro",
+  "insert": "Okutasyamu"
 }

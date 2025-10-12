@@ -30,5 +30,13 @@
   "bulletList": "รายการกระสุนปืน",
   "quote": "อ้าง",
   "horizontalRule": "กฎแนวนอน",
-  "strikethrough": "สเตจ"
+  "strikethrough": "สเตจ",
+  "confirmAppExitTitle": "ยืนยันการออก",
+  "confirmAppExitContent": "คุณแน่ใจหรือไม่ว่าต้องการออกจากแอปนี้",
+  "donate": "บริจาค",
+  "print": "พิมพ์",
+  "table": "โต๊ะ",
+  "rows": "แถว",
+  "columns": "คอลัมน์",
+  "insert": "แทรก"
 }

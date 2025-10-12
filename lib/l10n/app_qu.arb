@@ -29,5 +29,14 @@
   "bulletList": "Lista de balas .",
   "quote": "Cita",
   "horizontalRule": "Horizontal kamachiy .",
-  "strikethrough": "Strikthrough ."
+  "strikethrough": "Strikthrough .",
+  "@@locale": "qu",
+  "confirmAppExitTitle": "Lluqsiy takyachiy .",
+  "confirmAppExitContent": "¿Segurochu kanki kay appmanta lluqsiyta munanki?",
+  "donate": "Quy",
+  "print": "Imprimir .",
+  "table": "Hanpara",
+  "rows": "Filas .",
+  "columns": "Columnas .",
+  "insert": "Winay"
 }

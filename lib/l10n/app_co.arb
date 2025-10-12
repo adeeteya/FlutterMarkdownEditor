@@ -30,5 +30,13 @@
   "bulletList": "Lista di balle",
   "quote": "Quot",
   "horizontalRule": "Regula orizontale",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "Confirmate l'uscita",
+  "confirmAppExitContent": "Hè sicura chì vulete surtite sta app?",
+  "donate": "Donate",
+  "print": "Stampa",
+  "table": "Tavulinu",
+  "rows": "Fila",
+  "columns": "Colonne",
+  "insert": "Inserisci"
 }

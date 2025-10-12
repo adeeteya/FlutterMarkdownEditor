@@ -29,5 +29,14 @@
   "bulletList": "गोली सूची 1 .",
   "quote": "उद्धरण",
   "horizontalRule": "क्षैतिज नियम 1 .",
-  "strikethrough": "स्ट्राइक-थ्रू ."
+  "strikethrough": "स्ट्राइक-थ्रू .",
+  "@@locale": "sa",
+  "confirmAppExitTitle": "निर्गमनस्य पुष्टिं कुर्वन्तु .",
+  "confirmAppExitContent": "किं भवन्तः निश्चयेन एतत् एप् निर्गन्तुं इच्छन्ति?",
+  "donate": "वितरणं",
+  "print": "मुद्रणम् २.",
+  "table": "पीठिका",
+  "rows": "पङ्क्तयः २.",
+  "columns": "स्तम्भः २.",
+  "insert": "युज्"
 }

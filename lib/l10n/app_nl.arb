@@ -29,5 +29,14 @@
   "bulletList": "Bulletlist",
   "quote": "Citaat",
   "horizontalRule": "Horizontale regel",
-  "strikethrough": "Doorstrevend"
+  "strikethrough": "Doorstrevend",
+  "@@locale": "nl",
+  "confirmAppExitTitle": "Bevestig Afsluiten",
+  "confirmAppExitContent": "Weet je zeker dat je deze app wilt afsluiten?",
+  "donate": "Doneer",
+  "print": "Afdrukken",
+  "table": "Tafel",
+  "rows": "Rijen",
+  "columns": "Kolommen",
+  "insert": "Invoegen"
 }

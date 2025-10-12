@@ -30,5 +30,13 @@
   "bulletList": "Buul Li̱th",
   "quote": "Tho̱̱p ra̱n",
   "horizontalRule": "Ɣöridhɔn Ruulä",
-  "strikethrough": "Ti̱ɛr"
+  "strikethrough": "Ti̱ɛr",
+  "confirmAppExitTitle": "Cäät",
+  "confirmAppExitContent": "Kä ji̱n go̱o̱ri ɣöö bi app ɛmɛ raar?",
+  "donate": "Tho̱p ra̱m mi dɔŋ",
+  "print": "pɛ̱ɛ̱th",
+  "table": "Tha̱rbët",
+  "rows": "ba̱kɔ̱",
+  "columns": "duël mi tɔt",
+  "insert": "Tily"
 }

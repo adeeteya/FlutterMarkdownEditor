@@ -29,5 +29,14 @@
   "bulletList": "Mermi listesi",
   "quote": "Alıntı",
   "horizontalRule": "Yatay kural",
-  "strikethrough": "Sert"
+  "strikethrough": "Sert",
+  "@@locale": "tr",
+  "confirmAppExitTitle": "Çıkışı Onayla",
+  "confirmAppExitContent": "Bu uygulamadan çıkmak istediğinizden emin misiniz?",
+  "donate": "Bağış yapmak",
+  "print": "Yazdır",
+  "table": "Masa",
+  "rows": "Satırlar",
+  "columns": "Sütunlar",
+  "insert": "Sokmak"
 }

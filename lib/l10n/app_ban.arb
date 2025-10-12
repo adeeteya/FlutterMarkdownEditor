@@ -30,5 +30,13 @@
   "bulletList": "Daftar Bulet",
   "quote": "Kutipan",
   "horizontalRule": "Uger-uger Horizontal",
-  "strikethrough": "Striketherowan"
+  "strikethrough": "Striketherowan",
+  "confirmAppExitTitle": "Konfirmasi Penegasan",
+  "confirmAppExitContent": "Napiké Sameton pastika jagi medal saking aplikasi puniki?",
+  "donate": "Nyumbang",
+  "print": "Cetak",
+  "table": "Meja",
+  "rows": "Baris",
+  "columns": "Korenan",
+  "insert": "Nyelipang"
 }

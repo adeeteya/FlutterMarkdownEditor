@@ -29,5 +29,14 @@
   "bulletList": "सरल सूची",
   "quote": "उद्घत गर्नु",
   "horizontalRule": "तेर्सो नियम",
-  "strikethrough": "स्ट्राइकथु"
+  "strikethrough": "स्ट्राइकथु",
+  "@@locale": "ne",
+  "confirmAppExitTitle": "फुतास निकाल्नुहोस्",
+  "confirmAppExitContent": "के तपाइँ पक्का हुनुहुन्छ कि तपाइँ यो अनुप्रयोगबाट बाहिर निस्कन चाहानुहुन्छ?",
+  "donate": "दान दिनु",
+  "print": "छाप्ने काम",
+  "table": "टेवल",
+  "rows": "भजन शासन",
+  "columns": "स्तम्भ",
+  "insert": "घुसाउनु"
 }

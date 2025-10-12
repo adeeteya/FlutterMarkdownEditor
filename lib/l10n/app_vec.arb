@@ -30,5 +30,13 @@
   "bulletList": "Lista de bułeta",
   "quote": "Preventivo",
   "horizontalRule": "Regola de orizontale .",
-  "strikethrough": "Forte"
+  "strikethrough": "Forte",
+  "confirmAppExitTitle": "Evita conferma",
+  "confirmAppExitContent": "Sicuro che te vol uscir sta app?",
+  "donate": "Donar",
+  "print": "Stampa",
+  "table": "Tola",
+  "rows": "Fiduci",
+  "columns": "Coloni",
+  "insert": "Inpirar"
 }

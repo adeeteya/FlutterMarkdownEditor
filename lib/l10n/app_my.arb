@@ -29,5 +29,14 @@
   "bulletList": "ကျည်ဆန်စာရင်း",
   "quote": "စြေးထား",
   "horizontalRule": "အလျားလိုက်စည်းမျဉ်း",
-  "strikethrough": "အချစ်"
+  "strikethrough": "အချစ်",
+  "@@locale": "my",
+  "confirmAppExitTitle": "Exit ကိုအတည်ပြုပါ",
+  "confirmAppExitContent": "ဒီ app ကိုသင်ထွက်ချင်ပါသလား။",
+  "donate": "ပေးကမ်း",
+  "print": "ပုံနှိပ်",
+  "table": "စားပှဲ",
+  "rows": "အတန်း",
+  "columns": "ကော်လံ",
+  "insert": "ထည့်သွင်း"
 }

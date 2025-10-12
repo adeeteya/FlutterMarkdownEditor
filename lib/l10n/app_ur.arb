@@ -29,5 +29,14 @@
   "bulletList": "گولی کی فہرست",
   "quote": "اقتباس",
   "horizontalRule": "افقی اصول",
-  "strikethrough": "ہڑتال"
+  "strikethrough": "ہڑتال",
+  "@@locale": "ur",
+  "confirmAppExitTitle": "ایگزٹ کی تصدیق کریں",
+  "confirmAppExitContent": "کیا آپ واقعی اس ایپ سے باہر نکلنا چاہتے ہیں؟",
+  "donate": "عطیہ کریں",
+  "print": "پرنٹ کریں",
+  "table": "جدول",
+  "rows": "قطاریں",
+  "columns": "کالم",
+  "insert": "داخل کریں"
 }

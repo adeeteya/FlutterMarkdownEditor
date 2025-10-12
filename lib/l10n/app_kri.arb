@@ -30,5 +30,13 @@
   "bulletList": "List fɔ Bullet .",
   "quote": "Tɔk",
   "horizontalRule": "Ɔrizɔntal Rul .",
-  "strikethrough": "Straykthru"
+  "strikethrough": "Straykthru",
+  "confirmAppExitTitle": "Kɔnfirm Ɛkzit .",
+  "confirmAppExitContent": "Yu shɔ se yu want fɔ kɔmɔt na dis ap?",
+  "donate": "Gi",
+  "print": "Print di 1999.",
+  "table": "Tebul",
+  "rows": "Row dɛn .",
+  "columns": "Kɔlɔm dɛn .",
+  "insert": "Ad"
 }

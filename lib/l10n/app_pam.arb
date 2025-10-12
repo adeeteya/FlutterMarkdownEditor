@@ -30,5 +30,13 @@
   "bulletList": "Listahan ning Balat .",
   "quote": "Sinabi",
   "horizontalRule": "Pahang",
-  "strikethrough": "Lupa"
+  "strikethrough": "Lupa",
+  "confirmAppExitTitle": "Kumpirmang aext",
+  "confirmAppExitContent": "Siguradu ka bang buri meng lumual keng app a ini?",
+  "donate": "Biye",
+  "print": "Pamuntuk",
+  "table": "Lamesa",
+  "rows": "Hilaga",
+  "columns": "Kolum",
+  "insert": "Lage"
 }

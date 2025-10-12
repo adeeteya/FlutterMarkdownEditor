@@ -30,5 +30,13 @@
   "bulletList": "Sún wěgbójínɔtɔ́",
   "quote": "Xókwín",
   "horizontalRule": "Sɛ́n e kúnkplá wanyiyi é",
-  "strikethrough": "Nǔ e è sɔ́ dó jǐ tɔn é"
+  "strikethrough": "Nǔ e è sɔ́ dó jǐ tɔn é",
+  "confirmAppExitTitle": "Mi mɔ nu jɛ mɛ",
+  "confirmAppExitContent": "A ka kudeji ɖɔ emi jló na tɔ́n sín appli elɔ mɛ à?",
+  "donate": "Dŏ nù",
+  "print": "Wema",
+  "table": "Távo",
+  "rows": "Rows",
+  "columns": "Sinvi lɛ",
+  "insert": "Nùɖé"
 }

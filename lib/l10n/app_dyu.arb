@@ -30,5 +30,13 @@
   "bulletList": "Bulɔti lisi",
   "quote": "Kofɔta",
   "horizontalRule": "Horizontal sariya .",
-  "strikethrough": "barikaman"
+  "strikethrough": "barikaman",
+  "confirmAppExitTitle": "I ka bɔ kɛnɛ kan",
+  "confirmAppExitContent": "Yala i lanin b’a la ko i b’a fɛ ka bɔ o porogramu kɔnɔ wa?",
+  "donate": "Di",
+  "print": "sɛbɛn",
+  "table": "Tabaki",
+  "rows": "Rows",
+  "columns": "lagosininw",
+  "insert": "Ka don"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Лэсьтэм список",
   "quote": "Текст",
   "horizontalRule": "горизонтальной правило",
-  "strikethrough": "Стрикет"
+  "strikethrough": "Стрикет",
+  "confirmAppExitTitle": "Судьба",
+  "confirmAppExitContent": "Тон оскыса, тон та приложение потыны потэ?",
+  "donate": "Коньдонэн юрттӥськыны",
+  "print": "Печать",
+  "table": "Ӝӧк",
+  "rows": "радъёс",
+  "columns": "Колонкаос",
+  "insert": "Пыртыны"
 }

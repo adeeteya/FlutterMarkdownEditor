@@ -30,5 +30,13 @@
   "bulletList": "لیستی فیشەک",
   "quote": "وەرگرتە",
   "horizontalRule": "یاسای ئاسۆیی",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "دەرچوونی دەرچوون پشتڕاست بکەرەوە",
+  "confirmAppExitContent": "ئایا دڵنیای کە دەتەوێت لەم ئەپە دەربچیت؟",
+  "donate": "بەخشین",
+  "print": "چاپ",
+  "table": "خشتە",
+  "rows": "ڕیزەکان",
+  "columns": "ستوونەکان",
+  "insert": "تێکردن"
 }

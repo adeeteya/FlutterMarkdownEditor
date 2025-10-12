@@ -30,5 +30,13 @@
   "bulletList": "Bulllet Lis",
   "quote": "Capy",
   "horizontalRule": "Hariizantal Ruul",
-  "strikethrough": "Striik chuu"
+  "strikethrough": "Striik chuu",
+  "confirmAppExitTitle": "Kanfaiyam Exit .",
+  "confirmAppExitContent": "Yu shuor se yu waahn exit dis ap?",
+  "donate": "Gi",
+  "print": "Print",
+  "table": "Table",
+  "rows": "Rows",
+  "columns": "Kolumn",
+  "insert": "Push een"
 }

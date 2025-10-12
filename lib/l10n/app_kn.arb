@@ -29,5 +29,14 @@
   "bulletList": "ಗುಂಡು ಪಟ್ಟಿ",
   "quote": "ಉಲ್ಲೇಖಿಸು",
   "horizontalRule": "ಸಮತಲ ಆಡಳಿತ",
-  "strikethrough": "ಎದೆಗುಂದಿಸು"
+  "strikethrough": "ಎದೆಗುಂದಿಸು",
+  "@@locale": "kn",
+  "confirmAppExitTitle": "ನಿರ್ಗಮನವನ್ನು ದೃ irm ೀಕರಿಸಿ",
+  "confirmAppExitContent": "ಈ ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ನಿರ್ಗಮಿಸಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?",
+  "donate": "ದಾನ ಮಾಡು",
+  "print": "ಮುದ್ರಿಸು",
+  "table": "ಮೇಜು",
+  "rows": "ಸಾಲು",
+  "columns": "ಕಾಲಮ್‌ಗಳು",
+  "insert": "ಸೇರಿಸು"
 }

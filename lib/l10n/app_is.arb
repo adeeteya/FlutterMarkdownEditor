@@ -29,5 +29,14 @@
   "bulletList": "Skothríðslisti",
   "quote": "Tilvitnun",
   "horizontalRule": "Lárétt regla",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "is",
+  "confirmAppExitTitle": "Staðfestu útgönguleið",
+  "confirmAppExitContent": "Ertu viss um að þú viljir fara út úr þessu forriti?",
+  "donate": "Gefðu",
+  "print": "Prentun",
+  "table": "Töflu",
+  "rows": "Raðir",
+  "columns": "Dálkar",
+  "insert": "Settu inn"
 }

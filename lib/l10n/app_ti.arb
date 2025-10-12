@@ -29,5 +29,14 @@
   "bulletList": "ዝርዝር ጥይት",
   "quote": "ጥቕሲ",
   "horizontalRule": "ልኡል ሕጊ .",
-  "strikethrough": "ስትራይክብሩህ"
+  "strikethrough": "ስትራይክብሩህ",
+  "@@locale": "ti",
+  "confirmAppExitTitle": "መውጽኢ ኣረጋግጽ",
+  "confirmAppExitContent": "ካብዚ ኣፕ ክትወጽእ ከም እትደሊ ርግጸኛ ዲኻ?",
+  "donate": "ምልጋስ",
+  "print": "ሕትመት",
+  "table": "ጠረጴዛ",
+  "rows": "መስርዕ .",
+  "columns": "ዓምድታት .",
+  "insert": "ኣእትው"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Lista de bulet",
   "quote": "Liparel",
   "horizontalRule": "Horizontalno Regula",
-  "strikethrough": "Te ćhivel pes"
+  "strikethrough": "Te ćhivel pes",
+  "confirmAppExitTitle": "Konfirmisaren",
+  "confirmAppExitContent": "Si tu sigurno ke kames te zhas avri anda kado app?",
+  "donate": "Del",
+  "print": "Printo",
+  "table": "Sìnia",
+  "rows": "Rows",
+  "columns": "Kolone",
+  "insert": "Ćhivel"
 }

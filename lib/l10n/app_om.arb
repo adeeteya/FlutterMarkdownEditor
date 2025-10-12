@@ -29,5 +29,14 @@
   "bulletList": "Tarree rasaasaa .",
   "quote": "Jechama",
   "horizontalRule": "Seera horizontal .",
-  "strikethrough": "Strikethrough ."
+  "strikethrough": "Strikethrough .",
+  "@@locale": "om",
+  "confirmAppExitTitle": "Ba'uu mirkaneessi .",
+  "confirmAppExitContent": "Appii kana keessaa bahuu akka barbaaddan mirkaneeffatteettaa?",
+  "donate": "Gumaachuu",
+  "print": "Maxxansaa .",
+  "table": "Minjaala",
+  "rows": "Tarreewwan .",
+  "columns": "Tarreewwan .",
+  "insert": "Keessa galchuu"
 }

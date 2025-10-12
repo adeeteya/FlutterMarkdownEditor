@@ -30,5 +30,13 @@
   "bulletList": "Ale Lista",
   "quote": "Cytata",
   "horizontalRule": "Horytōniczny Prawidło",
-  "strikethrough": "Stykacyjo"
+  "strikethrough": "Stykacyjo",
+  "confirmAppExitTitle": "Potwierdzynie Ekstra Potwierdzynio",
+  "confirmAppExitContent": "Jesz pewny, iże chcesz wyjść z tyj aplikacyje?",
+  "donate": "Podarować",
+  "print": "W prem; wydarzenio",
+  "table": "Tabula",
+  "rows": "Rows",
+  "columns": "Kooł",
+  "insert": "Wstawić"
 }

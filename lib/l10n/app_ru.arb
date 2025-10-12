@@ -29,5 +29,14 @@
   "bulletList": "Список пуль",
   "quote": "Цитировать",
   "horizontalRule": "Горизонтальное правило",
-  "strikethrough": "Удар"
+  "strikethrough": "Удар",
+  "@@locale": "ru",
+  "confirmAppExitTitle": "Подтвердить выход",
+  "confirmAppExitContent": "Вы уверены, что хотите выйти из этого приложения?",
+  "donate": "Пожертвовать",
+  "print": "Распечатать",
+  "table": "Стол",
+  "rows": "Строки",
+  "columns": "Столбцы",
+  "insert": "Вставлять"
 }

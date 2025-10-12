@@ -30,5 +30,13 @@
   "bulletList": "Daftar Peluru",
   "quote": "Ngutip",
   "horizontalRule": "Aturan mendatar",
-  "strikethrough": "Nyerang"
+  "strikethrough": "Nyerang",
+  "confirmAppExitTitle": "Keluaran Konfirma",
+  "confirmAppExitContent": "Yakin mau keluar dari aplikasi ini?",
+  "donate": "Nyumbang",
+  "print": "Cetak",
+  "table": "Meja",
+  "rows": "Deretan",
+  "columns": "Kolom",
+  "insert": "Masukin"
 }

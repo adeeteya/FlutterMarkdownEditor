@@ -29,5 +29,14 @@
   "bulletList": "బుల్లెట్ జాబితా",
   "quote": "కోట్",
   "horizontalRule": "క్షితిజ సమాంతర నియమం",
-  "strikethrough": "స్ట్రైక్‌త్రూ"
+  "strikethrough": "స్ట్రైక్‌త్రూ",
+  "@@locale": "te",
+  "confirmAppExitTitle": "నిష్క్రమణను నిర్ధారించండి",
+  "confirmAppExitContent": "మీరు ఖచ్చితంగా ఈ అనువర్తనం నుండి నిష్క్రమించాలనుకుంటున్నారా?",
+  "donate": "దానం",
+  "print": "ముద్రణ",
+  "table": "పట్టిక",
+  "rows": "వరుసలు",
+  "columns": "నిలువు వరుసలు",
+  "insert": "చొప్పించండి"
 }

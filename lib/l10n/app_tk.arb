@@ -29,5 +29,14 @@
   "bulletList": "Ok sanawynda",
   "quote": "Sitata",
   "horizontalRule": "Gorizontal düzgün",
-  "strikethrough": "Iş taşlaýyş"
+  "strikethrough": "Iş taşlaýyş",
+  "@@locale": "tk",
+  "confirmAppExitTitle": "Çykyşy tassyklaň",
+  "confirmAppExitContent": "Bu programmadan çykmak isleýändigiňize ynanýarsyňyzmy?",
+  "donate": "Bagyş et",
+  "print": "Çap et",
+  "table": "Tablisa",
+  "rows": "Hatarlar",
+  "columns": "Sütünler",
+  "insert": "Goýmak"
 }

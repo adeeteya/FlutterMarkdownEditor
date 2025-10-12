@@ -29,5 +29,14 @@
   "bulletList": "ነጥበ ምልክት ዝርዝር",
   "quote": "ጥቅስ",
   "horizontalRule": "አግድም ሕግ",
-  "strikethrough": "ቀሚስ"
+  "strikethrough": "ቀሚስ",
+  "@@locale": "am",
+  "confirmAppExitTitle": "መውጫ ያረጋግጡ",
+  "confirmAppExitContent": "እርግጠኛ ነዎት ከዚህ መተግበሪያ ለመውጣት ይፈልጋሉ?",
+  "donate": "ልገሳ",
+  "print": "ማተም",
+  "table": "ሠንጠረዥ",
+  "rows": "ረድፎች",
+  "columns": "አምዶች",
+  "insert": "ያስገቡ"
 }

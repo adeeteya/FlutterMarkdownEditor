@@ -30,5 +30,13 @@
   "bulletList": "Lim pangat",
   "quote": "Gin mo ma ki coyo ka mo",
   "horizontalRule": "Cik matir",
-  "strikethrough": "Bedo ki par"
+  "strikethrough": "Bedo ki par",
+  "confirmAppExitTitle": "Ka ce",
+  "confirmAppExitContent": "Tika itye ki miti me weko app man?",
+  "donate": "Miyu kony",
+  "print": "dwan",
+  "table": "Meja",
+  "rows": "Row",
+  "columns": "Luco",
+  "insert": "Lut"
 }

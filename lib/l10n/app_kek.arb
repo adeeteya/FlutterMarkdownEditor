@@ -30,5 +30,13 @@
   "bulletList": "Lista de Ballet",
   "quote": "Ut wi' raj",
   "horizontalRule": "Xchaq’rab’il li Horizontal",
-  "strikethrough": "Chi kaw"
+  "strikethrough": "Chi kaw",
+  "confirmAppExitTitle": "Xk’ojob’ankil",
+  "confirmAppExitContent": "Ma ch’olch’o chawu naq taawaj elk sa’ li aplicación a’in?",
+  "donate": "Siib'al",
+  "print": "Kij tzʼiibʼa aʼan",
+  "table": "Che",
+  "rows": "Rochoch",
+  "columns": "Kolon",
+  "insert": "Roksinkil"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Mndandanda",
   "quote": "Mawu",
   "horizontalRule": "Lamulo lopingasa",
-  "strikethrough": "Landuka"
+  "strikethrough": "Landuka",
+  "@@locale": "ny",
+  "confirmAppExitTitle": "Tsimikizani Kutuluka",
+  "confirmAppExitContent": "Mukutsimikiza kuti mukufuna kutuluka pulogalamuyi?",
+  "donate": "Peleka",
+  "print": "Kusindikiza",
+  "table": "Tebulo",
+  "rows": "Miziro",
+  "columns": "Mzanga",
+  "insert": "Ika"
 }

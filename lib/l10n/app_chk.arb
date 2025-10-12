@@ -30,5 +30,13 @@
   "bulletList": "Lissiwil",
   "quote": "Usun ra apasa",
   "horizontalRule": "Ewe Alluk mi fokkun watte",
-  "strikethrough": "Achocho"
+  "strikethrough": "Achocho",
+  "confirmAppExitTitle": "Kopwe Ekkesiwinin Ekkesiwinin .",
+  "confirmAppExitContent": "Ka nukuw pwe ka mochen kopwe tou seni ei app?",
+  "donate": "Niffang ngeni",
+  "print": "katon",
+  "table": "Eyiti",
+  "rows": "Rows",
+  "columns": "Kolun",
+  "insert": "Etikaanong"
 }

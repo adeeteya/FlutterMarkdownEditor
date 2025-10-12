@@ -30,5 +30,13 @@
   "bulletList": "बुलेट लिस्ट",
   "quote": "दर",
   "horizontalRule": "क्षैतिज नियम",
-  "strikethrough": "हठोवा"
+  "strikethrough": "हठोवा",
+  "confirmAppExitTitle": "समायोजित",
+  "confirmAppExitContent": "का आपका यकीन है कि आप ई ऐप से बाहर निकलना चाहत हैं?",
+  "donate": "दान करब",
+  "print": "प्रिंट",
+  "table": "मेज",
+  "rows": "पंच",
+  "columns": "कॉलम",
+  "insert": "डारब"
 }

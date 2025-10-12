@@ -29,5 +29,14 @@
   "bulletList": "Kula",
   "quote": "Citationstecken",
   "horizontalRule": "Horisontell regel",
-  "strikethrough": "Trrikethrough"
+  "strikethrough": "Trrikethrough",
+  "@@locale": "sv",
+  "confirmAppExitTitle": "Bekräfta utgång",
+  "confirmAppExitContent": "Är du säker på att du vill lämna den här appen?",
+  "donate": "Donera",
+  "print": "Skriva ut",
+  "table": "Tabell",
+  "rows": "Rader",
+  "columns": "Kolumner",
+  "insert": "Infoga"
 }

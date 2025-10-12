@@ -29,5 +29,14 @@
   "bulletList": "Список кулі",
   "quote": "Цитата",
   "horizontalRule": "Горизонтальне правило",
-  "strikethrough": "Вражати"
+  "strikethrough": "Вражати",
+  "@@locale": "uk",
+  "confirmAppExitTitle": "Підтвердити вихід",
+  "confirmAppExitContent": "Ви впевнені, що хочете вийти з цього додатка?",
+  "donate": "Пожертвувати",
+  "print": "Друкувати",
+  "table": "Стіл",
+  "rows": "Ряди",
+  "columns": "Колони",
+  "insert": "Вставляти"
 }

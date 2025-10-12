@@ -30,5 +30,13 @@
   "bulletList": "Daftar Peluru",
   "quote": "Pedah",
   "horizontalRule": "Aturan Horizontal .",
-  "strikethrough": "erkite-kiteken"
+  "strikethrough": "erkite-kiteken",
+  "confirmAppExitTitle": "Keluarlah .",
+  "confirmAppExitContent": "Kam yakin nge atendu ndarat i bas aplikasi enda?",
+  "donate": "Cukong",
+  "print": "Cetak",
+  "table": "Meja",
+  "rows": "biri-biri",
+  "columns": "Kolom",
+  "insert": "Ngancuhi"
 }

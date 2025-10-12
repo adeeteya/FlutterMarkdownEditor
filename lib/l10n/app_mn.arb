@@ -29,5 +29,14 @@
   "bulletList": "Баруу Жууп жагсаалт",
   "quote": "Иш татах",
   "horizontalRule": "Хэвтээ дүрэм",
-  "strikethrough": "Strikethrugh"
+  "strikethrough": "Strikethrugh",
+  "@@locale": "mn",
+  "confirmAppExitTitle": "Гарах илгээх илгээх",
+  "confirmAppExitContent": "Та энэ апп-оос гарахыг хүсч байна уу?",
+  "donate": "Бэлэглэх",
+  "print": "Үсэг",
+  "table": "Ширээ",
+  "rows": "Мөр",
+  "columns": "Багана",
+  "insert": "Оруулах"
 }

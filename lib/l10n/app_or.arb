@@ -29,5 +29,14 @@
   "bulletList": "ବୁଲେଟ୍ ତାଲିକା |",
   "quote": "ଉଦ୍ଧୃତ",
   "horizontalRule": "ଭୂସମାନ୍ତର ନିୟମ",
-  "strikethrough": "ଷ୍ଟ୍ରାଇକ୍ଥ୍ରୋ |"
+  "strikethrough": "ଷ୍ଟ୍ରାଇକ୍ଥ୍ରୋ |",
+  "@@locale": "or",
+  "confirmAppExitTitle": "ପ୍ରସ୍ଥାନ ନିଶ୍ଚିତ କରନ୍ତୁ",
+  "confirmAppExitContent": "ଆପଣ ନିଶ୍ଚିତ କି ଆପଣ ଏହି ଆପର ବାହାରକୁ ଯିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
+  "donate": "ଦାନ କରନ୍ତୁ |",
+  "print": "ମୁଦ୍ରଣ",
+  "table": "ଟେବୁଲ୍ |",
+  "rows": "ଧାଡିଗୁଡ଼ିକ",
+  "columns": "ସ୍ତମ୍ଭ",
+  "insert": "ସନ୍ନିବେଶ କରନ୍ତୁ |"
 }

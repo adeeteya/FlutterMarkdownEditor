@@ -29,5 +29,14 @@
   "bulletList": "Λίστα με τις σφαίρες",
   "quote": "Παραθέτω",
   "horizontalRule": "Οριζόντιος κανόνας",
-  "strikethrough": "Στρίφια"
+  "strikethrough": "Στρίφια",
+  "@@locale": "el",
+  "confirmAppExitTitle": "Επιβεβαιώστε την έξοδο",
+  "confirmAppExitContent": "Είστε βέβαιοι ότι θέλετε να βγείτε από αυτήν την εφαρμογή;",
+  "donate": "Προσφέρω",
+  "print": "Αποτύπωμα",
+  "table": "Τραπέζι",
+  "rows": "Σειρές",
+  "columns": "Στήλες",
+  "insert": "Εισάγω"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Оқ тізімі",
   "quote": "Сілтеме жасау",
   "horizontalRule": "Көлденең ереже",
-  "strikethrough": "Стрикет"
+  "strikethrough": "Стрикет",
+  "confirmAppExitTitle": "Шығуды растаңыз",
+  "confirmAppExitContent": "Сіз бұл бағдарламадан шыққыңыз келе ме?",
+  "donate": "Қию",
+  "print": "Із",
+  "table": "Үстел",
+  "rows": "Жолдар",
+  "columns": "Бағандар",
+  "insert": "Қосу"
 }

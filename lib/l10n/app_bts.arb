@@ -30,5 +30,13 @@
   "bulletList": "Daftar Bully",
   "quote": "Kutipan",
   "horizontalRule": "Aturan Horizontal",
-  "strikethrough": "1:10 Tapi anggo si Striket"
+  "strikethrough": "1:10 Tapi anggo si Striket",
+  "confirmAppExitTitle": "Patonkon",
+  "confirmAppExitContent": "Ai yakin do nasiam sihol kaluar hun aplikasi on?",
+  "donate": "Sumbangan",
+  "print": "Cetak",
+  "table": "Meja",
+  "rows": "Buku",
+  "columns": "Kolom",
+  "insert": "Pamasukkon"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Kugle liste",
   "quote": "Citere",
   "horizontalRule": "Vandret regel",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "da",
+  "confirmAppExitTitle": "Bekræft udgang",
+  "confirmAppExitContent": "Er du sikker på, at du vil afslutte denne app?",
+  "donate": "Doner",
+  "print": "Trykke",
+  "table": "Tabel",
+  "rows": "Rækker",
+  "columns": "Søjler",
+  "insert": "Indsæt"
 }

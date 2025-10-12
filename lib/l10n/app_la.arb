@@ -29,5 +29,14 @@
   "bulletList": "Bullet List",
   "quote": "Reicio",
   "horizontalRule": "Regula",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "la",
+  "confirmAppExitTitle": "Confirmare Exit",
+  "confirmAppExitContent": "Certus es tu vis exitus huius app?",
+  "donate": "DONO",
+  "print": "Print",
+  "table": "Mensa",
+  "rows": "Row",
+  "columns": "Columnas",
+  "insert": "Inserto"
 }

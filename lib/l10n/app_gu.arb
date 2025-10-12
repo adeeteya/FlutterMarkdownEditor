@@ -30,5 +30,13 @@
   "bulletList": "ગોળી",
   "quote": "ભાવ",
   "horizontalRule": "આડા નિયમ",
-  "strikethrough": "હડતાલ"
+  "strikethrough": "હડતાલ",
+  "confirmAppExitTitle": "બહાર નીકળો",
+  "confirmAppExitContent": "શું તમે ખરેખર આ એપ્લિકેશનમાંથી બહાર નીકળવા માંગો છો?",
+  "donate": "દાન કરવું",
+  "print": "છાપું",
+  "table": "કોષ્ટક",
+  "rows": "પંખી",
+  "columns": "શણગાર",
+  "insert": "દાખલ કરવું"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Lista metaka",
   "quote": "Citat",
   "horizontalRule": "Horizontalno pravilo",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "bs",
+  "confirmAppExitTitle": "Potvrdite izlaz",
+  "confirmAppExitContent": "Jeste li sigurni da želite izaći iz ove aplikacije?",
+  "donate": "Donirati",
+  "print": "Ispisati",
+  "table": "Tablica",
+  "rows": "Redovi",
+  "columns": "Stubovi",
+  "insert": "Umetnuti"
 }

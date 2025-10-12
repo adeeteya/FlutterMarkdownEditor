@@ -29,5 +29,14 @@
   "bulletList": "لیست گلوله",
   "quote": "نقل قول",
   "horizontalRule": "قانون افقی",
-  "strikethrough": "چیز جالب"
+  "strikethrough": "چیز جالب",
+  "@@locale": "fa",
+  "confirmAppExitTitle": "خروج را تأیید کنید",
+  "confirmAppExitContent": "آیا مطمئن هستید که می خواهید از این برنامه خارج شوید؟",
+  "donate": "اهداء کردن",
+  "print": "چاپ",
+  "table": "جدول",
+  "rows": "ردیف",
+  "columns": "ستون",
+  "insert": "درج کردن"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Senarai peluru",
   "quote": "Petikan",
   "horizontalRule": "Peraturan mendatar",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "ms",
+  "confirmAppExitTitle": "Sahkan keluar",
+  "confirmAppExitContent": "Adakah anda pasti mahu keluar dari aplikasi ini?",
+  "donate": "Menderma",
+  "print": "Cetak",
+  "table": "Jadual",
+  "rows": "Baris",
+  "columns": "Lajur",
+  "insert": "Masukkan"
 }

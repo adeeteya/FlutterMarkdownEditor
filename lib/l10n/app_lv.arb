@@ -30,5 +30,13 @@
   "bulletList": "Ložu saraksts",
   "quote": "Citēt",
   "horizontalRule": "Horizontāls noteikums",
-  "strikethrough": "Streikot"
+  "strikethrough": "Streikot",
+  "confirmAppExitTitle": "Apstiprināt izeju",
+  "confirmAppExitContent": "Vai esat pārliecināts, ka vēlaties iziet no šīs lietotnes?",
+  "donate": "Ziedot",
+  "print": "Drukāt",
+  "table": "Galotne",
+  "rows": "Rindas",
+  "columns": "Kolonnas",
+  "insert": "Ievietot"
 }

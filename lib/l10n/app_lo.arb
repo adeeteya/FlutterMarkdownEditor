@@ -29,5 +29,14 @@
   "bulletList": "ບັນຊີລາຍຊື່ລູກປືນ",
   "quote": "ອ້າງ",
   "horizontalRule": "ກົດລະບຽບຕາມແນວນອນ",
-  "strikethrough": "ການເຄື່ອນໄຫວ"
+  "strikethrough": "ການເຄື່ອນໄຫວ",
+  "@@locale": "lo",
+  "confirmAppExitTitle": "ຢືນຢັນການອອກ",
+  "confirmAppExitContent": "ທ່ານແນ່ໃຈບໍ່ວ່າທ່ານຕ້ອງການອອກຈາກແອັບ this ນີ້?",
+  "donate": "ບໍລິຈາກ",
+  "print": "ພິມ",
+  "table": "ໂຕະ",
+  "rows": "ພາຢ",
+  "columns": "ຖັນ",
+  "insert": "ຊອນເຂົ້າ"
 }

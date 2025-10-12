@@ -29,5 +29,14 @@
   "bulletList": "Danh sách đạn",
   "quote": "Trích dẫn",
   "horizontalRule": "Quy tắc ngang",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "vi",
+  "confirmAppExitTitle": "Xác nhận Thoát",
+  "confirmAppExitContent": "Bạn có chắc chắn muốn thoát khỏi ứng dụng này không?",
+  "donate": "Quyên tặng",
+  "print": "In",
+  "table": "Bàn",
+  "rows": "Hàng",
+  "columns": "Cột",
+  "insert": "Chèn"
 }

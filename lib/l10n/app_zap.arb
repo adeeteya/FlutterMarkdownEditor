@@ -30,5 +30,13 @@
   "bulletList": "Lista de borrado",
   "quote": "Preciu",
   "horizontalRule": "Regla de Horizontal",
-  "strikethrough": "Nabé nadipaʼ dulce ."
+  "strikethrough": "Nabé nadipaʼ dulce .",
+  "confirmAppExitTitle": "Confirmar salida",
+  "confirmAppExitContent": "Ñee nuuluʼ seguru racaláʼdxiluʼ guireeluʼ de lu aplicación riʼ la?",
+  "donate": "Rusiga'de",
+  "print": "Imprimir",
+  "table": "Mexá",
+  "rows": "Ca fila",
+  "columns": "Columnas",
+  "insert": "Riguu"
 }

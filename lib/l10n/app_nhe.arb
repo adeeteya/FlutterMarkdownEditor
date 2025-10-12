@@ -30,5 +30,13 @@
   "bulletList": "Bullet Porta",
   "quote": "Tenauatilistli",
   "horizontalRule": "Tlanahuatili tlen Horizontal",
-  "strikethrough": "Tlayakapa"
+  "strikethrough": "Tlayakapa",
+  "confirmAppExitTitle": "rireas tlen kisa",
+  "confirmAppExitContent": "¿Tijmati para tijnequi tiquisas ipan ni aplicación?",
+  "donate": "Temaktia",
+  "print": "tejkaua",
+  "table": "Akolpechtli",
+  "rows": "Rows",
+  "columns": "Combustible",
+  "insert": "Kalakilis"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Belselist",
   "quote": "Opjaan",
   "horizontalRule": "Horizontale regel",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "Befêstigje ôfslach",
+  "confirmAppExitContent": "Binne jo wis dat jo dizze app wolle útgean?",
+  "donate": "Donearje",
+  "print": "Ôfdrukke",
+  "table": "Tafel",
+  "rows": "Rigen",
+  "columns": "Kolommen",
+  "insert": "Ynfoegje"
 }

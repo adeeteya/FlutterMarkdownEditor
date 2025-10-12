@@ -29,5 +29,14 @@
   "bulletList": "Ndepụta Bulle",
   "quote": "Kwotu",
   "horizontalRule": "Uche kwụ ọtọ",
-  "strikethrough": "Catchethrough"
+  "strikethrough": "Catchethrough",
+  "@@locale": "ig",
+  "confirmAppExitTitle": "Kwenye ọpụpụ",
+  "confirmAppExitContent": "Ì ji n'aka na ịchọrọ ịpụ ngwa a?",
+  "donate": "Inye",
+  "print": "Deputa",
+  "table": "Okpokoro",
+  "rows": "Agwo",
+  "columns": "Mntanet",
+  "insert": "Itinye"
 }

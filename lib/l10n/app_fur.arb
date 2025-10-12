@@ -30,5 +30,13 @@
   "bulletList": "Liste di bulle",
   "quote": "Preventîf",
   "horizontalRule": "Regole orizontâl",
-  "strikethrough": "Strichet"
+  "strikethrough": "Strichet",
+  "confirmAppExitTitle": "Confermâ Exite",
+  "confirmAppExitContent": "Sigur che si vûl jessi fûr di cheste aplicazion?",
+  "donate": "Donâ",
+  "print": "stamp; Preest",
+  "table": "Taule",
+  "rows": "struture",
+  "columns": "Racuelte",
+  "insert": "Inserî"
 }

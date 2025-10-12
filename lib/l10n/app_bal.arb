@@ -30,5 +30,13 @@
   "bulletList": "بلٹ لسٹ",
   "quote": "گْونڈگری",
   "horizontalRule": "سِندی قاعدہ",
-  "strikethrough": "اسٹرینڈ"
+  "strikethrough": "اسٹرینڈ",
+  "confirmAppExitTitle": "دره",
+  "confirmAppExitContent": "تو اے گپ ءَ دلجم ئے کہ تو اے کار ءَ کنگ لوٹ ئے؟",
+  "donate": "دیگ",
+  "print": "مانرگ",
+  "table": "مێز",
+  "rows": "راہ",
+  "columns": "کولمن",
+  "insert": "مان کنگ"
 }

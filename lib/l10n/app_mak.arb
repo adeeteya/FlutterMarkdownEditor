@@ -30,5 +30,13 @@
   "bulletList": "Kitta’ Buta .",
   "quote": "Kutipang",
   "horizontalRule": "Aturan Horizontal",
-  "strikethrough": "Strikewa"
+  "strikethrough": "Strikewa",
+  "confirmAppExitTitle": "Konfir",
+  "confirmAppExitContent": "Apa nupa’jari ero’nu assulu’ battu ri anne app?",
+  "donate": "Annyumbang",
+  "print": "napakalompo",
+  "table": "Meja",
+  "rows": "sar",
+  "columns": "kolong",
+  "insert": "Appasisi"
 }

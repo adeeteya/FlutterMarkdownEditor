@@ -30,5 +30,13 @@
   "bulletList": "Rintai Peluru",
   "quote": "Petikan",
   "horizontalRule": "Atur Horizontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "Ngesahka Pemansut",
+  "confirmAppExitContent": "Kati nuan tentu deka pansut ari app tu?",
+  "donate": "Menderma",
+  "print": "Print",
+  "table": "Mija",
+  "rows": "Baris",
+  "columns": "Tiang",
+  "insert": "Tama"
 }

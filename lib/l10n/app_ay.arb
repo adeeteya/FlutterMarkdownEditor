@@ -29,5 +29,14 @@
   "bulletList": "Bala Lista .",
   "quote": "Chanichaña",
   "horizontalRule": "Horizontal kamachixa 1.1.",
-  "strikethrough": "Ukax mä jach’a uñacht’äwiwa."
+  "strikethrough": "Ukax mä jach’a uñacht’äwiwa.",
+  "@@locale": "ay",
+  "confirmAppExitTitle": "Confirmar 1.1.",
+  "confirmAppExitContent": "¿Jumaxa aka app-at mistuñ munasmati?",
+  "donate": "Khuyapayaña",
+  "print": "Imprimir .",
+  "table": "Kumpurilla",
+  "rows": "Filanaka .",
+  "columns": "Columnas ukanakax .",
+  "insert": "Uchaña"
 }

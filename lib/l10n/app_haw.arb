@@ -30,5 +30,13 @@
   "bulletList": "Papa inoa lihi",
   "quote": "Quote",
   "horizontalRule": "Rula nui",
-  "strikethrough": "Kahuna"
+  "strikethrough": "Kahuna",
+  "confirmAppExitTitle": "E hōʻoia i waho",
+  "confirmAppExitContent": "Makemakeʻoe e makemake e haʻalele i kēia app?",
+  "donate": "Hāʻawi",
+  "print": "Paʻi",
+  "table": "Pākaukau",
+  "rows": "Nā Wale",
+  "columns": "Nā kolamu",
+  "insert": "Hoʻohui"
 }

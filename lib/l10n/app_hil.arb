@@ -30,5 +30,13 @@
   "bulletList": "Listahan sa Balay",
   "quote": "Ginbalikwa",
   "horizontalRule": "Bilezontal nga Pagsulundan .",
-  "strikethrough": "Pag-uyog ."
+  "strikethrough": "Pag-uyog .",
+  "confirmAppExitTitle": "Kumpirma nga Pagguwa .",
+  "confirmAppExitContent": "Sigurado ka bala nga gusto mo magguwa sa sini nga app?",
+  "donate": "Donar",
+  "print": "pag-imprinta",
+  "table": "Lamisa",
+  "rows": "Mga laray",
+  "columns": "Mga kolum",
+  "insert": "Pagsal-ot"
 }

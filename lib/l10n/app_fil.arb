@@ -29,5 +29,14 @@
   "bulletList": "Listahan ng Bullet",
   "quote": "Quote",
   "horizontalRule": "Pahalang na panuntunan",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "fil",
+  "confirmAppExitTitle": "Kumpirmahin ang exit",
+  "confirmAppExitContent": "Sigurado ka bang nais mong lumabas sa app na ito?",
+  "donate": "Mag -donate",
+  "print": "I -print",
+  "table": "Mesa",
+  "rows": "Mga hilera",
+  "columns": "Mga haligi",
+  "insert": "Ipasok"
 }

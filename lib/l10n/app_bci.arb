@@ -30,5 +30,13 @@
   "bulletList": "Liste bullet",
   "quote": "Inuan",
   "horizontalRule": "Mmla nga be kan sran’m be ndɛ’n",
-  "strikethrough": "Akplowa"
+  "strikethrough": "Akplowa",
+  "confirmAppExitTitle": "Exit exit d’anfirm",
+  "confirmAppExitContent": "?Amun lafi su kɛ amún fíte appli sɔ’n nun?",
+  "donate": "Man",
+  "print": "yili",
+  "table": "Tabli",
+  "rows": "Rows",
+  "columns": "tran'ni",
+  "insert": "Fa wlu"
 }

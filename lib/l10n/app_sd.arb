@@ -29,5 +29,14 @@
   "bulletList": "بلٽ لسٽ",
   "quote": "پڙهائي سينس",
   "horizontalRule": "افقي قاعدو",
-  "strikethrough": "هڙتال ڪندڙ"
+  "strikethrough": "هڙتال ڪندڙ",
+  "@@locale": "sd",
+  "confirmAppExitTitle": "تصديق ڪريو",
+  "confirmAppExitContent": "ڇا توهان کي پڪ آهي ته توهان هن ايپ کي ٻاهر نڪرڻ چاهيو ٿا؟",
+  "donate": "عطيو ڏيو",
+  "print": "ڇپي",
+  "table": "ٽيبل",
+  "rows": "قطار",
+  "columns": "ڪالمن",
+  "insert": "داخلو"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Bullet cazin",
   "quote": "Bia rovui",
   "horizontalRule": "Horizontal Rule",
-  "strikethrough": "Hrut"
+  "strikethrough": "Hrut",
+  "confirmAppExitTitle": "Confirm Exit",
+  "confirmAppExitContent": "Hi app hi chuah na duh hrimhrim maw?",
+  "donate": "Hlut",
+  "print": "print",
+  "table": "Cabuai",
+  "rows": "Rows",
+  "columns": "Column",
+  "insert": "A chung ah telh"
 }

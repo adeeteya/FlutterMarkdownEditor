@@ -29,5 +29,14 @@
   "bulletList": "Kulkų sąrašas",
   "quote": "Citata",
   "horizontalRule": "Horizontali taisyklė",
-  "strikethrough": "STRIKETHROUGH"
+  "strikethrough": "STRIKETHROUGH",
+  "@@locale": "lt",
+  "confirmAppExitTitle": "Patvirtinkite išėjimą",
+  "confirmAppExitContent": "Ar tikrai norite išeiti iš šios programos?",
+  "donate": "Paaukoti",
+  "print": "Spausdinti",
+  "table": "Lentelė",
+  "rows": "Eilutės",
+  "columns": "Stulpeliai",
+  "insert": "Įterpti"
 }

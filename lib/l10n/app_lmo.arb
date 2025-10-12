@@ -30,5 +30,13 @@
   "bulletList": "Fèrta",
   "quote": "Preventiv",
   "horizontalRule": "Eliminà del Giapon.",
-  "strikethrough": "Desmentega."
+  "strikethrough": "Desmentega.",
+  "confirmAppExitTitle": "Intensità",
+  "confirmAppExitContent": "Te g’hes de vèss sicür che te g’hes de vèss?",
+  "donate": "Donar",
+  "print": "La jenal",
+  "table": "Tavol",
+  "rows": "jener",
+  "columns": "luxn",
+  "insert": "Inserir"
 }

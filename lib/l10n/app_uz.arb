@@ -29,5 +29,14 @@
   "bulletList": "O'qlar ro'yxati",
   "quote": "Narx",
   "horizontalRule": "Gorizontal qoida",
-  "strikethrough": "StrikriRu"
+  "strikethrough": "StrikriRu",
+  "@@locale": "uz",
+  "confirmAppExitTitle": "Chiqishni tasdiqlang",
+  "confirmAppExitContent": "Ushbu ilovadan chiqishni xohlaysizmi?",
+  "donate": "Xayr-ehson qilmoq",
+  "print": "Bosib chiqarish",
+  "table": "Stol",
+  "rows": "Qatorlar",
+  "columns": "Ustunlar",
+  "insert": "Qo'shmoq"
 }

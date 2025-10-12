@@ -30,5 +30,13 @@
   "bulletList": "Listahan nin bala",
   "quote": "Banggit",
   "horizontalRule": "Pahigdang Paggawi sa Reglamento .",
-  "strikethrough": "Habik"
+  "strikethrough": "Habik",
+  "confirmAppExitTitle": "Kumpirmar an Pagluwas",
+  "confirmAppExitContent": "Sigurado ka na gusto mong magluwas sa app na ini?",
+  "donate": "Donar",
+  "print": "Pag-imprenta",
+  "table": "Lamesa",
+  "rows": "Mga hilera",
+  "columns": "Mga kolum",
+  "insert": "Isaliot"
 }

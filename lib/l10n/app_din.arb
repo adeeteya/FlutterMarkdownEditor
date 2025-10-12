@@ -30,5 +30,13 @@
   "bulletList": "Bunol Lithol",
   "quote": "Nëm",
   "horizontalRule": "Lööŋ ke paanakïm",
-  "strikethrough": "Thiɛ̈k"
+  "strikethrough": "Thiɛ̈k",
+  "confirmAppExitTitle": "Cɔk Kë loi",
+  "confirmAppExitContent": "Ye ŋic lɔn wïc yïn ba jäl në app kënë yic?",
+  "donate": "Kuɔ̈l",
+  "print": "Lööŋ",
+  "table": "Tɛ̈n luɔi",
+  "rows": "Rowi",
+  "columns": "Colum",
+  "insert": "Bɛ̈n thïn"
 }

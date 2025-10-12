@@ -29,5 +29,14 @@
   "bulletList": "Daftar peluru",
   "quote": "Mengutip",
   "horizontalRule": "Aturan horizontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "id",
+  "confirmAppExitTitle": "Konfirmasi Keluar",
+  "confirmAppExitContent": "Apakah Anda yakin ingin keluar dari aplikasi ini?",
+  "donate": "Menyumbangkan",
+  "print": "Mencetak",
+  "table": "Meja",
+  "rows": "Baris",
+  "columns": "Kolom",
+  "insert": "Menyisipkan"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Ka List",
   "quote": "Ka ba la shim",
   "horizontalRule": "Ka Rule kaba jur",
-  "strikethrough": "Ka jinglong"
+  "strikethrough": "Ka jinglong",
+  "confirmAppExitTitle": "pynskhem",
+  "confirmAppExitContent": "Hato phi thikna ba phi kwah ban mih na kane ka app?",
+  "donate": "Aisbun",
+  "print": "Print",
+  "table": "Ka miej",
+  "rows": "Ki Row",
+  "columns": "Column",
+  "insert": "Thep"
 }

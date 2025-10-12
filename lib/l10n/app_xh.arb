@@ -29,5 +29,14 @@
   "bulletList": "Uluhlu lweBullet",
   "quote": "Isicatshulwa",
   "horizontalRule": "Umthetho othe tyaba",
-  "strikethrough": "Ukubetha"
+  "strikethrough": "Ukubetha",
+  "@@locale": "xh",
+  "confirmAppExitTitle": "Qinisekisa ukuphuma",
+  "confirmAppExitContent": "Uqinisekile ukuba ufuna ukuphuma kule app?",
+  "donate": "Nikela",
+  "print": "Shicilela",
+  "table": "Itafile",
+  "rows": "Imiqolo yetyu",
+  "columns": "Iikholamu",
+  "insert": "Faka"
 }

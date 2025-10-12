@@ -29,5 +29,14 @@
   "bulletList": "Nxaxamelo wa swibalesa .",
   "quote": "Ntshaho",
   "horizontalRule": "Ku fuma ka horizontal .",
-  "strikethrough": "Strikethrough ."
+  "strikethrough": "Strikethrough .",
+  "@@locale": "ts",
+  "confirmAppExitTitle": "Tiyisisa ku huma .",
+  "confirmAppExitContent": "Xana u tiyisile leswaku u lava ku huma eka app leyi?",
+  "donate": "Nyikela",
+  "print": "Ku gandlisa .",
+  "table": "Tafula",
+  "rows": "Tilayini .",
+  "columns": "Tikholomu .",
+  "insert": "Nghenisa"
 }

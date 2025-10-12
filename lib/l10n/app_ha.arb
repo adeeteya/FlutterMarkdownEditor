@@ -29,5 +29,14 @@
   "bulletList": "Jerin harsashi",
   "quote": "Sa farashi",
   "horizontalRule": "Attaonal Dokar",
-  "strikethrough": "Faɗakarwa"
+  "strikethrough": "Faɗakarwa",
+  "@@locale": "ha",
+  "confirmAppExitTitle": "Tabbatar da fita",
+  "confirmAppExitContent": "Shin kun tabbata kuna son fita wannan app?",
+  "donate": "Ba da kyauta",
+  "print": "Buga",
+  "table": "Tebur",
+  "rows": "Layuka",
+  "columns": "Ginshiƙai",
+  "insert": "Shiga da"
 }

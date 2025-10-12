@@ -29,5 +29,14 @@
   "bulletList": "Laulauti lisi",
   "quote": "Upusii",
   "horizontalRule": "Tulaga maualuga",
-  "strikethrough": "Strickrough"
+  "strikethrough": "Strickrough",
+  "@@locale": "sm",
+  "confirmAppExitTitle": "Faamautu le ulufafo",
+  "confirmAppExitContent": "O e mautinoa e te manaʻo e alu ese atu i lenei app?",
+  "donate": "Lafo mai",
+  "print": "Lolomi",
+  "table": "Laulau",
+  "rows": "Laina",
+  "columns": "Pou",
+  "insert": "Faaofi"
 }

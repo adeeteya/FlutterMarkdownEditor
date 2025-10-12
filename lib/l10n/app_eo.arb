@@ -29,5 +29,14 @@
   "bulletList": "Kuglo -Listo",
   "quote": "Citaĵo",
   "horizontalRule": "Horizontala regulo",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "eo",
+  "confirmAppExitTitle": "Konfirmu Eliron",
+  "confirmAppExitContent": "Ĉu vi certas, ke vi volas forlasi ĉi tiun programon?",
+  "donate": "Donaci",
+  "print": "Presi",
+  "table": "Tabelo",
+  "rows": "Vicoj",
+  "columns": "Kolumnoj",
+  "insert": "Enmetu"
 }

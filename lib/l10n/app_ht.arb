@@ -29,5 +29,14 @@
   "bulletList": "Lis bal",
   "quote": "Kotasyon",
   "horizontalRule": "Règ orizontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "ht",
+  "confirmAppExitTitle": "Konfime sòti",
+  "confirmAppExitContent": "Èske ou sèten ou vle sòti app sa a?",
+  "donate": "Bay",
+  "print": "Anprent",
+  "table": "Tab",
+  "rows": "Rat",
+  "columns": "Kolòn",
+  "insert": "Ensere"
 }

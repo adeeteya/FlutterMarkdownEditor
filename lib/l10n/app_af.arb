@@ -29,5 +29,14 @@
   "bulletList": "Koeëllys",
   "quote": "Kwotasie",
   "horizontalRule": "Horisontale reël",
-  "strikethrough": "Treffend"
+  "strikethrough": "Treffend",
+  "@@locale": "af",
+  "confirmAppExitTitle": "Bevestig uitgang",
+  "confirmAppExitContent": "Is u seker dat u hierdie app wil verlaat?",
+  "donate": "Skenk",
+  "print": "Afdruk",
+  "table": "Tafel",
+  "rows": "Rye",
+  "columns": "Kolomme",
+  "insert": "Invoeg"
 }

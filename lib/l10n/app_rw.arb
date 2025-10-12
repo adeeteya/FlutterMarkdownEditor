@@ -30,5 +30,13 @@
   "bulletList": "Urutonde rw'amasasu",
   "quote": "Amagambo",
   "horizontalRule": "Amategeko atambitse",
-  "strikethrough": "Imyigaragambyo"
+  "strikethrough": "Imyigaragambyo",
+  "confirmAppExitTitle": "Emeza gusohoka",
+  "confirmAppExitContent": "Uzi neza ko ushaka gusohoka kuriyi porogaramu?",
+  "donate": "Gutanga",
+  "print": "Icapiro",
+  "table": "Imbonerahamwe",
+  "rows": "Umurongo",
+  "columns": "Inkingi",
+  "insert": "Shyiramo"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Liste ya masasi .",
   "quote": "Kozongela",
   "horizontalRule": "Mobeko ya horizontal .",
-  "strikethrough": "Strikethrough ."
+  "strikethrough": "Strikethrough .",
+  "@@locale": "ln",
+  "confirmAppExitTitle": "Kondimisa kobima .",
+  "confirmAppExitContent": "Ozali na kondima ete olingi kobima na appli oyo?",
+  "donate": "Kopesa libonza",
+  "print": "Imprimer .",
+  "table": "Mesa",
+  "rows": "Milɔngɔ́ .",
+  "columns": "Makonzí .",
+  "insert": "Kobakisa"
 }

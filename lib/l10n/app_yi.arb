@@ -29,5 +29,14 @@
   "bulletList": "קויל רשימה",
   "quote": "ציטירן",
   "horizontalRule": "האָריזאָנטאַל הערשן",
-  "strikethrough": "סטריקעטהראָוגה"
+  "strikethrough": "סטריקעטהראָוגה",
+  "@@locale": "yi",
+  "confirmAppExitTitle": "באַשטעטיקן אַרויסגאַנג",
+  "confirmAppExitContent": "ביסט איר זיכער אַז איר ווילט אַרויסגאַנג דעם אַפּ?",
+  "donate": "מאַקרעוו זייַן",
+  "print": "פאַרקויפט",
+  "table": "טיש",
+  "rows": "ראָוז",
+  "columns": "שפאלטן",
+  "insert": "אַרייַנפלעכטן"
 }

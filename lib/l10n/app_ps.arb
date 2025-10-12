@@ -30,5 +30,13 @@
   "bulletList": "د ګولۍ لیست",
   "quote": "نرخ",
   "horizontalRule": "افقي قانون",
-  "strikethrough": "اعتصاب"
+  "strikethrough": "اعتصاب",
+  "confirmAppExitTitle": "د وتلو تایید کړئ",
+  "confirmAppExitContent": "ایا تاسو باوري یاست چې غواړئ دا ایپ وتل غواړې؟",
+  "donate": "مرسته وکړه",
+  "print": "چاپ",
+  "table": "میز",
+  "rows": "قطارونه",
+  "columns": "کالمونه",
+  "insert": "دننه کړئ"
 }

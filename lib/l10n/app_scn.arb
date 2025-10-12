@@ -30,5 +30,13 @@
   "bulletList": "Lista di Bullet",
   "quote": "Privintivu",
   "horizontalRule": "Règula urizzuntali",
-  "strikethrough": "Culazzioni"
+  "strikethrough": "Culazzioni",
+  "confirmAppExitTitle": "Uscitura di cunfirmazzioni",
+  "confirmAppExitContent": "Sicuru ca voli nesciri sta app?",
+  "donate": "Dunari",
+  "print": "Stampa",
+  "table": "Tàvula",
+  "rows": "Righi",
+  "columns": "Culonni",
+  "insert": "Nziriri"
 }

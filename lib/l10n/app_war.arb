@@ -30,5 +30,13 @@
   "bulletList": "Lista han Bala",
   "quote": "Kotar",
   "horizontalRule": "Pamahom nga Surundon .",
-  "strikethrough": "Pagpatingad"
+  "strikethrough": "Pagpatingad",
+  "confirmAppExitTitle": "Kumpirma",
+  "confirmAppExitContent": "Sigurado ka ba nga karuyag mo gumawas hini nga app?",
+  "donate": "Pagdonar",
+  "print": "Imprinta",
+  "table": "Lamesa",
+  "rows": "Mga laray",
+  "columns": "Mga kolum",
+  "insert": "Ginlakip"
 }

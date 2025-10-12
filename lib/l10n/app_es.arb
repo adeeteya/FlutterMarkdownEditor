@@ -29,5 +29,14 @@
   "bulletList": "Lista de balas",
   "quote": "Cita",
   "horizontalRule": "Regla horizontal",
-  "strikethrough": "Fusible"
+  "strikethrough": "Fusible",
+  "@@locale": "es",
+  "confirmAppExitTitle": "Confirmar salida",
+  "confirmAppExitContent": "¿Estás seguro de que quieres salir de esta aplicación?",
+  "donate": "Donar",
+  "print": "Imprimir",
+  "table": "Mesa",
+  "rows": "Filas",
+  "columns": "columnas",
+  "insert": "Insertar"
 }

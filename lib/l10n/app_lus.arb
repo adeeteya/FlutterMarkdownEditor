@@ -30,5 +30,13 @@
   "bulletList": "Bullet list a awm a .",
   "quote": "Thusawi",
   "horizontalRule": "Horizontal Rule 1000 a ni.",
-  "strikethrough": "Strikethrough a ni a ."
+  "strikethrough": "Strikethrough a ni a .",
+  "confirmAppExitTitle": "A chhuahna tur confirm .",
+  "confirmAppExitContent": "He app hi i chhuahsan duh tak tak em?",
+  "donate": "Pe",
+  "print": "Print 100 a ni.",
+  "table": "Dawhkan",
+  "rows": "Rows 10 a awm.",
+  "columns": "Column hrang hrang .",
+  "insert": "Thun"
 }

@@ -30,5 +30,13 @@
   "bulletList": "បញ្ជីចំណុច",
   "quote": "ការវាយតមលៃ",
   "horizontalRule": "វិធានផ្តេក",
-  "strikethrough": "striKethrough"
+  "strikethrough": "striKethrough",
+  "confirmAppExitTitle": "បញ្ជាក់ការចាកចេញ",
+  "confirmAppExitContent": "តើអ្នកពិតជាចង់ចាកចេញពីកម្មវិធីនេះមែនទេ?",
+  "donate": "បរិច្ចាក",
+  "print": "អកសរបុម្ក",
+  "table": "តុ",
+  "rows": "ជួរ",
+  "columns": "ជួរឈរ",
+  "insert": "រចក"
 }

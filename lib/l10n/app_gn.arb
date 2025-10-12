@@ -30,5 +30,13 @@
   "bulletList": "Lista de balas rehegua .",
   "quote": "Hysýi",
   "horizontalRule": "regla horizontal rehegua .",
-  "strikethrough": "huelga rehegua ."
+  "strikethrough": "huelga rehegua .",
+  "confirmAppExitTitle": "Omoañete osê haguã .",
+  "confirmAppExitContent": "¿Reime seguro resẽseha ko app-gui?",
+  "donate": "Me'ẽrei",
+  "print": "Impresión rehegua .",
+  "table": "Aripaka",
+  "rows": "Fila rehegua .",
+  "columns": "Umi kolúmna .",
+  "insert": "Moinge"
 }

@@ -29,5 +29,14 @@
   "bulletList": "වෙඩි උණ්ඩ ලැයිස්තුව",
   "quote": "උපුටා ගැනීම",
   "horizontalRule": "තිරස් රීතිය",
-  "strikethrough": "වැඩ වර්ජනය"
+  "strikethrough": "වැඩ වර්ජනය",
+  "@@locale": "si",
+  "confirmAppExitTitle": "පිටවීම තහවුරු කරන්න",
+  "confirmAppExitContent": "ඔබට මෙම යෙදුමෙන් පිටවීමට අවශ්ය බව ඔබට විශ්වාසද?",
+  "donate": "පරිත්යාග කරන්න",
+  "print": "මුද්රණය",
+  "table": "වගුව",
+  "rows": "පේළි",
+  "columns": "තීරු",
+  "insert": "ඇතුළු කරන්න"
 }

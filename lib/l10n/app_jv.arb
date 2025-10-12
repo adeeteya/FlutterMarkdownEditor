@@ -29,5 +29,14 @@
   "bulletList": "Dhaptar Peluru",
   "quote": "Kutipan",
   "horizontalRule": "Aturan horisontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "jv",
+  "confirmAppExitTitle": "Konfirmasi Exit",
+  "confirmAppExitContent": "Apa sampeyan pengin metu app iki?",
+  "donate": "Sumbang",
+  "print": "Cetak",
+  "table": "Tabel",
+  "rows": "Larik",
+  "columns": "Kolom",
+  "insert": "SISTER"
 }

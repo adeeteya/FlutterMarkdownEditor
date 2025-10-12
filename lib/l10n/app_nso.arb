@@ -30,5 +30,13 @@
   "bulletList": "Lenaneo la Dikulo .",
   "quote": "Setsopolwa",
   "horizontalRule": "Molao wa go rapalala .",
-  "strikethrough": "Seteraeke sa go ngala mošomo ."
+  "strikethrough": "Seteraeke sa go ngala mošomo .",
+  "confirmAppExitTitle": "Netefatša go tšwa .",
+  "confirmAppExitContent": "Na o na le bonnete bja gore o nyaka go tšwa app ye?",
+  "donate": "Neela",
+  "print": "Kgatišo .",
+  "table": "Tafola",
+  "rows": "Methaladi .",
+  "columns": "Dikholomo .",
+  "insert": "Tsenya"
 }

@@ -29,5 +29,14 @@
   "bulletList": "Bullet List",
   "quote": "Sitere",
   "horizontalRule": "Horisontal regel",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "no",
+  "confirmAppExitTitle": "Bekreft avkjørsel",
+  "confirmAppExitContent": "Er du sikker på at du vil avslutte denne appen?",
+  "donate": "Donere",
+  "print": "Trykk",
+  "table": "Bord",
+  "rows": "Rader",
+  "columns": "Kolonner",
+  "insert": "Sett inn"
 }

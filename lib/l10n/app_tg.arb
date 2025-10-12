@@ -30,5 +30,13 @@
   "bulletList": "Рӯйхати Тамом",
   "quote": "Нархмонӣ",
   "horizontalRule": "Қоидаи уфуқӣ",
-  "strikethrough": "Strikesshough"
+  "strikethrough": "Strikesshough",
+  "confirmAppExitTitle": "Тасвирро тасдиқ кунед",
+  "confirmAppExitContent": "Шумо мутмаин ҳастед, ки мехоҳед аз ин барнома бароед?",
+  "donate": "Хайрия",
+  "print": "Чоп кардан",
+  "table": "Стол",
+  "rows": "Қатор",
+  "columns": "Сутунҳо",
+  "insert": "Илова кардан"
 }

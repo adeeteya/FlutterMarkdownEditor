@@ -30,5 +30,13 @@
   "bulletList": "Lalis bal",
   "quote": "Site",
   "horizontalRule": "Lareg orizontal",
-  "strikethrough": "Frapan"
+  "strikethrough": "Frapan",
+  "confirmAppExitTitle": "Sorti konfirm",
+  "confirmAppExitContent": "Eski ou sir ou anvi sorti dan sa app?",
+  "donate": "Donnen",
+  "print": "Enprimen",
+  "table": "Latab",
+  "rows": "bann ranze",
+  "columns": "Kolon",
+  "insert": "Met"
 }

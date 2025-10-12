@@ -30,5 +30,13 @@
   "bulletList": "Спіс кулі",
   "quote": "Цытаваць",
   "horizontalRule": "Гарызантальнае правіла",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "Пацвердзіце выхад",
+  "confirmAppExitContent": "Вы ўпэўнены, што хочаце выйсці з гэтага прыкладання?",
+  "donate": "Ахвяраваць",
+  "print": "Адбітак",
+  "table": "Стол",
+  "rows": "Шэды",
+  "columns": "Калоны",
+  "insert": "Устаўляць"
 }

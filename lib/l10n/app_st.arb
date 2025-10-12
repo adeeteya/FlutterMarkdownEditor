@@ -29,5 +29,14 @@
   "bulletList": "Lenane la Bullet",
   "quote": "Quote",
   "horizontalRule": "Molao o motle",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "st",
+  "confirmAppExitTitle": "Netefatsa ho tsoa",
+  "confirmAppExitContent": "Na u na le bonnete ba hore u batla ho tsoa sesebelisoa see?",
+  "donate": "Donate",
+  "print": "Hatisa",
+  "table": "Tafole",
+  "rows": "Mela",
+  "columns": "Likholomo",
+  "insert": "Kenya"
 }

@@ -30,5 +30,13 @@
   "bulletList": "Jarawec mi ng’om zoo .",
   "quote": "Cok dhoge",
   "horizontalRule": "Horifon",
-  "strikethrough": "Dhu'twing"
+  "strikethrough": "Dhu'twing",
+  "confirmAppExitTitle": "Keth cwinyi .",
+  "confirmAppExitContent": "Be ineno ni idwaro ni ibed gi app maeni?",
+  "donate": "Miki",
+  "print": "Dhu'",
+  "table": "Meza",
+  "rows": "Ndhuru",
+  "columns": "Jukwenda",
+  "insert": "Roi"
 }

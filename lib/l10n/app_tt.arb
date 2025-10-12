@@ -29,5 +29,14 @@
   "bulletList": "Пуля исемлеге",
   "quote": "Цитата",
   "horizontalRule": "Горизонталь кагыйдә",
-  "strikethrough": "Бәрелеш"
+  "strikethrough": "Бәрелеш",
+  "@@locale": "tt",
+  "confirmAppExitTitle": "Чыгышны раслагыз",
+  "confirmAppExitContent": "Сез бу кушымтаны чыгарга телисезме?",
+  "donate": "Бүләк итегез",
+  "print": "Бастыру",
+  "table": "Таблица",
+  "rows": "Рәтләр",
+  "columns": "Баганалар",
+  "insert": "Кертү"
 }

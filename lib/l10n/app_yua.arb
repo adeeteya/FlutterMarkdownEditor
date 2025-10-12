@@ -30,5 +30,13 @@
   "bulletList": "Tsoolol ba'alo'ob",
   "quote": "Kóotisasion",
   "horizontalRule": "Regla u horizontales",
-  "strikethrough": "Desviado"
+  "strikethrough": "Desviado",
+  "confirmAppExitTitle": "Confirme Salida",
+  "confirmAppExitContent": "Ba'ax táan seguro u k'áato' jóok'ol le ka'anatako'ob?",
+  "donate": "Ts'áaj áantaj",
+  "print": "Imprimo",
+  "table": "Mayakche",
+  "rows": "Rows",
+  "columns": "Columnas",
+  "insert": "Okol"
 }

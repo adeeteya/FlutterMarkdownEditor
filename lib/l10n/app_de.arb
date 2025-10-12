@@ -1,4 +1,5 @@
 {
+  "@@locale": "de",
   "ok": "OK",
   "yes": "Ja",
   "cancel": "Abbrechen",
@@ -29,5 +30,13 @@
   "bulletList": "Ungeordnete Liste",
   "quote": "Zitat",
   "horizontalRule": "Horizontale Linie",
-  "strikethrough": "Durchgestrichen"
+  "strikethrough": "Durchgestrichen",
+  "confirmAppExitTitle": "Bestätigen Sie das Beenden",
+  "confirmAppExitContent": "Möchten Sie diese App wirklich beenden?",
+  "donate": "Spenden",
+  "print": "Drucken",
+  "table": "Tisch",
+  "rows": "Reihen",
+  "columns": "Spalten",
+  "insert": "Einfügen"
 }

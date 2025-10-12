@@ -30,5 +30,13 @@
   "bulletList": "बसोट री सूची",
   "quote": "हवालो देणो",
   "horizontalRule": "पेंजर",
-  "strikethrough": "स्मार्ट"
+  "strikethrough": "स्मार्ट",
+  "confirmAppExitTitle": "समर्पण",
+  "confirmAppExitContent": "कांई आप पक्कायत ई इण ऐप नैं बारै काढणो चावो हो?",
+  "donate": "दान देणो",
+  "print": "जीमो",
+  "table": "टेबल",
+  "rows": "रोज",
+  "columns": "कोळ",
+  "insert": "मांय बाड़णो"
 }

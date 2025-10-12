@@ -30,5 +30,13 @@
   "bulletList": "Liste ya kalle",
   "quote": "Mambu ya muntu tubaka",
   "horizontalRule": "Nsiku ya ke monisa mambu",
-  "strikethrough": "Kubasika"
+  "strikethrough": "Kubasika",
+  "confirmAppExitTitle": "Kundimisa Kubasika",
+  "confirmAppExitContent": "Keti nge ke ndima nde nge ke zola kubasika na appli yai?",
+  "donate": "Kupesa makabu",
+  "print": "Kunyema",
+  "table": "Mesa",
+  "rows": "Mabulu",
+  "columns": "Bakolone",
+  "insert": "Kuyika"
 }

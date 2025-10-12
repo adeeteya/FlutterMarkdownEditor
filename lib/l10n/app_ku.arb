@@ -30,5 +30,13 @@
   "bulletList": "Navnîşa guleyan",
   "quote": "Girtebêjîn",
   "horizontalRule": "Rêza horizontî",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "EXIT piştrast bikin",
+  "confirmAppExitContent": "Ma hûn guman dikin ku hûn dixwazin vê sepanê derkevin?",
+  "donate": "Bêşdan",
+  "print": "Çap",
+  "table": "Mêz",
+  "rows": "Rêzdan",
+  "columns": "Kolon",
+  "insert": "Lêzêdekirin"
 }

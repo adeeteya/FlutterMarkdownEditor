@@ -30,5 +30,13 @@
   "bulletList": "Lista de Bullet",
   "quote": "Preventivo",
   "horizontalRule": "Regola orizzontale",
-  "strikethrough": "Copertua de striscia"
+  "strikethrough": "Copertua de striscia",
+  "confirmAppExitTitle": "Confermâ Exit",
+  "confirmAppExitContent": "Sei seguo che ti veu sciortî feua st'app?",
+  "donate": "Donâ",
+  "print": "Stampa",
+  "table": "Töa",
+  "rows": "core",
+  "columns": "donde s'attreuva",
+  "insert": "Inserî"
 }

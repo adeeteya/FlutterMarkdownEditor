@@ -29,5 +29,14 @@
   "bulletList": "Zoznam",
   "quote": "Citovať",
   "horizontalRule": "Horizontálne pravidlo",
-  "strikethrough": "Štrajk"
+  "strikethrough": "Štrajk",
+  "@@locale": "sk",
+  "confirmAppExitTitle": "Potvrďte výstup",
+  "confirmAppExitContent": "Ste si istí, že chcete opustiť túto aplikáciu?",
+  "donate": "Darovať",
+  "print": "Tlač",
+  "table": "Tabuľka",
+  "rows": "Riadky",
+  "columns": "Stĺpce",
+  "insert": "Vložiť"
 }

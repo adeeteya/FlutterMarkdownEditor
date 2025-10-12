@@ -30,5 +30,13 @@
   "bulletList": "Lista sa bala",
   "quote": "Mokutlo",
   "horizontalRule": "Halangdon nga Pagmando",
-  "strikethrough": "Wagat"
+  "strikethrough": "Wagat",
+  "confirmAppExitTitle": "Kumpirma ang exit",
+  "confirmAppExitContent": "Sigurado ka nga gusto nimo nga mogawas kini nga app?",
+  "donate": "Mohatag",
+  "print": "Patik",
+  "table": "Lamisa",
+  "rows": "Laray",
+  "columns": "Haligi",
+  "insert": "Isukip"
 }

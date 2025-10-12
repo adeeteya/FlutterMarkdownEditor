@@ -30,5 +30,13 @@
   "bulletList": "Daftar Peluru .",
   "quote": "Manapu",
   "horizontalRule": "Aturan horisontal .",
-  "strikethrough": "Langit"
+  "strikethrough": "Langit",
+  "confirmAppExitTitle": "Burju ma Kaluar .",
+  "confirmAppExitContent": "Pos do rohamuna naeng kaluar sian aplikasi on?",
+  "donate": "Manumbang",
+  "print": "Ccetak",
+  "table": "Meja",
+  "rows": "Bangun",
+  "columns": "Kolom",
+  "insert": "Manoloti"
 }

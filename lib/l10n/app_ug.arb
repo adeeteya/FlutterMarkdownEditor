@@ -29,5 +29,14 @@
   "bulletList": "ئوق تىزىملىكى",
   "quote": "نەقىل",
   "horizontalRule": "توغرىسىغا قائىدە",
-  "strikethrough": "ئىش تاشلاش"
+  "strikethrough": "ئىش تاشلاش",
+  "@@locale": "ug",
+  "confirmAppExitTitle": "چېكىنىشنى جەزملەشتۈرۈڭ",
+  "confirmAppExitContent": "بۇ دېتالدىن چېكىنىشنى خالامسىز?",
+  "donate": "ئىئانە قىلىڭ",
+  "print": "بېسىپ چىقىرىش",
+  "table": "جەدۋەل",
+  "rows": "Rows",
+  "columns": "ستونلار",
+  "insert": "قىستۇر"
 }

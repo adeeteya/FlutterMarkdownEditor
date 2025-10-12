@@ -29,5 +29,14 @@
   "bulletList": "Liiska Sharafta",
   "quote": "Ka soo xigasho",
   "horizontalRule": "Xeerka toosan",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "so",
+  "confirmAppExitTitle": "Xaqiiji bixitaanka",
+  "confirmAppExitContent": "Ma hubtaa inaad rabto inaad ka baxdo barnaamijkan?",
+  "donate": "Ku tabarrucid",
+  "print": "Daabicid",
+  "table": "Miis",
+  "rows": "Saf",
+  "columns": "Sadarka",
+  "insert": "Gelin"
 }

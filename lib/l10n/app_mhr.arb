@@ -30,5 +30,13 @@
   "bulletList": "Пуля списке",
   "quote": "Цитата",
   "horizontalRule": "Горизонтальный правилым",
-  "strikethrough": "Спектакль"
+  "strikethrough": "Спектакль",
+  "confirmAppExitTitle": "Пеҥгыдемдымаш лектыш",
+  "confirmAppExitContent": "Те ӱшанеда, те тиде приложений гыч лекташ шонеда?",
+  "donate": "Пӧлекленат",
+  "print": "Печатьыште",
+  "table": "Стол",
+  "rows": "Рӱдер-влак",
+  "columns": "Колонко",
+  "insert": "Пуртен шындаш"
 }

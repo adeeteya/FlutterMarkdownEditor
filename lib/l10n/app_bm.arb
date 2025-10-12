@@ -30,5 +30,13 @@
   "bulletList": "Lisiti bullet .",
   "quote": "Ka sɔngɔ jateminɛ",
   "horizontalRule": "sariya horizontale .",
-  "strikethrough": "Strikethrough ."
+  "strikethrough": "Strikethrough .",
+  "confirmAppExitTitle": "Aw bɛ bɔli dafa .",
+  "confirmAppExitContent": "Yala i dalen b’a la ko i b’a fɛ ka bɔ nin appli in na wa?",
+  "donate": "Ka saraka bɔ",
+  "print": "Print .",
+  "table": "Tabali",
+  "rows": "Rows .",
+  "columns": "Kolonw .",
+  "insert": "Ka don"
 }

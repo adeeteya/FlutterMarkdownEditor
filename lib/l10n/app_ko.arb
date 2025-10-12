@@ -29,5 +29,14 @@
   "bulletList": "총알 목록",
   "quote": "인용하다",
   "horizontalRule": "수평 규칙",
-  "strikethrough": "strikethrough"
+  "strikethrough": "strikethrough",
+  "@@locale": "ko",
+  "confirmAppExitTitle": "종료 확인",
+  "confirmAppExitContent": "이 앱을 종료하시겠습니까?",
+  "donate": "기부",
+  "print": "인쇄",
+  "table": "테이블",
+  "rows": "행",
+  "columns": "열",
+  "insert": "끼워 넣다"
 }

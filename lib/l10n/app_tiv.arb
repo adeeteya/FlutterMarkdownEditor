@@ -30,5 +30,13 @@
   "bulletList": "Bullet List",
   "quote": "Or kwagh la voughur",
   "horizontalRule": "Tindi u Ityendezwa",
-  "strikethrough": "Kwagh u kpilighyol"
+  "strikethrough": "Kwagh u kpilighyol",
+  "confirmAppExitTitle": "Kwaghôron u sha inja",
+  "confirmAppExitContent": "U ngu a vangertiôr wer u soo u duen ken app ne kpa?",
+  "donate": "Nagh",
+  "print": "Gber",
+  "table": "Tebul",
+  "rows": "Rows",
+  "columns": "Ukasua",
+  "insert": "Wa"
 }

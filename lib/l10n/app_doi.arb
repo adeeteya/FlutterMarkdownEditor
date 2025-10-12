@@ -30,5 +30,13 @@
   "bulletList": "बुलेट लिस्ट ऐ",
   "quote": "हवाला",
   "horizontalRule": "क्षैतिज नियम",
-  "strikethrough": "हड़ताल थ्रू"
+  "strikethrough": "हड़ताल थ्रू",
+  "confirmAppExitTitle": "निकास दी पुष्टि करो",
+  "confirmAppExitContent": "क्या तुस इस ऐप थमां बाहर निकलना चांह् दे ओ?",
+  "donate": "दान देना",
+  "print": "प्रिंट करो",
+  "table": "टेबल",
+  "rows": "कतारें",
+  "columns": "स्तंभ ऐ",
+  "insert": "दाखल करना"
 }

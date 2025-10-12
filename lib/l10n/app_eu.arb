@@ -29,5 +29,14 @@
   "bulletList": "Bala zerrenda",
   "quote": "Aipatu",
   "horizontalRule": "Arau horizontala",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "eu",
+  "confirmAppExitTitle": "Berretsi irteera",
+  "confirmAppExitContent": "Ziur aplikazio honetatik irten nahi duzula?",
+  "donate": "Eman",
+  "print": "Letra",
+  "table": "Mahai",
+  "rows": "Errenkadak",
+  "columns": "Zutabeak",
+  "insert": "Txertatu"
 }

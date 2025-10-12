@@ -30,5 +30,13 @@
   "bulletList": "बुलेट लिस्ट के बा .",
   "quote": "मोल लगावल",
   "horizontalRule": "क्षैतिज नियम के बा .",
-  "strikethrough": "स्ट्राइकथ्रू के बा ."
+  "strikethrough": "स्ट्राइकथ्रू के बा .",
+  "confirmAppExitTitle": "बाहर निकले के पुष्टि करीं",
+  "confirmAppExitContent": "का रउवा पक्का बानी कि रउवा एह ऐप से बाहर निकले के चाहत बानी?",
+  "donate": "दान कईल",
+  "print": "प्रिंट करे के बा .",
+  "table": "टेबुल",
+  "rows": "पंक्ति के बा .",
+  "columns": "कॉलम के बा .",
+  "insert": "डालीं"
 }

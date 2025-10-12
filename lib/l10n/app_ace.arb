@@ -30,5 +30,13 @@
   "bulletList": "Daftar Aneuek",
   "quote": "Kuot",
   "horizontalRule": "Aturan Horizontal .",
-  "strikethrough": "Strikethlur"
+  "strikethrough": "Strikethlur",
+  "confirmAppExitTitle": "Konfirmasi Keluaran .",
+  "confirmAppExitContent": "Peu keuh droeneuh yakin droeneuh neuk teubiet dari app nyoe?",
+  "donate": "Donasi",
+  "print": "Cetak",
+  "table": "Meh",
+  "rows": "Tali",
+  "columns": "Kolom",
+  "insert": "Sisep"
 }

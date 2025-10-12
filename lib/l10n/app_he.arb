@@ -29,5 +29,14 @@
   "bulletList": "רשימת כדורים",
   "quote": "לְצַטֵט",
   "horizontalRule": "כלל אופקי",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "he",
+  "confirmAppExitTitle": "אשר את היציאה",
+  "confirmAppExitContent": "האם אתה בטוח שאתה רוצה לצאת לאפליקציה זו?",
+  "donate": "לִתְרוֹם",
+  "print": "הֶדפֵּס",
+  "table": "לוּחַ",
+  "rows": "שורות",
+  "columns": "עמודות",
+  "insert": "לְהַכנִיס"
 }

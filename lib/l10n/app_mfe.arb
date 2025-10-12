@@ -30,5 +30,13 @@
   "bulletList": "Lalis bal",
   "quote": "Sitasion",
   "horizontalRule": "Regleman pou orizontal",
-  "strikethrough": "Fer enn gran difikilte"
+  "strikethrough": "Fer enn gran difikilte",
+  "confirmAppExitTitle": "Sorti lor Konfirm",
+  "confirmAppExitContent": "Eski to sir to anvi sorti dan sa app-la?",
+  "donate": "Donasion",
+  "print": "Inprim",
+  "table": "Latab",
+  "rows": "Bann ranze",
+  "columns": "Kolon",
+  "insert": "Insere"
 }

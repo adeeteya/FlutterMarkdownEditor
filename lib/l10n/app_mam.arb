@@ -30,5 +30,13 @@
   "bulletList": "k´ul u´j",
   "quote": "B´il twi´",
   "horizontalRule": "Horizestal",
-  "strikethrough": "NA"
+  "strikethrough": "NA",
+  "confirmAppExitTitle": "Ex nya bʼaʼn .",
+  "confirmAppExitContent": "¿Qʼuqli tkʼuʼja tiʼj qa taja tuʼn tel tpan tibʼa tiʼj aplicación lu?",
+  "donate": "Oyil",
+  "print": "Imprimir",
+  "table": "Mex",
+  "rows": "Roya",
+  "columns": "ij;",
+  "insert": "Q´onxa"
 }

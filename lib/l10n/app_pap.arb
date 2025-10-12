@@ -30,5 +30,13 @@
   "bulletList": "Lista di Bala",
   "quote": "Sita",
   "horizontalRule": "Regla horizontal",
-  "strikethrough": "Entrando"
+  "strikethrough": "Entrando",
+  "confirmAppExitTitle": "Konfirmá Salida",
+  "confirmAppExitContent": "Bo ta sigur cu bo kier sali for di e app aki?",
+  "donate": "Hasi donashon",
+  "print": "Investiga",
+  "table": "Mesa",
+  "rows": "Relanan",
+  "columns": "Kolumnanan",
+  "insert": "Insertá"
 }

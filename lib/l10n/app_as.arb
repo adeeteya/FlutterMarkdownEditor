@@ -29,5 +29,14 @@
   "bulletList": "বুলেট তালিকা",
   "quote": "উদ্ধৃতি",
   "horizontalRule": "অনুভূমিক নিয়ম",
-  "strikethrough": "ষ্ট্ৰাইকথ্ৰু"
+  "strikethrough": "ষ্ট্ৰাইকথ্ৰু",
+  "@@locale": "as",
+  "confirmAppExitTitle": "প্ৰস্থান নিশ্চিত কৰক",
+  "confirmAppExitContent": "আপুনি এই এপটোৰ পৰা ওলাই যাব বিচৰাটো নিশ্চিত নেকি?",
+  "donate": "দান কৰা",
+  "print": "প্ৰিন্ট কৰক",
+  "table": "মেজ",
+  "rows": "শাৰী",
+  "columns": "স্তম্ভসমূহ",
+  "insert": "প্ৰবিষ্ট কৰা"
 }

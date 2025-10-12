@@ -30,5 +30,13 @@
   "bulletList": "Uhlu lwezinhlamvu",
   "quote": "Phinda amazwi ashiwo ngomunye umuntu",
   "horizontalRule": "Umthetho ovundlile",
-  "strikethrough": "I-Strikethrough"
+  "strikethrough": "I-Strikethrough",
+  "confirmAppExitTitle": "Qinisekisa ukuphuma",
+  "confirmAppExitContent": "Uqinisekile ukuthi ufuna ukuphuma kulolu hlelo lokusebenza?",
+  "donate": "Nikela",
+  "print": "Cindezela",
+  "table": "Itafula",
+  "rows": "Imigqa",
+  "columns": "Amakholamu",
+  "insert": "Faka"
 }

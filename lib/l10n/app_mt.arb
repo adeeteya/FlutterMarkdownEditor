@@ -29,5 +29,14 @@
   "bulletList": "Lista tal-Bullet",
   "quote": "Kwotazzjoni",
   "horizontalRule": "Regola orizzontali",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "mt",
+  "confirmAppExitTitle": "Ikkonferma l-ħruġ",
+  "confirmAppExitContent": "Int żgur li trid toħroġ minn din l-app?",
+  "donate": "Donazzjoni",
+  "print": "Stampa",
+  "table": "Tabella",
+  "rows": "Ringieli",
+  "columns": "Kolonni",
+  "insert": "Daħħal"
 }

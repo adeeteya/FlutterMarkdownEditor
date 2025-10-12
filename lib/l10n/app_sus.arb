@@ -30,5 +30,13 @@
   "bulletList": "Bullet List",
   "quote": "Mikhi gbètè khoui",
   "horizontalRule": "Taruxui sɛbɛxi .",
-  "strikethrough": "temi"
+  "strikethrough": "temi",
+  "confirmAppExitTitle": "Confirme xa wali .",
+  "confirmAppExitContent": "Wo laxi a ra wo wama yi appli raminife ?",
+  "donate": "Fi",
+  "print": "a sago",
+  "table": "Walèkhè khoungbé",
+  "rows": "Rows",
+  "columns": "Kolon",
+  "insert": "Araso akoui fé"
 }

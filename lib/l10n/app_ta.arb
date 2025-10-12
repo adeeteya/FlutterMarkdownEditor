@@ -29,5 +29,14 @@
   "bulletList": "புல்லட் பட்டியல்",
   "quote": "மேற்கோள்",
   "horizontalRule": "கிடைமட்ட விதி",
-  "strikethrough": "ஸ்ட்ரைகெத்ரோ"
+  "strikethrough": "ஸ்ட்ரைகெத்ரோ",
+  "@@locale": "ta",
+  "confirmAppExitTitle": "வெளியேறுவதை உறுதிப்படுத்தவும்",
+  "confirmAppExitContent": "இந்த பயன்பாட்டிலிருந்து வெளியேற விரும்புகிறீர்களா?",
+  "donate": "நன்கொடை",
+  "print": "அச்சிடுக",
+  "table": "அட்டவணை",
+  "rows": "வரிசைகள்",
+  "columns": "நெடுவரிசைகள்",
+  "insert": "செருகவும்"
 }

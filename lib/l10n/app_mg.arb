@@ -29,5 +29,14 @@
   "bulletList": "Lisitry ny bala",
   "quote": "notsongaina",
   "horizontalRule": "Fitsipika momba ny horizontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "mg",
+  "confirmAppExitTitle": "Hamarino ny fivoahana",
+  "confirmAppExitContent": "Azonao antoka ve fa te hivoaka ity fampiharana ity ianao?",
+  "donate": "Manomeza",
+  "print": "PIRINTY",
+  "table": "LOHA",
+  "rows": "andalana",
+  "columns": "andry",
+  "insert": "Mampidira"
 }

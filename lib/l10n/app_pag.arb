@@ -30,5 +30,13 @@
   "bulletList": "Listaan ​​na Bula",
   "quote": "Binitla",
   "horizontalRule": "Ganggan ed Pabitay",
-  "strikethrough": "I-istrikso"
+  "strikethrough": "I-istrikso",
+  "confirmAppExitTitle": "Kompirmaen so .",
+  "confirmAppExitContent": "Segurado ka kasin labay mon ipaway iyan app?",
+  "donate": "Idonasyon",
+  "print": "I-print",
+  "table": "Lamisaan",
+  "rows": "Saray Hrow",
+  "columns": "Saray comumna",
+  "insert": "Isurob"
 }

@@ -29,5 +29,14 @@
   "bulletList": "बुलेट सूची",
   "quote": "उद्धरण",
   "horizontalRule": "क्षैतिज नियम",
-  "strikethrough": "स्ट्राइकथ्रू"
+  "strikethrough": "स्ट्राइकथ्रू",
+  "@@locale": "hi",
+  "confirmAppExitTitle": "बाहर निकलने की पुष्टि करें",
+  "confirmAppExitContent": "क्या आप वाकई इस ऐप से बाहर निकलना चाहते हैं?",
+  "donate": "दान करें",
+  "print": "छाप",
+  "table": "मेज़",
+  "rows": "पंक्तियों",
+  "columns": "कॉलम",
+  "insert": "डालना"
 }

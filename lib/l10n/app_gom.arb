@@ -30,5 +30,13 @@
   "bulletList": "बुलेट लिस्ट 1 .",
   "quote": "उतारो",
   "horizontalRule": "आडवें नेम 1 .",
-  "strikethrough": "स्ट्रायकथ्रू 1 ."
+  "strikethrough": "स्ट्रायकथ्रू 1 .",
+  "confirmAppExitTitle": "भायर सरपाची खात्री .",
+  "confirmAppExitContent": "तुमकां खात्री आसा की तुमकां ह्या अॅपांतल्यान भायर सरपाची आसा?",
+  "donate": "देणगी दिवप",
+  "print": "मुद्रण 1 .",
+  "table": "मेज",
+  "rows": "वळी 1 .",
+  "columns": "स्तंभ 1 .",
+  "insert": "रिगोवचें"
 }

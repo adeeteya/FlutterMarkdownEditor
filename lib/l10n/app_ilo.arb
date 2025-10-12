@@ -30,5 +30,13 @@
   "bulletList": "Listaan ​​ti bala .",
   "quote": "Adawen",
   "horizontalRule": "Paisaad a pagannurotan .",
-  "strikethrough": "Strikethrough ."
+  "strikethrough": "Strikethrough .",
+  "confirmAppExitTitle": "Pasingkedan ti panagruar .",
+  "confirmAppExitContent": "Sigurado ka kadi a kayatmo ti rummuar iti daytoy nga app?",
+  "donate": "Agidonar",
+  "print": "Imprenta .",
+  "table": "Lamesaan",
+  "rows": "Dagiti Hilera .",
+  "columns": "Dagiti adigi .",
+  "insert": "Iragpin"
 }

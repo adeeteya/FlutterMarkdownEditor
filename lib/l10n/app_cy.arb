@@ -30,5 +30,13 @@
   "bulletList": "Rhestr Bwled",
   "quote": "Ddyfynnent",
   "horizontalRule": "Rheol lorweddol",
-  "strikethrough": "Streic"
+  "strikethrough": "Streic",
+  "confirmAppExitTitle": "Cadarnhau allanfa",
+  "confirmAppExitContent": "Ydych chi'n siŵr eich bod chi am adael yr app hon?",
+  "donate": "Rhoion",
+  "print": "Printiwyd",
+  "table": "Fwrdd",
+  "rows": "Ngrymus",
+  "columns": "Colofnau",
+  "insert": "Mewnosodent"
 }

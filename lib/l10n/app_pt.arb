@@ -29,5 +29,14 @@
   "bulletList": "Lista de balas",
   "quote": "Citar",
   "horizontalRule": "Regra horizontal",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "@@locale": "pt",
+  "confirmAppExitTitle": "Confirmar saída",
+  "confirmAppExitContent": "Tem certeza de que deseja sair deste aplicativo?",
+  "donate": "Doar",
+  "print": "Imprimir",
+  "table": "Mesa",
+  "rows": "Linhas",
+  "columns": "Colunas",
+  "insert": "Inserir"
 }

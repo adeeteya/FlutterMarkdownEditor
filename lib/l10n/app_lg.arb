@@ -29,5 +29,14 @@
   "bulletList": "Olukalala lw'essasi .",
   "quote": "Kwoti",
   "horizontalRule": "Etteeka ery’okwebungulula .",
-  "strikethrough": "Okwediimathrough ."
+  "strikethrough": "Okwediimathrough .",
+  "@@locale": "lg",
+  "confirmAppExitTitle": "Kakasa okufuluma .",
+  "confirmAppExitContent": "Okakasa nti oyagala kufuluma app eno?",
+  "donate": "Okugaba",
+  "print": "Okukuba ebitabo .",
+  "table": "Emmeeza",
+  "rows": "Ennyiriri .",
+  "columns": "Empagi .",
+  "insert": "Okuteekamu"
 }

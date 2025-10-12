@@ -30,5 +30,13 @@
   "bulletList": "Mos txwv daim ntawv",
   "quote": "Siv luag cov lus hais",
   "horizontalRule": "Kab rov tav kav",
-  "strikethrough": "Txawv txav"
+  "strikethrough": "Txawv txav",
+  "confirmAppExitTitle": "Paub meej tawm",
+  "confirmAppExitContent": "Koj puas paub tseeb tias koj xav tawm qhov app no?",
+  "donate": "Pub dawb",
+  "print": "Luam ntawv",
+  "table": "Lub rooj",
+  "rows": "Txoj",
+  "columns": "Txhua",
+  "insert": "Ntim"
 }

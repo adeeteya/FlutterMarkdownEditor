@@ -29,5 +29,14 @@
   "bulletList": "Elenco dei proiettili",
   "quote": "Citazione",
   "horizontalRule": "Regola orizzontale",
-  "strikethrough": "Sciopero"
+  "strikethrough": "Sciopero",
+  "@@locale": "it",
+  "confirmAppExitTitle": "Conferma l'uscita",
+  "confirmAppExitContent": "Sei sicuro di voler uscire da questa app?",
+  "donate": "Donare",
+  "print": "Stampa",
+  "table": "Tavolo",
+  "rows": "Righe",
+  "columns": "Colonne",
+  "insert": "Inserire"
 }

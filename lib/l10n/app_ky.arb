@@ -30,5 +30,13 @@
   "bulletList": "Ок тизмеси",
   "quote": "Цитата",
   "horizontalRule": "Горизонталдуу эреже",
-  "strikethrough": "Strikhhough"
+  "strikethrough": "Strikhhough",
+  "confirmAppExitTitle": "Чыгуу ыраста",
+  "confirmAppExitContent": "Бул колдонмону чыгууну каалайсызбы?",
+  "donate": "Кайрымдуулук",
+  "print": "Басып чыгаруу",
+  "table": "Стол",
+  "rows": "Катарлар",
+  "columns": "Тилкелери",
+  "insert": "Кыстаруу"
 }

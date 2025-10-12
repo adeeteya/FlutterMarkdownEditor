@@ -30,5 +30,13 @@
   "bulletList": "Seznam kulky",
   "quote": "Citovat",
   "horizontalRule": "Horizontální pravidlo",
-  "strikethrough": "Strikethrough"
+  "strikethrough": "Strikethrough",
+  "confirmAppExitTitle": "Potvrďte výjezd",
+  "confirmAppExitContent": "Jste si jisti, že chcete tuto aplikaci opustit?",
+  "donate": "Darovat",
+  "print": "Vytisknout",
+  "table": "Tabulka",
+  "rows": "Řádky",
+  "columns": "Sloupce",
+  "insert": "Vložit"
 }

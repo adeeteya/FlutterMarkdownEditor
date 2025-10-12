@@ -30,5 +30,13 @@
   "bulletList": "Bullet List",
   "quote": "Kɛɛmɔ",
   "horizontalRule": "Mla ni yɔɔ diɛŋtsɛ",
-  "strikethrough": "yi nɔ"
+  "strikethrough": "yi nɔ",
+  "confirmAppExitTitle": "Majemɔ",
+  "confirmAppExitContent": "Ani oyɛ nɔmimaa akɛ oosumɔ ni oje app nɛɛ mli?",
+  "donate": "Onia",
+  "print": "Print",
+  "table": "Okpɔnɔ",
+  "rows": "Rows",
+  "columns": "Colums",
+  "insert": "Hɔlɔ mli"
 }

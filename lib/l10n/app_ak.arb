@@ -29,5 +29,14 @@
   "bulletList": "Bullet List .",
   "quote": "Asɛnka",
   "horizontalRule": "Mmara a ɛda fam .",
-  "strikethrough": "Strikethrough ."
+  "strikethrough": "Strikethrough .",
+  "@@locale": "ak",
+  "confirmAppExitTitle": "Si so dua sɛ wobɛfi adi .",
+  "confirmAppExitContent": "Wogye di sɛ wopɛ sɛ wufi app yi mu?",
+  "donate": "Yi boa",
+  "print": "Print .",
+  "table": "Pono",
+  "rows": "Ntoatoaso .",
+  "columns": "Nsɛm a ɛwɔ adum so .",
+  "insert": "Fa hyɛ mu"
 }
