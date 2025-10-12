@@ -54,6 +54,11 @@ Please star⭐ the repo if you like what you see😊.
         <a href="https://github.com/adeeteya/FlutterMarkdownEditor/releases/latest/download/MarkdownEditor-Linux-rpm.rpm">
           <img alt="Download .rpm" src="https://img.shields.io/static/v1?label=Download&message=.rpm&color=EE0000&style=for-the-badge&logo=redhat&logoColor=white&logoSize=auto">
         </a>
+        <br>
+        <br>
+        <a href="https://snapcraft.io/markdown-editor">
+          <img alt="Get it from the Snap Store" src=https://snapcraft.io/en/dark/install.svg />
+        </a>
       </td>
   </tr>
 
@@ -104,16 +109,25 @@ Please star⭐ the repo if you like what you see😊.
 
 ## 🔌 Plugins
 
-| Name                                                                        | Usage                                                       |
-|-----------------------------------------------------------------------------|-------------------------------------------------------------|
-| [**flutter_markdown**](https://pub.dev/packages/flutter_markdown)           | To render markdown text                                     |
-| [**permission_handler**](https://pub.dev/packages/permission_handler)       | To get storage permissions for opening and saving .md files |
-| [**url_launcher**](https://pub.dev/packages/url_launcher)                   | To launch markdown links                                    |
-| [**file_picker**](https://pub.dev/packages/file_picker)                     | To open markdown files directly from the app                |
-| [**expandable**](https://pub.dev/packages/expandable)                       | To create expandable header buttons                         |
-| [**flutter_localizations**](https://pub.dev/packages/flutter_localizations) | Internationalizing app                                      |
-| [**intl**](https://pub.dev/packages/intl)                                   | Provides internationalization and localization facilities   |
-| [**flutter_lints**](https://pub.dev/packages/flutter_lints)                 | For linting                                                 |
+| Name                                                                                        | Usage                                                       |
+|---------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| [**expandable**](https://pub.dev/packages/expandable)                                       | To create expandable header buttons                         |
+| [**file_picker**](https://pub.dev/packages/file_picker)                                     | To open markdown files directly from the app                |
+| [**flutter_localizations**](https://pub.dev/packages/flutter_localizations)                 | Internationalizing app                                      |
+| [**flutter_math_fork**](https://pub.dev/packages/flutter_math_fork)                         | Help with LaTeX support                                     |
+| [**flutter_svg**](https://pub.dev/packages/flutter_svg)                                     | To Display Svg Images                                       |
+| [**flutter_widget_from_html_core**](https://pub.dev/packages/flutter_widget_from_html_core) | To add html display support                                 |
+| [**html**](https://pub.dev/packages/html)                                                   | To help display html format                                 |
+| [**htmltopdfwidgets**](https://pub.dev/packages/htmltopdfwidgets)                           | To convert html to pdf for printing                         |
+| [**intl**](https://pub.dev/packages/intl)                                                   | Provides internationalization and localization facilities   |
+| [**markdown**](https://pub.dev/packages/markdown)                                           | To convert markdown to html format                          |
+| [**markdown_widget**](https://pub.dev/packages/markdown_widget)                             | To help display markdown/custom markdown                    |
+| [**pdf**](https://pub.dev/packages/pdf)                                                     | To help save/create a pdf                                   |
+| [**permission_handler**](https://pub.dev/packages/permission_handler)                       | To get storage permissions for opening and saving .md files |
+| [**printing**](https://pub.dev/packages/printing)                                           | To help printing a pdf                                      |
+| [**shared_preferences**](https://pub.dev/packages/shared_preferences)                       | To store device preferences for persistence                 |
+| [**url_launcher**](https://pub.dev/packages/url_launcher)                                   | To launch markdown links                                    |
+| [**flutter_lints**](https://pub.dev/packages/flutter_lints)                                 | For linting                                                 |
 
 ## 🤓 Author
 

@@ -5,6 +5,7 @@
 #define MyAppExeName "MarkdownEditor.exe"
 #define MyAppContact "adeeteya@gmail.com"
 #define MyAppCopyright "Copyright (C) 2025 Adeeteya"
+#define Workspace GetEnv("GITHUB_WORKSPACE")
 
 [Setup]
 AppId={{B23EEE54-4907-4B4A-9739-A56313D52E7A}
@@ -21,9 +22,9 @@ AppContact={#MyAppContact}
 AppCopyright={#MyAppCopyright}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-OutputDir=D:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\
+OutputDir={#Workspace}
 OutputBaseFilename=MarkdownEditor-Windows
-SetupIconFile=D:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\windows\runner\resources\app_icon.ico
+SetupIconFile={#Workspace}\windows\runner\resources\app_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -43,7 +44,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\a\FlutterMarkdownEditor\FlutterMarkdownEditor\build\windows\x64\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#Workspace}\build\windows\x64\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

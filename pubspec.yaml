@@ -3,7 +3,7 @@ description: A Flutter app to edit and save markdown files
 
 publish_to: 'none'
 
-version: 1.4.1+7
+version: 2.0.0+8
 
 environment:
   sdk: ^3.9.2
