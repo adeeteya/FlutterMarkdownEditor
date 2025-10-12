@@ -55,6 +55,7 @@ class MarkdownTextInput extends StatefulWidget {
       MarkdownType.blockquote,
       MarkdownType.separator,
       MarkdownType.image,
+      MarkdownType.table,
     ],
     this.textStyle,
     this.controller,
@@ -78,6 +79,8 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
     int titleSize = 1,
     String? link,
     String? selectedText,
+    int tableRows = 3,
+    int tableCols = 3,
   }) {
     final basePosition = _textSelection.baseOffset;
     final noTextSelected =
@@ -95,6 +98,8 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
       link: link,
       selectedText:
           selectedText ?? _controller.text.substring(fromIndex, toIndex),
+      tableRows: tableRows,
+      tableCols: tableCols,
     );
 
     _controller.value = _controller.value.copyWith(
@@ -323,6 +328,30 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
                   );
                 },
         );
+      case MarkdownType.table:
+        return Tooltip(
+          message: type.title(context),
+          child: InkWell(
+            key: const Key('table_button'),
+            onTap: () async {
+              final res = await showDialog<_TableConfig?>(
+                context: context,
+                builder: (ctx) => _TableDialog(),
+              );
+              if (res != null) {
+                onTap(
+                  MarkdownType.table,
+                  tableRows: res.rows,
+                  tableCols: res.cols,
+                );
+              }
+            },
+            child: const Padding(
+              padding: EdgeInsets.all(10),
+              child: Icon(Icons.table_chart_rounded),
+            ),
+          ),
+        );
       default:
         return _basicInkwell(type);
     }
@@ -395,6 +424,92 @@ class _MarkdownTextInputState extends State<MarkdownTextInput> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _TableConfig {
+  final int rows;
+  final int cols;
+  const _TableConfig({required this.rows, required this.cols});
+}
+
+class _TableDialog extends StatefulWidget {
+  @override
+  State<_TableDialog> createState() => _TableDialogState();
+}
+
+class _TableDialogState extends State<_TableDialog> {
+  int _rows = 3;
+  int _cols = 3;
+
+  Widget _numberField({
+    required String label,
+    required int value,
+    required ValueChanged<int> onChanged,
+  }) {
+    return TextFormField(
+      initialValue: value.toString(),
+      keyboardType: TextInputType.number,
+      decoration: InputDecoration(
+        labelText: label,
+        border: const OutlineInputBorder(),
+        isDense: true,
+      ),
+      onChanged: (s) => onChanged(int.tryParse(s) ?? value),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context);
+    return AlertDialog(
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(loc?.table ?? 'Table'),
+          IconButton(
+            icon: const Icon(Icons.close),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+      content: Row(
+        children: [
+          Expanded(
+            child: _numberField(
+              label: loc?.rows ?? 'Rows',
+              value: _rows,
+              onChanged: (v) => setState(() => _rows = v),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: _numberField(
+              label: loc?.columns ?? 'Columns',
+              value: _cols,
+              onChanged: (v) => setState(() => _cols = v),
+            ),
+          ),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.pop(context),
+          child: Text(loc?.cancel ?? 'Cancel'),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            final sanitizedRows = _rows.clamp(1, 50);
+            final sanitizedCols = _cols.clamp(1, 20);
+            Navigator.pop(
+              context,
+              _TableConfig(rows: sanitizedRows, cols: sanitizedCols),
+            );
+          },
+          child: Text(loc?.insert ?? 'Insert'),
+        ),
+      ],
     );
   }
 }

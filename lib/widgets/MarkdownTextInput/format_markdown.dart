@@ -16,6 +16,8 @@ class FormatMarkdown {
     int titleSize = 1,
     String? link,
     String selectedText = '',
+    int tableRows = 3,
+    int tableCols = 3,
   }) {
     late String changedData;
     late int replaceCursorIndex;
@@ -79,6 +81,44 @@ class FormatMarkdown {
         changedData =
             '![${data.substring(lesserIndex, greaterIndex)}](${data.substring(lesserIndex, greaterIndex)})';
         replaceCursorIndex = 3;
+        break;
+      case MarkdownType.table:
+        final rows = tableRows.clamp(1, 50);
+        final cols = tableCols.clamp(1, 20);
+
+        String cell(int r, int c) {
+          // If text was selected, try to split it into cells (basic support) else placeholders
+          if (selectedText.trim().isNotEmpty) {
+            // naive split by lines and pipes for quick paste handling
+            final byLines = selectedText.trim().split('\n');
+            if (r < byLines.length) {
+              final parts = byLines[r]
+                  .split('|')
+                  .where((e) => e.trim().isNotEmpty)
+                  .toList();
+              if (c < parts.length) return parts[c].trim();
+            }
+          }
+          return (r == 0) ? 'Header ${c + 1}' : 'Cell ${r + 1}:${c + 1}';
+        }
+
+        final buffer = StringBuffer();
+        // First row
+        buffer.writeln(
+          '| ${List.generate(cols, (c) => cell(0, c)).join(' | ')} |',
+        );
+        // Separator (align left by default). If no header, still required by Markdown.
+        buffer.writeln('| ${List.generate(cols, (_) => '---').join(' | ')} |');
+
+        for (int r = 1; r < rows; r++) {
+          buffer.writeln(
+            '| ${List.generate(cols, (c) => cell(r, c)).join(' | ')} |',
+          );
+        }
+
+        changedData = buffer.toString();
+        // place cursor in first body cell (roughly after "| ")
+        replaceCursorIndex = 2; // when no selection,put caret inside first cell
         break;
     }
 
@@ -145,7 +185,10 @@ enum MarkdownType {
   separator,
 
   /// For ![Alt text](link)
-  image;
+  image,
+
+  /// For creating tables
+  table;
 
   String title(BuildContext context) {
     switch (this) {
@@ -169,6 +212,8 @@ enum MarkdownType {
         return AppLocalizations.of(context)!.horizontalRule;
       case MarkdownType.image:
         return AppLocalizations.of(context)!.image;
+      case MarkdownType.table:
+        return AppLocalizations.of(context)!.table;
     }
   }
 
@@ -195,6 +240,8 @@ enum MarkdownType {
         return 'separator_button';
       case MarkdownType.image:
         return 'image_button';
+      case MarkdownType.table:
+        return 'table_button';
     }
   }
 
@@ -221,6 +268,8 @@ enum MarkdownType {
         return Icons.minimize_rounded;
       case MarkdownType.image:
         return Icons.image_rounded;
+      case MarkdownType.table:
+        return Icons.table_chart_rounded;
     }
   }
 }

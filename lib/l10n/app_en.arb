@@ -130,5 +130,29 @@
   "confirmAppExitContent": "Are you sure you want to exit this app?",
   "@confirmAppExitContent": {
     "description": "Content for the Confirm Exit Dialog"
+  },
+  "donate": "Donate",
+  "@donate": {
+    "description": "Menu Item for Donate"
+  },
+  "print": "Print",
+  "@print": {
+    "description": "Menu Item for Print"
+  },
+  "table": "Table",
+  "@table": {
+    "description": "Tooltip for the Table Icon Button"
+  },
+  "rows": "Rows",
+  "@rows": {
+    "description": "Label for the Rows Text Field in the Table Dialog"
+  },
+  "columns": "Columns",
+  "@columns": {
+    "description": "Label for the Columns Text Field in the Table Dialog"
+  },
+  "insert": "Insert",
+  "@insert": {
+    "description": "Text Action for the Insert Table Dialog"
   }
 }
