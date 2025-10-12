@@ -91,6 +91,7 @@ Please star⭐ the repo if you like what you see😊.
 - [x] Ability to clear text and start from scratch
 - [x] Create new .md files
 - [x] Edit existing .md files
+- [x] LaTex support
 
 ## 📸 Screenshots
 
