@@ -24,8 +24,12 @@ class CustomImgConfig extends ImgConfig {
            try {
              final w = attrs['width'];
              final h = attrs['height'];
-             if (w != null && w.trim().isNotEmpty) width = double.parse(w);
-             if (h != null && h.trim().isNotEmpty) height = double.parse(h);
+             if (w != null && w.trim().isNotEmpty) {
+               width = double.tryParse(w) ?? 0;
+             }
+             if (h != null && h.trim().isNotEmpty) {
+               height = double.tryParse(h) ?? 0;
+             }
            } catch (_) {}
 
            final alt = attrs['alt'] ?? '';

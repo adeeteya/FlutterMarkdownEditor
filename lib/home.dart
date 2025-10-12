@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math' as math;
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
@@ -10,6 +11,7 @@ import 'package:htmltopdfwidgets/htmltopdfwidgets.dart' as html2pdf;
 import 'package:markdown/markdown.dart' as md;
 import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/l10n/generated/app_localizations.dart';
+import 'package:markdown_editor/widgets/MarkdownBody/custom_checkbox.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/custom_image_config.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/custom_text_node.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/latex_node.dart';
@@ -32,6 +34,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   static const _methodChannel = MethodChannel(
     "com.adeeteya.markdown_editor/channel",
+  );
+  static final RegExp _taskListLinePattern = RegExp(
+    r'^(?:[-+*]|\d+[.)])\s+\[(?: |x|X)\]',
   );
   String _filePath = "/storage/emulated/0/Download";
   String _fileName = 'Markdown';
@@ -263,6 +268,7 @@ class _HomeState extends State<Home> {
     final config = isDark
         ? MarkdownConfig.darkConfig
         : MarkdownConfig.defaultConfig;
+    int checkboxIndex = -1;
     return Card(
       child: SizedBox(
         height: double.infinity,
@@ -283,7 +289,22 @@ class _HomeState extends State<Home> {
                     CustomTextNode(node.textContent, config, visitor),
                 richTextBuilder: Text.rich,
               ),
-              config: config.copy(configs: [CustomImgConfig()]),
+              config: config.copy(
+                configs: [
+                  CustomImgConfig(),
+                  CheckBoxConfig(
+                    builder: (checked) {
+                      checkboxIndex++;
+                      final currentIndex = checkboxIndex;
+                      return CustomCheckbox(
+                        key: ValueKey('markdown-task-checkbox-$currentIndex'),
+                        checked: checked,
+                        onChanged: () => _toggleTaskListCheckbox(currentIndex),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -344,6 +365,70 @@ class _HomeState extends State<Home> {
         ),
       ),
     );
+  }
+
+  List<int> _taskListMarkerPositions(String text) {
+    final positions = <int>[];
+    final lines = text.split('\n');
+    var offset = 0;
+
+    for (final line in lines) {
+      var sanitizedLine = line;
+      if (sanitizedLine.endsWith('\r')) {
+        sanitizedLine = sanitizedLine.substring(0, sanitizedLine.length - 1);
+      }
+      sanitizedLine = sanitizedLine.trimLeft();
+      while (sanitizedLine.startsWith('>')) {
+        sanitizedLine = sanitizedLine.substring(1).trimLeft();
+      }
+      if (_taskListLinePattern.hasMatch(sanitizedLine)) {
+        final bracketIndex = line.indexOf('[');
+        if (bracketIndex != -1) {
+          positions.add(offset + bracketIndex);
+        }
+      }
+      offset += line.length + 1;
+    }
+
+    return positions;
+  }
+
+  void _toggleTaskListCheckbox(int index) {
+    final markerPositions = _taskListMarkerPositions(_inputText);
+    if (index < 0 || index >= markerPositions.length) {
+      return;
+    }
+    final markerStart = markerPositions[index];
+    if (markerStart + 2 >= _inputText.length) {
+      return;
+    }
+    final currentState = _inputText[markerStart + 1];
+    final newState = (currentState == 'x' || currentState == 'X') ? ' ' : 'x';
+    final updatedText = _inputText.replaceRange(
+      markerStart,
+      markerStart + 3,
+      '[$newState]',
+    );
+    final currentSelection = _textEditingController.selection;
+    final collapsedSelection = currentSelection.isValid
+        ? TextSelection(
+            baseOffset: math.min(
+              currentSelection.baseOffset,
+              updatedText.length,
+            ),
+            extentOffset: math.min(
+              currentSelection.extentOffset,
+              updatedText.length,
+            ),
+          )
+        : TextSelection.collapsed(offset: updatedText.length);
+    setState(() {
+      _inputText = updatedText;
+      _textEditingController.value = TextEditingValue(
+        text: updatedText,
+        selection: collapsedSelection,
+      );
+    });
   }
 
   @override
