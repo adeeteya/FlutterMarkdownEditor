@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -95,6 +96,8 @@ class _HomeState extends State<Home> {
     try {
       final FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
+        initialDirectory:
+            widget.devicePreferenceNotifier.value.defaultFolderPath,
         allowedExtensions: ['md'],
       );
       if (result != null) {
@@ -107,6 +110,13 @@ class _HomeState extends State<Home> {
         _inputText = await file.readAsString();
         _textEditingController.text = _inputText;
         setState(() {});
+        final folderPath = _filePath.substring(
+          0,
+          _filePath.lastIndexOf(Platform.pathSeparator),
+        );
+        unawaited(
+          widget.devicePreferenceNotifier.setDefaultFolderPath(folderPath),
+        );
       }
     } catch (e) {
       if (mounted) {
@@ -174,13 +184,24 @@ class _HomeState extends State<Home> {
       );
       return;
     } else {
-      await FilePicker.platform.saveFile(
+      final filePath = await FilePicker.platform.saveFile(
         dialogTitle: AppLocalizations.of(context)!.saveFileDialogTitle,
         fileName: (!kIsWeb && Platform.isWindows) ? null : "$_fileName.md",
+        initialDirectory:
+            widget.devicePreferenceNotifier.value.defaultFolderPath,
         type: FileType.custom,
         allowedExtensions: ['md'],
         bytes: utf8.encode(_inputText),
       );
+      if (filePath != null) {
+        final folderPath = filePath.substring(
+          0,
+          filePath.lastIndexOf(Platform.pathSeparator),
+        );
+        unawaited(
+          widget.devicePreferenceNotifier.setDefaultFolderPath(folderPath),
+        );
+      }
     }
   }
 

@@ -93,6 +93,7 @@ Please star⭐ the repo if you like what you see😊.
 - [x] Edit existing .md files
 - [x] LaTex support
 - [x] Horizontal Swipe to Switch between Preview and Editing View in Single View Mode
+- [x] Default Folder for Opening and Saving .md files
 
 ## 📸 Screenshots
 
