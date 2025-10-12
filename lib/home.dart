@@ -272,18 +272,28 @@ class _HomeState extends State<Home> {
       child: AnimatedSwitcher(
         duration: const Duration(milliseconds: 300),
         reverseDuration: const Duration(milliseconds: 300),
-        child: _isPreview
-            ? _markdownPreviewWidget()
-            : MarkdownTextInput(
-                (String value) {
-                  setState(() {
-                    _inputText = value;
-                  });
-                },
-                _inputText,
-                controller: _textEditingController,
-                label: AppLocalizations.of(context)!.markdownTextInputLabel,
-              ),
+        child: GestureDetector(
+          onHorizontalDragEnd: (drag) {
+            if (drag.primaryVelocity == null) {
+              return;
+            }
+            setState(() {
+              _isPreview = !_isPreview;
+            });
+          },
+          child: _isPreview
+              ? _markdownPreviewWidget()
+              : MarkdownTextInput(
+                  (String value) {
+                    setState(() {
+                      _inputText = value;
+                    });
+                  },
+                  _inputText,
+                  controller: _textEditingController,
+                  label: AppLocalizations.of(context)!.markdownTextInputLabel,
+                ),
+        ),
       ),
     );
   }

@@ -92,6 +92,7 @@ Please star⭐ the repo if you like what you see😊.
 - [x] Create new .md files
 - [x] Edit existing .md files
 - [x] LaTex support
+- [x] Horizontal Swipe to Switch between Preview and Editing View in Single View Mode
 
 ## 📸 Screenshots
 
