@@ -2,7 +2,7 @@
 #define MyAppPublisher "Adeeteya"
 #define MyAppPublisherURL "https://github.com/adeeteya/"
 #define MyAppURL "https://github.com/adeeteya/FlutterMarkdownEditor"
-#define MyAppExeName "MarkdownEditor.exe"
+#define MyAppExeName "markdown_editor.exe"
 #define MyAppContact "adeeteya@gmail.com"
 #define MyAppCopyright "Copyright (C) 2025 Adeeteya"
 #define Workspace GetEnv("GITHUB_WORKSPACE")
