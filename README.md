@@ -103,6 +103,14 @@ Please star⭐ the repo if you like what you see😊.
 - [x] Added Print/Save as Pdf Option
 - [x] Added the option to check/uncheck checkboxes in preview mode
 
+## 🌐 How to contribute to this project's translations
+
+1. Fork this repository and create a branch dedicated to the translation you want to work on.
+2. The source strings live in lib/l10n/app_en.arb. Copy it to lib/l10n/app_<languageCode>.arb (use the ISO language or language_region code) when adding a new language, or open the existing file if the language is already present.
+3. Translate only the string values. Keep placeholders (such as {count}) and the accompanying @metadata blocks untouched so Flutter can still generate code correctly.
+4. Run flutter gen-l10n from the project root to regenerate lib/l10n/generated/app_localizations.dart and to update untranslated_messages.json.
+5. Launch the app (or run flutter test if you add tests) to double-check that your strings render correctly, then open a pull request describing the language(s) you updated.
+
 ## 📸 Screenshots
 
 <img alt="Light Mode Image" src="screenshots/screenshot_1.png" height="587px" width="256px"/> <img alt="Dark Mode Image" src="screenshots/screenshot_2.png" height="587px" width="256px"/> <img alt="File Explorer Image" src="screenshots/screenshot_3.png" height="587px" width="256px"/> <img alt="Add Link Image" src="screenshots/screenshot_4.png" height="587px" width="256px"/> <img alt="Markdown Preview Image" src="screenshots/screenshot_5.png" height="587px" width="256px"/> <img alt="Markdown Editor Image" src="screenshots/screenshot_6.png" height="587px" width="256px"/>
