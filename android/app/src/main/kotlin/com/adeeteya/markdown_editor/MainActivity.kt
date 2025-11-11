@@ -51,11 +51,18 @@ class MainActivity : FlutterActivity() {
         super.configureFlutterEngine(flutterEngine)
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
             .setMethodCallHandler { call, result ->
-                if (call.method == "getFileContent") {
-                    result.success(fileContentToSend)
-                    fileContentToSend = null // send only once
-                } else {
-                    result.notImplemented()
+                when (call.method) {
+                    "getFileContent" -> {
+                        result.success(fileContentToSend)
+                        fileContentToSend = null // send only once
+                    }
+                    "clearFileContent" -> {
+                        fileContentToSend = null
+                        result.success(null)
+                    }
+                    else -> {
+                        result.notImplemented()
+                    }
                 }
             }
     }
