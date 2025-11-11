@@ -7,7 +7,7 @@ version: 2.0.0+8
 
 environment:
   sdk: ^3.9.2
-  flutter: 3.35.6
+  flutter: 3.35.7
 
 dependencies:
   expandable: ^5.0.1
@@ -17,7 +17,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_math_fork: ^0.7.4
-  flutter_svg: ^2.2.1
+  flutter_svg: ^2.2.2
   flutter_widget_from_html_core: ^0.17.0
   html: ^0.15.6
   htmltopdfwidgets: ^1.1.3
