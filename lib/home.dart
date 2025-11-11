@@ -7,6 +7,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:htmltopdfwidgets/htmltopdfwidgets.dart' as html2pdf;
 import 'package:markdown/markdown.dart' as md;
 import 'package:markdown_editor/device_preference_notifier.dart';
@@ -225,12 +226,43 @@ class _HomeState extends State<Home> {
       return;
     } else {
       final htmlFromMarkdown = md.markdownToHtml(_inputText);
+      final defaultFontFamily = GoogleFonts.notoSans().fontFamily ?? 'Roboto';
+      final printFonts = await _loadPrintFonts();
       await Printing.layoutPdf(
         usePrinterSettings: true,
         onLayout: (format) async {
           final pdf = pw.Document();
-          final widgets = await html2pdf.HTMLToPdf().convert(htmlFromMarkdown);
-          pdf.addPage(pw.MultiPage(build: (context) => widgets));
+          final widgets = await html2pdf.HTMLToPdf().convert(
+            htmlFromMarkdown,
+            defaultFontFamily: defaultFontFamily,
+            fontFallback: printFonts.fallbacks,
+            fontResolver: (fontFamily, isBold, isItalic) {
+              if (fontFamily == defaultFontFamily ||
+                  fontFamily == 'Noto Sans') {
+                if (isBold && isItalic) {
+                  return printFonts.boldItalic;
+                } else if (isBold) {
+                  return printFonts.bold;
+                } else if (isItalic) {
+                  return printFonts.italic;
+                }
+                return printFonts.regular;
+              }
+              return printFonts.regular;
+            },
+          );
+          pdf.addPage(
+            pw.MultiPage(
+              theme: pw.ThemeData.withFont(
+                base: printFonts.regular,
+                bold: printFonts.bold,
+                italic: printFonts.italic,
+                boldItalic: printFonts.boldItalic,
+                fontFallback: printFonts.fallbacks,
+              ),
+              build: (context) => widgets,
+            ),
+          );
           return pdf.save();
         },
       );
@@ -603,4 +635,56 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+}
+
+class _PrintFonts {
+  const _PrintFonts({
+    required this.regular,
+    required this.bold,
+    required this.italic,
+    required this.boldItalic,
+    required this.fallbacks,
+  });
+
+  final pw.Font regular;
+  final pw.Font bold;
+  final pw.Font italic;
+  final pw.Font boldItalic;
+  final List<pw.Font> fallbacks;
+}
+
+Future<_PrintFonts>? _printFontsFuture;
+
+Future<_PrintFonts> _loadPrintFonts() {
+  return _printFontsFuture ??= (() async {
+    try {
+      final regular = await PdfGoogleFonts.notoSansRegular();
+      final bold = await PdfGoogleFonts.notoSansBold();
+      final italic = await PdfGoogleFonts.notoSansItalic();
+      final boldItalic = await PdfGoogleFonts.notoSansBoldItalic();
+
+      final fallbackFonts = await Future.wait<pw.Font>([
+        PdfGoogleFonts.notoSansSymbols2Regular(),
+        PdfGoogleFonts.notoSansMathRegular(),
+        PdfGoogleFonts.notoSansJPRegular(),
+        PdfGoogleFonts.notoSansKRRegular(),
+        PdfGoogleFonts.notoSansSCRegular(),
+        PdfGoogleFonts.notoSansArabicRegular(),
+        PdfGoogleFonts.notoSansDevanagariRegular(),
+        PdfGoogleFonts.notoSansThaiLoopedRegular(),
+        PdfGoogleFonts.notoColorEmoji(),
+      ]);
+
+      return _PrintFonts(
+        regular: regular,
+        bold: bold,
+        italic: italic,
+        boldItalic: boldItalic,
+        fallbacks: fallbackFonts,
+      );
+    } catch (_) {
+      _printFontsFuture = null;
+      rethrow;
+    }
+  })();
 }
