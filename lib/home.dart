@@ -348,21 +348,34 @@ class _HomeState extends State<Home> {
   Widget _fullView() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-      child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 300),
-        reverseDuration: const Duration(milliseconds: 300),
-        child: GestureDetector(
-          onHorizontalDragEnd: (drag) {
-            if (drag.primaryVelocity == null) {
-              return;
-            }
-            setState(() {
-              _isPreview = !_isPreview;
-            });
-          },
-          child: _isPreview
-              ? _markdownPreviewWidget()
-              : MarkdownTextInput(
+      child: GestureDetector(
+        onHorizontalDragEnd: (drag) {
+          if (drag.primaryVelocity == null) {
+            return;
+          }
+          setState(() {
+            _isPreview = !_isPreview;
+          });
+        },
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            IgnorePointer(
+              ignoring: !_isPreview,
+              child: AnimatedOpacity(
+                opacity: _isPreview ? 1 : 0,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                child: _markdownPreviewWidget(),
+              ),
+            ),
+            IgnorePointer(
+              ignoring: _isPreview,
+              child: AnimatedOpacity(
+                opacity: _isPreview ? 0 : 1,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                child: MarkdownTextInput(
                   (String value) {
                     setState(() {
                       _inputText = value;
@@ -372,6 +385,9 @@ class _HomeState extends State<Home> {
                   controller: _textEditingController,
                   label: AppLocalizations.of(context)!.markdownTextInputLabel,
                 ),
+              ),
+            ),
+          ],
         ),
       ),
     );
