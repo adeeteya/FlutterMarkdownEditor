@@ -489,23 +489,23 @@ class _HomeState extends State<Home> {
               PopupMenuButton<MenuItem>(
                 onSelected: (selectedMenuItem) async {
                   switch (selectedMenuItem) {
-                    case MenuItem.switchTheme:
-                      await widget.devicePreferenceNotifier.toggleTheme();
-                      break;
-                    case MenuItem.switchView:
-                      await widget.devicePreferenceNotifier.toggleLayout();
-                      break;
                     case MenuItem.open:
                       await _openFilePicker();
-                      break;
-                    case MenuItem.clear:
-                      await _clearText();
                       break;
                     case MenuItem.save:
                       await _saveFile();
                       break;
+                    case MenuItem.clear:
+                      await _clearText();
+                      break;
                     case MenuItem.print:
                       await _printFile();
+                      break;
+                    case MenuItem.switchView:
+                      await widget.devicePreferenceNotifier.toggleLayout();
+                      break;
+                    case MenuItem.switchTheme:
+                      await widget.devicePreferenceNotifier.toggleTheme();
                       break;
                     case MenuItem.donate:
                       await launchUrl(
@@ -517,46 +517,12 @@ class _HomeState extends State<Home> {
                 },
                 itemBuilder: (context) => [
                   PopupMenuItem(
-                    value: MenuItem.switchTheme,
-                    child: Row(
-                      children: [
-                        Icon(
-                          widget.devicePreferenceNotifier.value.isDarkMode
-                              ? Icons.dark_mode
-                              : Icons.light_mode,
-                        ),
-                        const SizedBox(width: 8),
-                        Text(AppLocalizations.of(context)!.switchThemeMenuItem),
-                      ],
-                    ),
-                  ),
-                  PopupMenuItem(
-                    value: MenuItem.switchView,
-                    child: Row(
-                      children: [
-                        const Icon(Icons.rotate_left),
-                        const SizedBox(width: 8),
-                        Text(AppLocalizations.of(context)!.switchViewMenuItem),
-                      ],
-                    ),
-                  ),
-                  PopupMenuItem(
                     value: MenuItem.open,
                     child: Row(
                       children: [
                         const Icon(Icons.file_open),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.openFileMenuItem),
-                      ],
-                    ),
-                  ),
-                  PopupMenuItem(
-                    value: MenuItem.clear,
-                    child: Row(
-                      children: [
-                        const Icon(Icons.clear_all),
-                        const SizedBox(width: 8),
-                        Text(AppLocalizations.of(context)!.clear),
                       ],
                     ),
                   ),
@@ -571,12 +537,46 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   PopupMenuItem(
+                    value: MenuItem.clear,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.clear_all),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.clear),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
                     value: MenuItem.print,
                     child: Row(
                       children: [
                         const Icon(Icons.print),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.print),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.switchView,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.rotate_left),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.switchViewMenuItem),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.switchTheme,
+                    child: Row(
+                      children: [
+                        Icon(
+                          widget.devicePreferenceNotifier.value.isDarkMode
+                              ? Icons.dark_mode
+                              : Icons.light_mode,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.switchThemeMenuItem),
                       ],
                     ),
                   ),
