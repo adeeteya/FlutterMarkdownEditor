@@ -237,6 +237,16 @@ class _HomeState extends State<Home> {
     }
   }
 
+  Future<void> _clearFileContent() async {
+    try {
+      await _methodChannel.invokeMethod<void>('clearFileContent');
+    } on MissingPluginException {
+      debugPrint("Method channel not available on this platform");
+    } catch (e) {
+      debugPrint("Error clearing file content: $e");
+    }
+  }
+
   Future<bool> _showExitConfirmationDialog() async {
     return await showDialog<bool>(
           context: context,
@@ -443,6 +453,7 @@ class _HomeState extends State<Home> {
           }
           final bool shouldPop = await _showExitConfirmationDialog();
           if (shouldPop && context.mounted) {
+            await _clearFileContent();
             await SystemNavigator.pop(animated: true);
           }
         },
