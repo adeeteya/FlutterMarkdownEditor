@@ -663,17 +663,18 @@ Future<_PrintFonts> _loadPrintFonts() {
       final italic = await PdfGoogleFonts.notoSansItalic();
       final boldItalic = await PdfGoogleFonts.notoSansBoldItalic();
 
-      final fallbackFonts = await Future.wait<pw.Font>([
-        PdfGoogleFonts.notoSansSymbols2Regular(),
-        PdfGoogleFonts.notoSansMathRegular(),
-        PdfGoogleFonts.notoSansJPRegular(),
-        PdfGoogleFonts.notoSansKRRegular(),
-        PdfGoogleFonts.notoSansSCRegular(),
-        PdfGoogleFonts.notoSansArabicRegular(),
-        PdfGoogleFonts.notoSansDevanagariRegular(),
-        PdfGoogleFonts.notoSansThaiLoopedRegular(),
-        PdfGoogleFonts.notoColorEmoji(),
-      ]);
+          final fallbackFonts = await Future.wait<pw.Font>([
+            PdfGoogleFonts.notoSansSymbols2Regular(),
+            PdfGoogleFonts.notoSansMathRegular(),
+            PdfGoogleFonts.notoSansJPRegular(),
+            PdfGoogleFonts.notoSansKRRegular(),
+            PdfGoogleFonts.notoSansSCRegular(),
+            PdfGoogleFonts.notoSansArabicRegular(),
+            PdfGoogleFonts.notoSansHebrewRegular(),
+            PdfGoogleFonts.notoSansDevanagariRegular(),
+            PdfGoogleFonts.notoSansThaiLoopedRegular(),
+            PdfGoogleFonts.notoColorEmoji(),
+          ]);
 
       return _PrintFonts(
         regular: regular,
