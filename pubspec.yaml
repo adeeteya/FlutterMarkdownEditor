@@ -11,7 +11,7 @@ environment:
 
 dependencies:
   expandable: ^5.0.1
-  file_picker: ^10.3.3
+  file_picker: ^10.3.6
   flutter:
     sdk: flutter
   flutter_localizations:
