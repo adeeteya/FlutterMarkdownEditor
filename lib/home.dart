@@ -7,6 +7,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:htmltopdfwidgets/htmltopdfwidgets.dart' as html2pdf;
 import 'package:markdown/markdown.dart' as md;
 import 'package:markdown_editor/device_preference_notifier.dart';
@@ -225,12 +226,43 @@ class _HomeState extends State<Home> {
       return;
     } else {
       final htmlFromMarkdown = md.markdownToHtml(_inputText);
+      final defaultFontFamily = GoogleFonts.notoSans().fontFamily ?? 'Roboto';
+      final printFonts = await _loadPrintFonts();
       await Printing.layoutPdf(
         usePrinterSettings: true,
         onLayout: (format) async {
           final pdf = pw.Document();
-          final widgets = await html2pdf.HTMLToPdf().convert(htmlFromMarkdown);
-          pdf.addPage(pw.MultiPage(build: (context) => widgets));
+          final widgets = await html2pdf.HTMLToPdf().convert(
+            htmlFromMarkdown,
+            defaultFontFamily: defaultFontFamily,
+            fontFallback: printFonts.fallbacks,
+            fontResolver: (fontFamily, isBold, isItalic) {
+              if (fontFamily == defaultFontFamily ||
+                  fontFamily == 'Noto Sans') {
+                if (isBold && isItalic) {
+                  return printFonts.boldItalic;
+                } else if (isBold) {
+                  return printFonts.bold;
+                } else if (isItalic) {
+                  return printFonts.italic;
+                }
+                return printFonts.regular;
+              }
+              return printFonts.regular;
+            },
+          );
+          pdf.addPage(
+            pw.MultiPage(
+              theme: pw.ThemeData.withFont(
+                base: printFonts.regular,
+                bold: printFonts.bold,
+                italic: printFonts.italic,
+                boldItalic: printFonts.boldItalic,
+                fontFallback: printFonts.fallbacks,
+              ),
+              build: (context) => widgets,
+            ),
+          );
           return pdf.save();
         },
       );
@@ -348,21 +380,34 @@ class _HomeState extends State<Home> {
   Widget _fullView() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-      child: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 300),
-        reverseDuration: const Duration(milliseconds: 300),
-        child: GestureDetector(
-          onHorizontalDragEnd: (drag) {
-            if (drag.primaryVelocity == null) {
-              return;
-            }
-            setState(() {
-              _isPreview = !_isPreview;
-            });
-          },
-          child: _isPreview
-              ? _markdownPreviewWidget()
-              : MarkdownTextInput(
+      child: GestureDetector(
+        onHorizontalDragEnd: (drag) {
+          if (drag.primaryVelocity == null) {
+            return;
+          }
+          setState(() {
+            _isPreview = !_isPreview;
+          });
+        },
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            IgnorePointer(
+              ignoring: !_isPreview,
+              child: AnimatedOpacity(
+                opacity: _isPreview ? 1 : 0,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                child: _markdownPreviewWidget(),
+              ),
+            ),
+            IgnorePointer(
+              ignoring: _isPreview,
+              child: AnimatedOpacity(
+                opacity: _isPreview ? 0 : 1,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                child: MarkdownTextInput(
                   (String value) {
                     setState(() {
                       _inputText = value;
@@ -372,6 +417,9 @@ class _HomeState extends State<Home> {
                   controller: _textEditingController,
                   label: AppLocalizations.of(context)!.markdownTextInputLabel,
                 ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -473,23 +521,23 @@ class _HomeState extends State<Home> {
               PopupMenuButton<MenuItem>(
                 onSelected: (selectedMenuItem) async {
                   switch (selectedMenuItem) {
-                    case MenuItem.switchTheme:
-                      await widget.devicePreferenceNotifier.toggleTheme();
-                      break;
-                    case MenuItem.switchView:
-                      await widget.devicePreferenceNotifier.toggleLayout();
-                      break;
                     case MenuItem.open:
                       await _openFilePicker();
-                      break;
-                    case MenuItem.clear:
-                      await _clearText();
                       break;
                     case MenuItem.save:
                       await _saveFile();
                       break;
+                    case MenuItem.clear:
+                      await _clearText();
+                      break;
                     case MenuItem.print:
                       await _printFile();
+                      break;
+                    case MenuItem.switchView:
+                      await widget.devicePreferenceNotifier.toggleLayout();
+                      break;
+                    case MenuItem.switchTheme:
+                      await widget.devicePreferenceNotifier.toggleTheme();
                       break;
                     case MenuItem.donate:
                       await launchUrl(
@@ -501,46 +549,12 @@ class _HomeState extends State<Home> {
                 },
                 itemBuilder: (context) => [
                   PopupMenuItem(
-                    value: MenuItem.switchTheme,
-                    child: Row(
-                      children: [
-                        Icon(
-                          widget.devicePreferenceNotifier.value.isDarkMode
-                              ? Icons.dark_mode
-                              : Icons.light_mode,
-                        ),
-                        const SizedBox(width: 8),
-                        Text(AppLocalizations.of(context)!.switchThemeMenuItem),
-                      ],
-                    ),
-                  ),
-                  PopupMenuItem(
-                    value: MenuItem.switchView,
-                    child: Row(
-                      children: [
-                        const Icon(Icons.rotate_left),
-                        const SizedBox(width: 8),
-                        Text(AppLocalizations.of(context)!.switchViewMenuItem),
-                      ],
-                    ),
-                  ),
-                  PopupMenuItem(
                     value: MenuItem.open,
                     child: Row(
                       children: [
                         const Icon(Icons.file_open),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.openFileMenuItem),
-                      ],
-                    ),
-                  ),
-                  PopupMenuItem(
-                    value: MenuItem.clear,
-                    child: Row(
-                      children: [
-                        const Icon(Icons.clear_all),
-                        const SizedBox(width: 8),
-                        Text(AppLocalizations.of(context)!.clear),
                       ],
                     ),
                   ),
@@ -555,12 +569,46 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   PopupMenuItem(
+                    value: MenuItem.clear,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.clear_all),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.clear),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
                     value: MenuItem.print,
                     child: Row(
                       children: [
                         const Icon(Icons.print),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.print),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.switchView,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.rotate_left),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.switchViewMenuItem),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.switchTheme,
+                    child: Row(
+                      children: [
+                        Icon(
+                          widget.devicePreferenceNotifier.value.isDarkMode
+                              ? Icons.dark_mode
+                              : Icons.light_mode,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.switchThemeMenuItem),
                       ],
                     ),
                   ),
@@ -587,4 +635,57 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+}
+
+class _PrintFonts {
+  const _PrintFonts({
+    required this.regular,
+    required this.bold,
+    required this.italic,
+    required this.boldItalic,
+    required this.fallbacks,
+  });
+
+  final pw.Font regular;
+  final pw.Font bold;
+  final pw.Font italic;
+  final pw.Font boldItalic;
+  final List<pw.Font> fallbacks;
+}
+
+Future<_PrintFonts>? _printFontsFuture;
+
+Future<_PrintFonts> _loadPrintFonts() {
+  return _printFontsFuture ??= (() async {
+    try {
+      final regular = await PdfGoogleFonts.notoSansRegular();
+      final bold = await PdfGoogleFonts.notoSansBold();
+      final italic = await PdfGoogleFonts.notoSansItalic();
+      final boldItalic = await PdfGoogleFonts.notoSansBoldItalic();
+
+          final fallbackFonts = await Future.wait<pw.Font>([
+            PdfGoogleFonts.notoSansSymbols2Regular(),
+            PdfGoogleFonts.notoSansMathRegular(),
+            PdfGoogleFonts.notoSansJPRegular(),
+            PdfGoogleFonts.notoSansKRRegular(),
+            PdfGoogleFonts.notoSansSCRegular(),
+            PdfGoogleFonts.notoSansArabicRegular(),
+            PdfGoogleFonts.notoSansHebrewRegular(),
+            PdfGoogleFonts.notoSansDevanagariRegular(),
+            PdfGoogleFonts.notoSansThaiLoopedRegular(),
+            PdfGoogleFonts.notoColorEmoji(),
+          ]);
+
+      return _PrintFonts(
+        regular: regular,
+        bold: bold,
+        italic: italic,
+        boldItalic: boldItalic,
+        fallbacks: fallbackFonts,
+      );
+    } catch (_) {
+      _printFontsFuture = null;
+      rethrow;
+    }
+  })();
 }

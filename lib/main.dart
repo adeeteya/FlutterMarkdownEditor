@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown_editor/device_preference_notifier.dart';
 import 'package:markdown_editor/home.dart';
 import 'package:markdown_editor/l10n/generated/app_localizations.dart';
@@ -34,9 +35,16 @@ class MarkdownEditorApp extends StatelessWidget {
           themeMode: devicePreference.isDarkMode
               ? ThemeMode.dark
               : ThemeMode.light,
-          theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
+          theme: ThemeData(
+            useMaterial3: true,
+            textTheme: GoogleFonts.notoSansTextTheme(),
+            colorSchemeSeed: Colors.indigo,
+          ),
           darkTheme: ThemeData(
             useMaterial3: true,
+            textTheme: GoogleFonts.notoSansTextTheme(
+              ThemeData(brightness: Brightness.dark).textTheme,
+            ),
             brightness: Brightness.dark,
             colorSchemeSeed: Colors.indigo,
           ),
