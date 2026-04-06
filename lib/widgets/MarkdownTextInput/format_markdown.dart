@@ -52,10 +52,7 @@ class FormatMarkdown {
         final splitedData = data
             .substring(lesserIndex, greaterIndex)
             .split('\n');
-        changedData = splitedData.map((value) {
-          index++;
-          return index == splitedData.length ? '* $value' : '* $value\n';
-        }).join();
+        changedData = splitedData.map((value) => '* $value').join('\n');
         replaceCursorIndex = 0;
         break;
       case MarkdownType.code:
@@ -67,10 +64,7 @@ class FormatMarkdown {
         final splitedData = data
             .substring(lesserIndex, greaterIndex)
             .split('\n');
-        changedData = splitedData.map((value) {
-          index++;
-          return index == splitedData.length ? '> $value' : '> $value\n';
-        }).join();
+        changedData = splitedData.map((value) => '> $value').join('\n');
         replaceCursorIndex = 0;
         break;
       case MarkdownType.separator:
