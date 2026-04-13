@@ -1,6 +1,8 @@
-Added LaTex support
-Added Horizontal Swipe to Switch between Preview and Editing View in Single View Mode
-Added Default Folder for Opening and Saving .md files
-Added Print/Save as Pdf Option
-Added the option to check/uncheck checkboxes in preview mode
-Added Convenient way to add tables
+### Added
+- Integrated dynamic color support for improved theme customization.
+- Added sharing functionality with options for plain text, markdown, and PDF.
+- Custom tag style for code blocks in PDF export.
+
+### Fixed
+- Platform brightness detection in device preference notifier.
+- Various UI fixes and improvements.

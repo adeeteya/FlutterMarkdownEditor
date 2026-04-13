@@ -6,9 +6,9 @@ The app also offers a convenient way to style your text with options such as bol
 
 In addition, you can preview JPEG, PNG, GIF, WebP, BMP, and WBMP image formats right within the app. You can easily open links from the preview, making it easy to navigate between different files and sources.
 
-Choose between Light and Dark Theme Modes, and use the Dual View Mode to simultaneously view both the preview and editing views. Alternatively, you can use Single View Mode to focus on either the preview or editing view.
+Choose between Light and Dark Theme Modes, use Dynamic Color for improved theme customization, and use the Dual View Mode to simultaneously view both the preview and editing views. Alternatively, you can use Single View Mode to focus on either the preview or editing view.
 
-The app also offers the ability to clear text and start from scratch, as well as create new .md files or edit existing ones.
+The app also offers the ability to share your markdown files as plain text, markdown, or PDF, clear text and start from scratch, as well as create new .md files or edit existing ones.
 
 This Editor was developed using Flutter and is mainly targeted for mobile devices as currently there aren't any standalone markdown editors available.
 
@@ -91,6 +91,7 @@ Please star⭐ the repo if you like what you see😊.
 - [x] Ability to preview JPEG, PNG, GIF, WebP, BMP, and WBMP image formats.
 - [x] Easily open links from the preview
 - [x] Light and Dark Theme Modes available
+- [x] Dynamic Color support for improved theme customization
 - [x] Dual View Mode available (Both Preview and Editing View)
 - [x] Single View Mode available (Either Preview or the Editing View)
 - [x] Added Multi Language Support (For Some of the most popular languages of the world)
@@ -101,6 +102,7 @@ Please star⭐ the repo if you like what you see😊.
 - [x] Horizontal Swipe to Switch between Preview and Editing View in Single View Mode
 - [x] Default Folder for Opening and Saving .md files
 - [x] Added Print/Save as Pdf Option
+- [x] Added Share as Plain Text, Markdown, and PDF Option
 - [x] Added the option to check/uncheck checkboxes in preview mode
 
 ## 🌐 How to contribute to this project's translations
@@ -119,12 +121,14 @@ Please star⭐ the repo if you like what you see😊.
 
 | Name                                                                                        | Usage                                                       |
 |---------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| [**dynamic_color**](https://pub.dev/packages/dynamic_color)                                 | For improved theme customization                            |
 | [**expandable**](https://pub.dev/packages/expandable)                                       | To create expandable header buttons                         |
 | [**file_picker**](https://pub.dev/packages/file_picker)                                     | To open markdown files directly from the app                |
 | [**flutter_localizations**](https://pub.dev/packages/flutter_localizations)                 | Internationalizing app                                      |
 | [**flutter_math_fork**](https://pub.dev/packages/flutter_math_fork)                         | Help with LaTeX support                                     |
 | [**flutter_svg**](https://pub.dev/packages/flutter_svg)                                     | To Display Svg Images                                       |
 | [**flutter_widget_from_html_core**](https://pub.dev/packages/flutter_widget_from_html_core) | To add html display support                                 |
+| [**google_fonts**](https://pub.dev/packages/google_fonts)                                   | To add custom fonts support                                 |
 | [**html**](https://pub.dev/packages/html)                                                   | To help display html format                                 |
 | [**htmltopdfwidgets**](https://pub.dev/packages/htmltopdfwidgets)                           | To convert html to pdf for printing                         |
 | [**intl**](https://pub.dev/packages/intl)                                                   | Provides internationalization and localization facilities   |
@@ -133,6 +137,7 @@ Please star⭐ the repo if you like what you see😊.
 | [**pdf**](https://pub.dev/packages/pdf)                                                     | To help save/create a pdf                                   |
 | [**permission_handler**](https://pub.dev/packages/permission_handler)                       | To get storage permissions for opening and saving .md files |
 | [**printing**](https://pub.dev/packages/printing)                                           | To help printing a pdf                                      |
+| [**share_plus**](https://pub.dev/packages/share_plus)                                       | To share markdown files in various formats                  |
 | [**shared_preferences**](https://pub.dev/packages/shared_preferences)                       | To store device preferences for persistence                 |
 | [**url_launcher**](https://pub.dev/packages/url_launcher)                                   | To launch markdown links                                    |
 | [**flutter_lints**](https://pub.dev/packages/flutter_lints)                                 | For linting                                                 |
