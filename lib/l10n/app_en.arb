@@ -71,6 +71,10 @@
   "@save": {
     "description": "Positive Action for the Save File Alert Dialog and the Save File Menu Item"
   },
+  "saveAs": "Save As",
+  "@saveAs": {
+    "description": "Menu Item to save the current file with a new name or location"
+  },
   "linkDialogTextTitle": "Text",
   "@linkDialogTextTitle": {
     "description": "Text Field Title of The Link Dialog Box"
