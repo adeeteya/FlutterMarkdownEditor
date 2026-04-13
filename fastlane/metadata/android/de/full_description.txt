@@ -1,9 +1,0 @@
-Wir stellen die <i>Markdown Editor</i> App vor, das perfekte Tool für alle, die Markdown-Dateien einfach erstellen und bearbeiten müssen. Mit der Möglichkeit, „.md“-Dateien direkt aus dem Explorer zu öffnen, können Sie einfach auf Ihre Dateien zugreifen und sofort mit der Arbeit beginnen.
-
-Die App bietet auch eine bequeme Möglichkeit, Ihren Text mit Optionen wie Fett, Kursiv, Überschriften und mehr zu gestalten. Das Hinzufügen von Links ist mit der einfachen Benutzeroberfläche ebenfalls ein Kinderspiel.
-
-Darüber hinaus können Sie direkt in der App eine Vorschau der Bildformate JPEG, PNG, GIF, WebP, BMP und WBMP anzeigen. Sie können ganz einfach Links aus der Vorschau öffnen und so einfach zwischen verschiedenen Dateien und Quellen navigieren.
-
-Wählen Sie zwischen den Modi „Helles“ und „Dunkles Design“ und verwenden Sie den Modus „Dual View“, um gleichzeitig sowohl die Vorschau- als auch die Bearbeitungsansicht anzuzeigen. Alternativ können Sie den Einzelansichtsmodus verwenden, um sich entweder auf die Vorschau- oder die Bearbeitungsansicht zu konzentrieren.
-
-Die App bietet auch die Möglichkeit, Text zu löschen und von vorne zu beginnen sowie neue <code>.md</code> Dateien zu erstellen oder vorhandene zu bearbeiten.
