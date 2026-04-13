@@ -105,7 +105,7 @@ class _HomeState extends State<Home> {
 
   Future<void> _openFilePicker() async {
     try {
-      final FilePickerResult? result = await FilePicker.platform.pickFiles(
+      final FilePickerResult? result = await FilePicker.pickFiles(
         type: FileType.custom,
         initialDirectory:
             widget.devicePreferenceNotifier.value.defaultFolderPath,
@@ -195,7 +195,7 @@ class _HomeState extends State<Home> {
       );
       return;
     } else {
-      final filePath = await FilePicker.platform.saveFile(
+      final filePath = await FilePicker.saveFile(
         dialogTitle: AppLocalizations.of(context)!.saveFileDialogTitle,
         fileName: (!kIsWeb && Platform.isWindows) ? null : "$_fileName.md",
         initialDirectory:
@@ -663,18 +663,18 @@ Future<_PrintFonts> _loadPrintFonts() {
       final italic = await PdfGoogleFonts.notoSansItalic();
       final boldItalic = await PdfGoogleFonts.notoSansBoldItalic();
 
-          final fallbackFonts = await Future.wait<pw.Font>([
-            PdfGoogleFonts.notoSansSymbols2Regular(),
-            PdfGoogleFonts.notoSansMathRegular(),
-            PdfGoogleFonts.notoSansJPRegular(),
-            PdfGoogleFonts.notoSansKRRegular(),
-            PdfGoogleFonts.notoSansSCRegular(),
-            PdfGoogleFonts.notoSansArabicRegular(),
-            PdfGoogleFonts.notoSansHebrewRegular(),
-            PdfGoogleFonts.notoSansDevanagariRegular(),
-            PdfGoogleFonts.notoSansThaiLoopedRegular(),
-            PdfGoogleFonts.notoColorEmoji(),
-          ]);
+      final fallbackFonts = await Future.wait<pw.Font>([
+        PdfGoogleFonts.notoSansSymbols2Regular(),
+        PdfGoogleFonts.notoSansMathRegular(),
+        PdfGoogleFonts.notoSansJPRegular(),
+        PdfGoogleFonts.notoSansKRRegular(),
+        PdfGoogleFonts.notoSansSCRegular(),
+        PdfGoogleFonts.notoSansArabicRegular(),
+        PdfGoogleFonts.notoSansHebrewRegular(),
+        PdfGoogleFonts.notoSansDevanagariRegular(),
+        PdfGoogleFonts.notoSansThaiLoopedRegular(),
+        PdfGoogleFonts.notoColorEmoji(),
+      ]);
 
       return _PrintFonts(
         regular: regular,
