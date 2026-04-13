@@ -345,6 +345,12 @@ class _HomeState extends State<Home> {
                       );
                     },
                   ),
+                  TableConfig(
+                    wrapper: (tableWidget) => SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: tableWidget,
+                    ),
+                  ),
                 ],
               ),
             ),
