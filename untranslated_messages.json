@@ -1,785 +1,1765 @@
 {
   "ace": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ach": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "af": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ak": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "alz": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "am": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ar": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "as": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "awa": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ay": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "az": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bal": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ban": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bbc": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bci": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "be": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bem": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ber": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bew": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bg": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bho": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bik": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bm": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bs": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bts": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "btx": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "bua": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ca": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ceb": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "cgg": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "chk": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ckb": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "cnh": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "co": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "crh": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "crs": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "cs": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "cy": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "da": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "de": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "din": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "doi": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "dv": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "dyu": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "el": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "eo": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "es": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "et": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "eu": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "fa": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "fi": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "fil": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "fon": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "fr": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "fur": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "fy": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ga": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "gaa": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "gd": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "gl": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "gn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "gom": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "gu": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ha": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "haw": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "he": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "hi": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "hil": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "hmn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "hr": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "hrx": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ht": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "hu": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "hy": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "iba": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "id": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ig": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ilo": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "is": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "it": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ja": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "jam": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "jv": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ka": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "kac": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "kek": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "kha": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "kk": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "km": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "kn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ko": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "kri": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ktu": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ku": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ky": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "la": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lb": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lg": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lij": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lmo": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ln": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lo": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lt": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ltg": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "luo": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lus": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "lv": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mai": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mak": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mam": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mfe": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mg": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mhr": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mi": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "min": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mk": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ml": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mr": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ms": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mt": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "mwr": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "my": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ne": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "new": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "nhe": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "nl": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "no": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "nso": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "nus": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ny": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "om": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "or": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "pa": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "pag": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "pam": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "pap": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "pl": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ps": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "pt": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "qu": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ro": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "rom": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ru": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "rw": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sa": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sah": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sat": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "scn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sd": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "shn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "si": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sk": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sl": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sm": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sn": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "so": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sq": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sr": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "st": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "su": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sus": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sv": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "sw": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "szl": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ta": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "te": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tet": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tg": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "th": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ti": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tiv": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tk": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tl": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tpi": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tr": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ts": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tt": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "tum": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "udm": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ug": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "uk": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "ur": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "uz": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "vec": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "vi": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "war": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "xh": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "yi": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "yo": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "yua": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "yue": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "zap": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "zh": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ],
 
   "zu": [
-    "saveAs"
+    "saveAs",
+    "share",
+    "shareAsDialogTitle",
+    "plainText",
+    "markdown",
+    "pdf"
   ]
 }

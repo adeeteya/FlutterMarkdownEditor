@@ -158,5 +158,25 @@
   "insert": "Insert",
   "@insert": {
     "description": "Text Action for the Insert Table Dialog"
+  },
+  "share": "Share",
+  "@share": {
+    "description": "Menu Item for Share"
+  },
+  "shareAsDialogTitle": "Share As",
+  "@shareAsDialogTitle": {
+    "description": "Title for the Share As Dialog"
+  },
+  "plainText": "Plain Text",
+  "@plainText": {
+    "description": "Option for sharing as plain text"
+  },
+  "markdown": "Markdown",
+  "@markdown": {
+    "description": "Option for sharing as markdown"
+  },
+  "pdf": "PDF",
+  "@pdf": {
+    "description": "Option for sharing as PDF"
   }
 }
