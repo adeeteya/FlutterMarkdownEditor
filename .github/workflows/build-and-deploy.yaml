@@ -144,7 +144,7 @@ jobs:
 
       - name: Install Inno Setup
         run: |
-          Invoke-WebRequest -Uri http://files.jrsoftware.org/is/6/innosetup-6.4.2.exe -OutFile build\installer.exe
+          Invoke-WebRequest -Uri https://github.com/jrsoftware/issrc/releases/download/is-6_7_1/innosetup-6.7.1.exe -OutFile build\installer.exe
           git clone https://github.com/DomGries/InnoDependencyInstaller.git build\inno-depend
           Start-Process -Wait -FilePath build\installer.exe -ArgumentList '/verysilent', '/allusers', '/dir=build\iscc'
 
