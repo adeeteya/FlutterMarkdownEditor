@@ -1,1 +1,785 @@
-{}
+{
+  "ace": [
+    "saveAs"
+  ],
+
+  "ach": [
+    "saveAs"
+  ],
+
+  "af": [
+    "saveAs"
+  ],
+
+  "ak": [
+    "saveAs"
+  ],
+
+  "alz": [
+    "saveAs"
+  ],
+
+  "am": [
+    "saveAs"
+  ],
+
+  "ar": [
+    "saveAs"
+  ],
+
+  "as": [
+    "saveAs"
+  ],
+
+  "awa": [
+    "saveAs"
+  ],
+
+  "ay": [
+    "saveAs"
+  ],
+
+  "az": [
+    "saveAs"
+  ],
+
+  "bal": [
+    "saveAs"
+  ],
+
+  "ban": [
+    "saveAs"
+  ],
+
+  "bbc": [
+    "saveAs"
+  ],
+
+  "bci": [
+    "saveAs"
+  ],
+
+  "be": [
+    "saveAs"
+  ],
+
+  "bem": [
+    "saveAs"
+  ],
+
+  "ber": [
+    "saveAs"
+  ],
+
+  "bew": [
+    "saveAs"
+  ],
+
+  "bg": [
+    "saveAs"
+  ],
+
+  "bho": [
+    "saveAs"
+  ],
+
+  "bik": [
+    "saveAs"
+  ],
+
+  "bm": [
+    "saveAs"
+  ],
+
+  "bn": [
+    "saveAs"
+  ],
+
+  "bs": [
+    "saveAs"
+  ],
+
+  "bts": [
+    "saveAs"
+  ],
+
+  "btx": [
+    "saveAs"
+  ],
+
+  "bua": [
+    "saveAs"
+  ],
+
+  "ca": [
+    "saveAs"
+  ],
+
+  "ceb": [
+    "saveAs"
+  ],
+
+  "cgg": [
+    "saveAs"
+  ],
+
+  "chk": [
+    "saveAs"
+  ],
+
+  "ckb": [
+    "saveAs"
+  ],
+
+  "cnh": [
+    "saveAs"
+  ],
+
+  "co": [
+    "saveAs"
+  ],
+
+  "crh": [
+    "saveAs"
+  ],
+
+  "crs": [
+    "saveAs"
+  ],
+
+  "cs": [
+    "saveAs"
+  ],
+
+  "cy": [
+    "saveAs"
+  ],
+
+  "da": [
+    "saveAs"
+  ],
+
+  "de": [
+    "saveAs"
+  ],
+
+  "din": [
+    "saveAs"
+  ],
+
+  "doi": [
+    "saveAs"
+  ],
+
+  "dv": [
+    "saveAs"
+  ],
+
+  "dyu": [
+    "saveAs"
+  ],
+
+  "el": [
+    "saveAs"
+  ],
+
+  "eo": [
+    "saveAs"
+  ],
+
+  "es": [
+    "saveAs"
+  ],
+
+  "et": [
+    "saveAs"
+  ],
+
+  "eu": [
+    "saveAs"
+  ],
+
+  "fa": [
+    "saveAs"
+  ],
+
+  "fi": [
+    "saveAs"
+  ],
+
+  "fil": [
+    "saveAs"
+  ],
+
+  "fon": [
+    "saveAs"
+  ],
+
+  "fr": [
+    "saveAs"
+  ],
+
+  "fur": [
+    "saveAs"
+  ],
+
+  "fy": [
+    "saveAs"
+  ],
+
+  "ga": [
+    "saveAs"
+  ],
+
+  "gaa": [
+    "saveAs"
+  ],
+
+  "gd": [
+    "saveAs"
+  ],
+
+  "gl": [
+    "saveAs"
+  ],
+
+  "gn": [
+    "saveAs"
+  ],
+
+  "gom": [
+    "saveAs"
+  ],
+
+  "gu": [
+    "saveAs"
+  ],
+
+  "ha": [
+    "saveAs"
+  ],
+
+  "haw": [
+    "saveAs"
+  ],
+
+  "he": [
+    "saveAs"
+  ],
+
+  "hi": [
+    "saveAs"
+  ],
+
+  "hil": [
+    "saveAs"
+  ],
+
+  "hmn": [
+    "saveAs"
+  ],
+
+  "hr": [
+    "saveAs"
+  ],
+
+  "hrx": [
+    "saveAs"
+  ],
+
+  "ht": [
+    "saveAs"
+  ],
+
+  "hu": [
+    "saveAs"
+  ],
+
+  "hy": [
+    "saveAs"
+  ],
+
+  "iba": [
+    "saveAs"
+  ],
+
+  "id": [
+    "saveAs"
+  ],
+
+  "ig": [
+    "saveAs"
+  ],
+
+  "ilo": [
+    "saveAs"
+  ],
+
+  "is": [
+    "saveAs"
+  ],
+
+  "it": [
+    "saveAs"
+  ],
+
+  "ja": [
+    "saveAs"
+  ],
+
+  "jam": [
+    "saveAs"
+  ],
+
+  "jv": [
+    "saveAs"
+  ],
+
+  "ka": [
+    "saveAs"
+  ],
+
+  "kac": [
+    "saveAs"
+  ],
+
+  "kek": [
+    "saveAs"
+  ],
+
+  "kha": [
+    "saveAs"
+  ],
+
+  "kk": [
+    "saveAs"
+  ],
+
+  "km": [
+    "saveAs"
+  ],
+
+  "kn": [
+    "saveAs"
+  ],
+
+  "ko": [
+    "saveAs"
+  ],
+
+  "kri": [
+    "saveAs"
+  ],
+
+  "ktu": [
+    "saveAs"
+  ],
+
+  "ku": [
+    "saveAs"
+  ],
+
+  "ky": [
+    "saveAs"
+  ],
+
+  "la": [
+    "saveAs"
+  ],
+
+  "lb": [
+    "saveAs"
+  ],
+
+  "lg": [
+    "saveAs"
+  ],
+
+  "lij": [
+    "saveAs"
+  ],
+
+  "lmo": [
+    "saveAs"
+  ],
+
+  "ln": [
+    "saveAs"
+  ],
+
+  "lo": [
+    "saveAs"
+  ],
+
+  "lt": [
+    "saveAs"
+  ],
+
+  "ltg": [
+    "saveAs"
+  ],
+
+  "luo": [
+    "saveAs"
+  ],
+
+  "lus": [
+    "saveAs"
+  ],
+
+  "lv": [
+    "saveAs"
+  ],
+
+  "mai": [
+    "saveAs"
+  ],
+
+  "mak": [
+    "saveAs"
+  ],
+
+  "mam": [
+    "saveAs"
+  ],
+
+  "mfe": [
+    "saveAs"
+  ],
+
+  "mg": [
+    "saveAs"
+  ],
+
+  "mhr": [
+    "saveAs"
+  ],
+
+  "mi": [
+    "saveAs"
+  ],
+
+  "min": [
+    "saveAs"
+  ],
+
+  "mk": [
+    "saveAs"
+  ],
+
+  "ml": [
+    "saveAs"
+  ],
+
+  "mn": [
+    "saveAs"
+  ],
+
+  "mr": [
+    "saveAs"
+  ],
+
+  "ms": [
+    "saveAs"
+  ],
+
+  "mt": [
+    "saveAs"
+  ],
+
+  "mwr": [
+    "saveAs"
+  ],
+
+  "my": [
+    "saveAs"
+  ],
+
+  "ne": [
+    "saveAs"
+  ],
+
+  "new": [
+    "saveAs"
+  ],
+
+  "nhe": [
+    "saveAs"
+  ],
+
+  "nl": [
+    "saveAs"
+  ],
+
+  "no": [
+    "saveAs"
+  ],
+
+  "nso": [
+    "saveAs"
+  ],
+
+  "nus": [
+    "saveAs"
+  ],
+
+  "ny": [
+    "saveAs"
+  ],
+
+  "om": [
+    "saveAs"
+  ],
+
+  "or": [
+    "saveAs"
+  ],
+
+  "pa": [
+    "saveAs"
+  ],
+
+  "pag": [
+    "saveAs"
+  ],
+
+  "pam": [
+    "saveAs"
+  ],
+
+  "pap": [
+    "saveAs"
+  ],
+
+  "pl": [
+    "saveAs"
+  ],
+
+  "ps": [
+    "saveAs"
+  ],
+
+  "pt": [
+    "saveAs"
+  ],
+
+  "qu": [
+    "saveAs"
+  ],
+
+  "ro": [
+    "saveAs"
+  ],
+
+  "rom": [
+    "saveAs"
+  ],
+
+  "ru": [
+    "saveAs"
+  ],
+
+  "rw": [
+    "saveAs"
+  ],
+
+  "sa": [
+    "saveAs"
+  ],
+
+  "sah": [
+    "saveAs"
+  ],
+
+  "sat": [
+    "saveAs"
+  ],
+
+  "scn": [
+    "saveAs"
+  ],
+
+  "sd": [
+    "saveAs"
+  ],
+
+  "shn": [
+    "saveAs"
+  ],
+
+  "si": [
+    "saveAs"
+  ],
+
+  "sk": [
+    "saveAs"
+  ],
+
+  "sl": [
+    "saveAs"
+  ],
+
+  "sm": [
+    "saveAs"
+  ],
+
+  "sn": [
+    "saveAs"
+  ],
+
+  "so": [
+    "saveAs"
+  ],
+
+  "sq": [
+    "saveAs"
+  ],
+
+  "sr": [
+    "saveAs"
+  ],
+
+  "st": [
+    "saveAs"
+  ],
+
+  "su": [
+    "saveAs"
+  ],
+
+  "sus": [
+    "saveAs"
+  ],
+
+  "sv": [
+    "saveAs"
+  ],
+
+  "sw": [
+    "saveAs"
+  ],
+
+  "szl": [
+    "saveAs"
+  ],
+
+  "ta": [
+    "saveAs"
+  ],
+
+  "te": [
+    "saveAs"
+  ],
+
+  "tet": [
+    "saveAs"
+  ],
+
+  "tg": [
+    "saveAs"
+  ],
+
+  "th": [
+    "saveAs"
+  ],
+
+  "ti": [
+    "saveAs"
+  ],
+
+  "tiv": [
+    "saveAs"
+  ],
+
+  "tk": [
+    "saveAs"
+  ],
+
+  "tl": [
+    "saveAs"
+  ],
+
+  "tpi": [
+    "saveAs"
+  ],
+
+  "tr": [
+    "saveAs"
+  ],
+
+  "ts": [
+    "saveAs"
+  ],
+
+  "tt": [
+    "saveAs"
+  ],
+
+  "tum": [
+    "saveAs"
+  ],
+
+  "udm": [
+    "saveAs"
+  ],
+
+  "ug": [
+    "saveAs"
+  ],
+
+  "uk": [
+    "saveAs"
+  ],
+
+  "ur": [
+    "saveAs"
+  ],
+
+  "uz": [
+    "saveAs"
+  ],
+
+  "vec": [
+    "saveAs"
+  ],
+
+  "vi": [
+    "saveAs"
+  ],
+
+  "war": [
+    "saveAs"
+  ],
+
+  "xh": [
+    "saveAs"
+  ],
+
+  "yi": [
+    "saveAs"
+  ],
+
+  "yo": [
+    "saveAs"
+  ],
+
+  "yua": [
+    "saveAs"
+  ],
+
+  "yue": [
+    "saveAs"
+  ],
+
+  "zap": [
+    "saveAs"
+  ],
+
+  "zh": [
+    "saveAs"
+  ],
+
+  "zu": [
+    "saveAs"
+  ]
+}

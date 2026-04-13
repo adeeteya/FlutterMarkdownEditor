@@ -22,7 +22,16 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-enum MenuItem { switchTheme, switchView, open, clear, save, print, donate }
+enum MenuItem {
+  switchTheme,
+  switchView,
+  open,
+  clear,
+  save,
+  saveAs,
+  print,
+  donate,
+}
 
 class Home extends StatefulWidget {
   final DevicePreferenceNotifier devicePreferenceNotifier;
@@ -41,6 +50,7 @@ class _HomeState extends State<Home> {
   );
   String _filePath = "/storage/emulated/0/Download";
   String _fileName = 'Markdown';
+  bool _isOpenedFile = false;
   bool _isPreview = false;
   bool _isLoading = true;
   String _inputText = '';
@@ -120,6 +130,7 @@ class _HomeState extends State<Home> {
         final File file = File(_filePath);
         _inputText = await file.readAsString();
         _textEditingController.text = _inputText;
+        _isOpenedFile = true;
         setState(() {});
         final folderPath = _filePath.substring(
           0,
@@ -175,6 +186,9 @@ class _HomeState extends State<Home> {
               setState(() {
                 _inputText = "";
                 _textEditingController.clear();
+                _isOpenedFile = false;
+                _filePath = "/storage/emulated/0/Download";
+                _fileName = 'Markdown';
               });
               Navigator.pop(context);
             },
@@ -194,25 +208,65 @@ class _HomeState extends State<Home> {
         ),
       );
       return;
-    } else {
-      final filePath = await FilePicker.saveFile(
-        dialogTitle: AppLocalizations.of(context)!.saveFileDialogTitle,
-        fileName: (!kIsWeb && Platform.isWindows) ? null : "$_fileName.md",
-        initialDirectory:
-            widget.devicePreferenceNotifier.value.defaultFolderPath,
-        type: FileType.custom,
-        allowedExtensions: ['md'],
-        bytes: utf8.encode(_inputText),
-      );
-      if (filePath != null) {
-        final folderPath = filePath.substring(
-          0,
-          filePath.lastIndexOf(Platform.pathSeparator),
-        );
-        unawaited(
-          widget.devicePreferenceNotifier.setDefaultFolderPath(folderPath),
-        );
+    }
+
+    if (_isOpenedFile) {
+      try {
+        final file = File(_filePath);
+        await file.writeAsString(_inputText);
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("File saved successfully")),
+          );
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text("Error saving file: $e")));
+        }
       }
+    } else {
+      await _saveFileAs();
+    }
+  }
+
+  Future<void> _saveFileAs() async {
+    if (_inputText.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
+        ),
+      );
+      return;
+    }
+
+    final filePath = await FilePicker.saveFile(
+      dialogTitle: AppLocalizations.of(context)!.saveFileDialogTitle,
+      fileName: (!kIsWeb && Platform.isWindows) ? null : "$_fileName.md",
+      initialDirectory: widget.devicePreferenceNotifier.value.defaultFolderPath,
+      type: FileType.custom,
+      allowedExtensions: ['md'],
+      bytes: utf8.encode(_inputText),
+    );
+
+    if (filePath != null) {
+      setState(() {
+        _filePath = filePath;
+        _fileName = _filePath.substring(
+          _filePath.lastIndexOf(Platform.pathSeparator) + 1,
+          _filePath.lastIndexOf("."),
+        );
+        _isOpenedFile = true;
+      });
+
+      final folderPath = _filePath.substring(
+        0,
+        _filePath.lastIndexOf(Platform.pathSeparator),
+      );
+      unawaited(
+        widget.devicePreferenceNotifier.setDefaultFolderPath(folderPath),
+      );
     }
   }
 
@@ -533,6 +587,9 @@ class _HomeState extends State<Home> {
                     case MenuItem.save:
                       await _saveFile();
                       break;
+                    case MenuItem.saveAs:
+                      await _saveFileAs();
+                      break;
                     case MenuItem.clear:
                       await _clearText();
                       break;
@@ -571,6 +628,16 @@ class _HomeState extends State<Home> {
                         const Icon(Icons.save),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.save),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.saveAs,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.save_as),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.saveAs),
                       ],
                     ),
                   ),
