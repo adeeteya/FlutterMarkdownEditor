@@ -18,9 +18,11 @@ import 'package:markdown_editor/widgets/MarkdownBody/custom_text_node.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/latex_node.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:markdown_widget/markdown_widget.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 enum MenuItem {
@@ -30,6 +32,7 @@ enum MenuItem {
   clear,
   save,
   saveAs,
+  share,
   print,
   donate,
 }
@@ -271,6 +274,47 @@ class _HomeState extends State<Home> {
     }
   }
 
+  Future<Uint8List> _generatePdfBytes() async {
+    final htmlFromMarkdown = md.markdownToHtml(_inputText);
+    final defaultFontFamily = GoogleFonts.notoSans().fontFamily ?? 'Roboto';
+    final printFonts = await _loadPrintFonts();
+    final pdf = pw.Document();
+    final widgets = await html2pdf.HTMLToPdf().convert(
+      htmlFromMarkdown,
+      defaultFontFamily: defaultFontFamily,
+      fontFallback: printFonts.fallbacks,
+      tagStyle: const html2pdf.HtmlTagStyle(
+        codeBlockBackgroundColor: PdfColors.grey300,
+      ),
+      fontResolver: (fontFamily, isBold, isItalic) {
+        if (fontFamily == defaultFontFamily || fontFamily == 'Noto Sans') {
+          if (isBold && isItalic) {
+            return printFonts.boldItalic;
+          } else if (isBold) {
+            return printFonts.bold;
+          } else if (isItalic) {
+            return printFonts.italic;
+          }
+          return printFonts.regular;
+        }
+        return printFonts.regular;
+      },
+    );
+    pdf.addPage(
+      pw.MultiPage(
+        theme: pw.ThemeData.withFont(
+          base: printFonts.regular,
+          bold: printFonts.bold,
+          italic: printFonts.italic,
+          boldItalic: printFonts.boldItalic,
+          fontFallback: printFonts.fallbacks,
+        ),
+        build: (context) => widgets,
+      ),
+    );
+    return pdf.save();
+  }
+
   Future<void> _printFile() async {
     if (_inputText.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -280,50 +324,72 @@ class _HomeState extends State<Home> {
       );
       return;
     } else {
-      final htmlFromMarkdown = md.markdownToHtml(_inputText);
-      final defaultFontFamily = GoogleFonts.notoSans().fontFamily ?? 'Roboto';
-      final printFonts = await _loadPrintFonts();
       await Printing.layoutPdf(
         usePrinterSettings: true,
-        onLayout: (format) async {
-          final pdf = pw.Document();
-          final widgets = await html2pdf.HTMLToPdf().convert(
-            htmlFromMarkdown,
-            defaultFontFamily: defaultFontFamily,
-            fontFallback: printFonts.fallbacks,
-            tagStyle: const html2pdf.HtmlTagStyle(
-              codeBlockBackgroundColor: PdfColors.grey300,
-            ),
-            fontResolver: (fontFamily, isBold, isItalic) {
-              if (fontFamily == defaultFontFamily ||
-                  fontFamily == 'Noto Sans') {
-                if (isBold && isItalic) {
-                  return printFonts.boldItalic;
-                } else if (isBold) {
-                  return printFonts.bold;
-                } else if (isItalic) {
-                  return printFonts.italic;
-                }
-                return printFonts.regular;
-              }
-              return printFonts.regular;
-            },
-          );
-          pdf.addPage(
-            pw.MultiPage(
-              theme: pw.ThemeData.withFont(
-                base: printFonts.regular,
-                bold: printFonts.bold,
-                italic: printFonts.italic,
-                boldItalic: printFonts.boldItalic,
-                fontFallback: printFonts.fallbacks,
-              ),
-              build: (context) => widgets,
-            ),
-          );
-          return pdf.save();
-        },
+        onLayout: (format) async => _generatePdfBytes(),
       );
+    }
+  }
+
+  Future<void> _share() async {
+    if (_inputText.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.emptyInputTextContent),
+        ),
+      );
+      return;
+    }
+
+    if (kIsWeb) {
+      await SharePlus.instance.share(ShareParams(text: _inputText));
+      return;
+    }
+
+    final String? format = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(AppLocalizations.of(context)!.shareAsDialogTitle),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.text_snippet),
+              title: Text(AppLocalizations.of(context)!.plainText),
+              onTap: () => Navigator.pop(context, 'plain'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.code),
+              title: Text(AppLocalizations.of(context)!.markdown),
+              onTap: () => Navigator.pop(context, 'md'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.picture_as_pdf),
+              title: Text(AppLocalizations.of(context)!.pdf),
+              onTap: () => Navigator.pop(context, 'pdf'),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    if (format == null) return;
+
+    if (format == 'plain') {
+      await SharePlus.instance.share(ShareParams(text: _inputText));
+    } else {
+      final tempDir = await getTemporaryDirectory();
+      final baseName = _fileName.split(Platform.pathSeparator).last;
+      if (format == 'md') {
+        final file = File('${tempDir.path}/$baseName.md');
+        await file.writeAsString(_inputText);
+        await SharePlus.instance.share(ShareParams(files: [XFile(file.path)]));
+      } else if (format == 'pdf') {
+        final bytes = await _generatePdfBytes();
+        final file = File('${tempDir.path}/$baseName.pdf');
+        await file.writeAsBytes(bytes);
+        await SharePlus.instance.share(ShareParams(files: [XFile(file.path)]));
+      }
     }
   }
 
@@ -594,6 +660,9 @@ class _HomeState extends State<Home> {
                     case MenuItem.saveAs:
                       await _saveFileAs();
                       break;
+                    case MenuItem.share:
+                      await _share();
+                      break;
                     case MenuItem.clear:
                       await _clearText();
                       break;
@@ -642,6 +711,16 @@ class _HomeState extends State<Home> {
                         const Icon(Icons.save_as),
                         const SizedBox(width: 8),
                         Text(AppLocalizations.of(context)!.saveAs),
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    value: MenuItem.share,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.share),
+                        const SizedBox(width: 8),
+                        Text(AppLocalizations.of(context)!.share),
                       ],
                     ),
                   ),
