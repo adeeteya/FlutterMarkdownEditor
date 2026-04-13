@@ -265,10 +265,10 @@ packages:
     dependency: "direct main"
     description:
       name: htmltopdfwidgets
-      sha256: e2c42dc784fa884eee0f29bbced6555a1a4cb0a3171c7d334cb5ca64a3854d77
+      sha256: "459e3ffaecaebc5ccb35118eba41898d027a68fe4323aaeb036cbf404fd411a2"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.3"
+    version: "2.0.1"
   http:
     dependency: transitive
     description:
