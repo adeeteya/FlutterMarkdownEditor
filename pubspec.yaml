@@ -10,6 +10,7 @@ environment:
   flutter: 3.41.6
 
 dependencies:
+  dynamic_color: ^1.8.1
   expandable: ^5.0.1
   file_picker: ^11.0.2
   flutter:
