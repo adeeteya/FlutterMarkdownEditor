@@ -18,6 +18,7 @@ import 'package:markdown_editor/widgets/MarkdownBody/custom_text_node.dart';
 import 'package:markdown_editor/widgets/MarkdownBody/latex_node.dart';
 import 'package:markdown_editor/widgets/MarkdownTextInput/markdown_text_input.dart';
 import 'package:markdown_widget/markdown_widget.dart';
+import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -290,6 +291,9 @@ class _HomeState extends State<Home> {
             htmlFromMarkdown,
             defaultFontFamily: defaultFontFamily,
             fontFallback: printFonts.fallbacks,
+            tagStyle: const html2pdf.HtmlTagStyle(
+              codeBlockBackgroundColor: PdfColors.grey300,
+            ),
             fontResolver: (fontFamily, isBold, isItalic) {
               if (fontFamily == defaultFontFamily ||
                   fontFamily == 'Noto Sans') {
