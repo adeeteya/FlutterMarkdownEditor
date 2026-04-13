@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum _SharedPreferencesKeys { isDarkMode, isSplitLayout, defaultFolderPath }
@@ -53,7 +54,8 @@ class DevicePreferenceNotifier extends ValueNotifier<DevicePreferences> {
     );
     final isDarkMode =
         _prefs.getBool(_SharedPreferencesKeys.isDarkMode.name) ??
-        PlatformDispatcher.instance.platformBrightness == Brightness.dark;
+        WidgetsBinding.instance.platformDispatcher.platformBrightness ==
+            Brightness.dark;
     final isSplitLayout =
         _prefs.getBool(_SharedPreferencesKeys.isSplitLayout.name) ?? true;
     final defaultFolderPath = _prefs.getString(
