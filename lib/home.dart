@@ -22,7 +22,16 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-enum MenuItem { switchTheme, switchView, open, clear, save, saveAs, print, donate }
+enum MenuItem {
+  switchTheme,
+  switchView,
+  open,
+  clear,
+  save,
+  saveAs,
+  print,
+  donate,
+}
 
 class Home extends StatefulWidget {
   final DevicePreferenceNotifier devicePreferenceNotifier;
@@ -212,9 +221,9 @@ class _HomeState extends State<Home> {
         }
       } catch (e) {
         if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Error saving file: $e")),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text("Error saving file: $e")));
         }
       }
     } else {
