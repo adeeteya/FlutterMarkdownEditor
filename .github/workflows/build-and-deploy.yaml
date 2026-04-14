@@ -142,15 +142,11 @@ jobs:
       - name: Build Windows Release
         run: flutter build windows --release
 
-      - name: Install Inno Setup
-        run: |
-          Invoke-WebRequest -Uri https://github.com/jrsoftware/issrc/releases/download/is-6_7_1/innosetup-6.7.1.exe -OutFile build\installer.exe
-          git clone https://github.com/DomGries/InnoDependencyInstaller.git build\inno-depend
-          Start-Process -Wait -FilePath build\installer.exe -ArgumentList '/verysilent', '/allusers', '/dir=build\iscc'
-
-      - name: Run Inno Setup to Build Installer
-        run: |
-          build\iscc\iscc.exe scripts\windows-setup.iss /DMyAppVersion=${{ inputs.version_number }}
+      - name: Compile Inno Setup Script
+        uses: Minionguyjpro/Inno-Setup-Action@v1.2.2
+        with:
+          path: scripts/windows-setup.iss
+          options: /DMyAppVersion=${{ inputs.version_number }}
 
       - name: Upload Windows Release Artifact to GitHub Release
         shell: cmd
